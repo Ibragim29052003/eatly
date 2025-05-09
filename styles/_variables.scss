@@ -1,0 +1,26 @@
+@use 'helpers' as *;
+
+:root {
+  --color-pale-orange: #FFDB80;
+  --color-white: #FFFFFF;
+  --color-deep-purple: #6D31D0;
+  --color-pale-pink-orange: #FDBFA3;
+  --color-pale-yellow-orange: #FFEB80;
+  --color-lavender-blue: #828CDE;
+  --color-dark-gray-purple: #434364;
+
+
+  --font-family-avenir-next: 'Avenir Next', sans-serif;
+  --font-family-montserrat: 'Montserrat', sans-serif;
+
+  --container-width: #{rem(1180)};
+  --container-padding-x: #{rem(50)};
+
+  --transition-duration: 0.2s;
+
+
+
+  @include tablet {
+    --container-width: #{rem(780)};
+  }
+}
