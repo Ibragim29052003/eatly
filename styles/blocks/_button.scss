@@ -1,0 +1,24 @@
+@use '../helpers' as *;
+
+.button {
+  line-height: 1.6;
+  padding: rem(8) rem(24);
+  border-radius: rem(30);
+  font-family: var(--font-family-montserrat);
+  font-size: fluid(20, 16);
+  font-weight: 600;
+  color: var(--color-deep-purple);
+  background-color: var(--color-pale-orange);
+  border: rem(1) solid var(--color-pale-orange);
+
+
+  @include hover {
+    color: var(--color-pale-orange);
+    background: linear-gradient(
+      90deg,
+      var(--color-deep-purple) 0%,
+      #ab80ef 100%
+      );
+      box-shadow: 0 4px 35px 0 rgba(255, 185, 175, 0.3);
+  }
+}

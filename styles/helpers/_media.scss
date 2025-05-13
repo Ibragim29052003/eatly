@@ -1,9 +1,21 @@
 @use './functions' as *;
 
+$tablet-l: 1199.98;
 $tablet: 999.98;
 $mobile: 767.98;
 $mobile-s: 479.98;
 
+@mixin tablet-l-above {
+  @media (width > rem($tablet-l)) {
+    @content;
+  }
+}
+
+@mixin tablet-l {
+  @media (width <= rem($tablet-l)) {
+    @content;
+  }
+}
 
 @mixin tablet-above {
   @media (width > rem($tablet)) {

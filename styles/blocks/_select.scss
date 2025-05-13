@@ -1,0 +1,26 @@
+@use '../helpers' as *;
+
+.select{
+  select {
+    display: none;
+  }
+
+  &__link {
+    display: flex;
+    column-gap: rem(4);
+    align-items: baseline;
+  }
+    &__icon {
+      --size: #{rem(12)};
+
+      @include square(var(--size));
+
+      content: '';
+      background: url('../../images/select/arrow-down-white.svg') center/contain no-repeat;
+
+      @include hover {
+      background: url('../../images/select/arrow-down-black.svg') center/contain no-repeat;
+      }
+
+  }
+}

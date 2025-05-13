@@ -9,6 +9,11 @@
   --color-lavender-blue: #828CDE;
   --color-dark-gray-purple: #434364;
 
+  --gradient-header: linear-gradient(
+    141deg,
+    #53269d 0%,
+    var(--color-deep-purple) 100%
+    );
 
   --font-family-avenir-next: 'Avenir Next', sans-serif;
   --font-family-montserrat: 'Montserrat', sans-serif;
