@@ -1,3 +1,329 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAM | home</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <script src="./scripts/main.js" type="module" defer></script>
+</head>
+
+<body>
+  <header class="header" data-js-header>
+    <div class="header__body container">
+        <a
+          class="header__logo logo"
+          href="/"
+          aria-label="Home"
+          title="Home">
+            <img
+              src="./images/logo.svg"
+              alt=""
+              width="120"
+              height="80"
+            >
+        </a>
+      <div class="header__navigation">
+        <div class="header__navigation-inner" data-js-header-navigation>
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a href="./index.html" class="header__menu-link is-active">HOME</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="/" class="header__menu-link">ABOUT US</a>
+              </li>
+              <li class="header__menu-item">
+                <div class="select">
+                  <label class="select__label visually-hidden" for="various-services">SERVICES</label>
+                  <a href="/" class="select__link">SERVICES
+                    <span class="select__icon"></span>
+                  </a>
+                  <select id="various-services" tabindex="0">
+                    <option value="investments-opportunities">Investments opportunities</option>
+                    <option value="business-relocation">Business relocation</option>
+                    <option value="family-relocation">Family relocation</option>
+                  </select>
+                </div>
+              </li>
+              <li class="header__menu-item">
+                <a href="/" class="header__menu-link">INVEST IN CYPRUS</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="/" class="header__menu-link">MIGRATION</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="/" class="header__menu-link">CONTACT US</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <a href="/" class="header__get-in-touch button hidden-mobile-s">Get in touch</a>
+      <button
+        class="header__burger-button burger-button visible-tablet-l"
+        type="button"
+        aria-label="Open menu"
+        title="Open menu"
+        data-js-header-burger-button
+      >
+      <span class="burger-button__line"></span>
+      <span class="burger-button__line"></span>
+      <span class="burger-button__line"></span>
+
+        </button>
+      </div>
+      </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero__main container">
+        <div class="hero__promo">
+          <ul class="hero__promo-list promo">
+            <li class="promo__item">
+              <p class="promo__item-info">investments</p>
+            </li>
+            <li class="promo__item">
+              <p class="promo__item-info">business relocation</p>
+            </li>
+            <li class="promo__item">
+              <p class="promo__item-info">family relocation</p>
+            </li>
+          </ul>
+        </div>
+        <div class="hero__body">
+         <div class="hero__body-info" aria-labelledby="hero-title-bind">
+          <h1 class="hero__title h2" id="hero-title-bind">Relocating to Cyprus </h1>
+          <p class="hero__subtitle h4">Seamless – Exceptional – Experience </p>
+         </div>
+          <div class="hero__description">
+            <p>The captivating Mediterranean island of Cyprus has become a business haven with a flourishing expat community. The strategic location that grants networking opportunities and the stability of being in the EU offers entrepreneurs the abilities they need </p>
+          </div>
+          <button class="hero__button button button-gradient">Find Out More</button>
+
+          <div class="hero__slider slider" data-js-slider>
+            <h2 class="visually-hidden" id="slider__title">Slider</h2>
+            <div
+            class="slider__dots container"
+            role="slider"
+            aria-labelledby="slider__title"
+            >
+            <button
+            class="slider__dot is-active"
+            id="dot-1"
+            type="button"
+            aria-controls="dotpanel-1"
+            data-js-dots-button
+            aria-selected="true"
+            >
+
+            </button>
+            <button
+            class="slider__dot"
+            id="dot-2"
+            type="button"
+            aria-controls="dotpanel-2"
+            data-js-dots-button
+            aria-selected="false"
+            tabindex="-1"
+
+            >
+
+            </button>
+            <button
+            class="slider__dot"
+            id="dot-3"
+            type="button"
+            aria-controls="dotpanel-3"
+            data-js-dots-button
+            aria-selected="false"
+            tabindex="-1"
+
+            >
+
+            </button>
+            <button
+            class="slider__dot"
+            id="dot-4"
+            type="button"
+            aria-controls="dotpanel-4"
+            data-js-dots-button
+            aria-selected="false"
+            tabindex="-1"
+
+            >
+
+            </button>
+            <button
+            class="slider__dot"
+            id="dot-5"
+            type="button"
+            aria-controls="dotpanel-5"
+            data-js-dots-button
+            aria-selected="false"
+            tabindex="-1"
+
+
+            >
+
+            </button>
+            <button
+            class="slider__dot"
+            id="dot-6"
+            type="button"
+            aria-controls="dotpanel-6"
+            data-js-dots-button
+            aria-selected="false"
+            tabindex="-1"
+
+            >
+
+            </button>
+            </div>
+
+            <div class="slider__body">
+              <div
+              class="slider__content is-active"
+              id="dotpanel-1"
+              aria-labelledby="dot-1"
+              tabindex="0"
+              data-js-dots-content
+              >
+              <a href="./index.html"></a>
+            </div>
+              <div
+              class="slider__content"
+              id="dotpanel-2"
+              aria-labelledby="dot-2"
+              tabindex="0"
+              data-js-dots-content
+              >
+              Lorem ipsum dolor sit amet.2
+              </div>
+              <div
+              class="slider__content"
+              id="dotpanel-3"
+              aria-labelledby="dot-3"
+              tabindex="0"
+              data-js-dots-content
+              >
+              Lorem ipsum dolor sit amet.3
+              </div>
+              <div
+              class="slider__content"
+              id="dotpanel-4"
+              aria-labelledby="dot-4"
+              tabindex="0"
+              data-js-dots-content
+              >
+              Lorem ipsum dolor sit amet.4
+              </div>
+              <div
+              class="slider__content"
+              id="dotpanel-5"
+              aria-labelledby="dot-5"
+              tabindex="0"
+              data-js-dots-content
+              >
+              Lorem ipsum dolor sit amet.5
+              </div>
+              <div
+              class="slider__content"
+              id="dotpanel-6"
+              aria-labelledby="dot-6"
+              tabindex="0"
+              data-js-dots-content
+              >
+              Lorem ipsum dolor sit amet.6
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="hero__cities">
+        <h2 class="visually-hidden">Popular cities</h2>
+       <div class="hero__cities-body cities container">
+        <h3 class="cities__title h4">Most popular cities</h3>
+        <ul class="cities__list">
+          <li class="cities__item">
+            <div class="cities__card ">
+              <img
+                class="cities__card-image"
+                src="./images/hero/hero-cities/nicosia.jpg"
+                alt=""
+                width="129"
+                height="123"
+                loading="lazy"
+                >
+                <p class="cities__card-title">Nicosia</p>
+            </div>
+          </li>
+          <li class="cities__item">
+            <div class="cities__card ">
+              <img
+                class="cities__card-image"
+                src="./images/hero/hero-cities/limassol.jpg"
+                alt=""
+                width="129"
+                height="123"
+                loading="lazy"
+                >
+                <p class="cities__card-title">Limassol</p>
+            </div>
+          </li>
+          <li class="cities__item">
+            <div class="cities__card ">
+              <img
+                class="cities__card-image"
+                src="./images/hero/hero-cities/paphos.jpg"
+                alt=""
+                width="129"
+                height="123"
+                loading="lazy"
+                >
+                <p class="cities__card-title">Paphos</p>
+            </div>
+          </li>
+          <li class="cities__item">
+            <div class="cities__card ">
+              <img
+                class="cities__card-image"
+                src="./images/hero/hero-cities/larnaka.jpg"
+                alt=""
+                width="129"
+                height="123"
+                loading="lazy"
+                >
+                <p class="cities__card-title">Larnaka</p>
+            </div>
+          </li>
+        </ul>
+       </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,8 +384,8 @@
               </li>
             </ul>
           </nav>
-          <a href="/" class="header__get-in-touch button hidden-mobile-s">Get in touch</a>
         </div>
+        <a href="/" class="header__get-in-touch button hidden-mobile-s">Get in touch</a>
       <button
         class="header__burger-button burger-button visible-tablet-l"
         type="button"
@@ -75,6 +401,239 @@
       </div>
       </div>
   </header>
+  <main>
+    <section class="hero">
+      <div class="hero__main container">
+        <div class="hero__promo">
+          <ul class="hero__promo-list promo">
+            <li class="promo__item">
+              <p class="promo__item-info">investments</p>
+            </li>
+            <li class="promo__item">
+              <p class="promo__item-info">business relocation</p>
+            </li>
+            <li class="promo__item">
+              <p class="promo__item-info">family relocation</p>
+            </li>
+          </ul>
+        </div>
+        <div class="hero__body">
+         <div class="hero__body-info" aria-labelledby="hero-title-bind">
+          <h1 class="hero__title h2" id="hero-title-bind">Relocating to Cyprus </h1>
+          <p class="hero__subtitle h4">Seamless – Exceptional – Experience </p>
+         </div>
+          <div class="hero__description">
+            <p>The captivating Mediterranean island of Cyprus has become a business haven with a flourishing expat community. The strategic location that grants networking opportunities and the stability of being in the EU offers entrepreneurs the abilities they need </p>
+          </div>
+          <button class="hero__button button button-gradient">Find Out More</button>
+
+          <div class="hero__slider slider" data-js-slider>
+            <h2 class="visually-hidden" id="slider__title">Slider</h2>
+            <div
+            class="slider__dots container"
+            role="slider"
+            aria-labelledby="slider__title"
+            >
+            <button
+            class="slider__dot is-active"
+            id="dot-1"
+            type="button"
+            aria-controls="dotpanel-1"
+            data-js-dots-button
+            aria-selected="true"
+            >
+
+            </button>
+            <button
+            class="slider__dot"
+            id="dot-2"
+            type="button"
+            aria-controls="dotpanel-2"
+            data-js-dots-button
+            aria-selected="false"
+            tabindex="-1"
+
+            >
+
+            </button>
+            <button
+            class="slider__dot"
+            id="dot-3"
+            type="button"
+            aria-controls="dotpanel-3"
+            data-js-dots-button
+            aria-selected="false"
+            tabindex="-1"
+
+            >
+
+            </button>
+            <button
+            class="slider__dot"
+            id="dot-4"
+            type="button"
+            aria-controls="dotpanel-4"
+            data-js-dots-button
+            aria-selected="false"
+            tabindex="-1"
+
+            >
+
+            </button>
+            <button
+            class="slider__dot"
+            id="dot-5"
+            type="button"
+            aria-controls="dotpanel-5"
+            data-js-dots-button
+            aria-selected="false"
+            tabindex="-1"
+
+
+            >
+
+            </button>
+            <button
+            class="slider__dot"
+            id="dot-6"
+            type="button"
+            aria-controls="dotpanel-6"
+            data-js-dots-button
+            aria-selected="false"
+            tabindex="-1"
+
+            >
+
+            </button>
+            </div>
+
+            <div class="slider__body">
+              <div
+              class="slider__content is-active"
+              id="dotpanel-1"
+              aria-labelledby="dot-1"
+              tabindex="0"
+              data-js-dots-content
+              >
+              <a href="./index.html"></a>
+            </div>
+              <div
+              class="slider__content"
+              id="dotpanel-2"
+              aria-labelledby="dot-2"
+              tabindex="0"
+              data-js-dots-content
+              >
+              <h2>Investment Opportunities</h2>
+              <p>Explore diverse investment sectors: real estate, tech startups, tourism, and shipping.</p>
+              <ul>
+                <li>Real estate incentives</li>
+                <li>Startup grants</li>
+                <li>Low corporate tax</li>
+              </ul>              </div>
+              <div
+              class="slider__content"
+              id="dotpanel-3"
+              aria-labelledby="dot-3"
+              tabindex="0"
+              data-js-dots-content
+              >
+              Lorem ipsum dolor sit amet.3
+              </div>
+              <div
+              class="slider__content"
+              id="dotpanel-4"
+              aria-labelledby="dot-4"
+              tabindex="0"
+              data-js-dots-content
+              >
+              Lorem ipsum dolor sit amet.4
+              </div>
+              <div
+              class="slider__content"
+              id="dotpanel-5"
+              aria-labelledby="dot-5"
+              tabindex="0"
+              data-js-dots-content
+              >
+              Lorem ipsum dolor sit amet.5
+              </div>
+              <div
+              class="slider__content"
+              id="dotpanel-6"
+              aria-labelledby="dot-6"
+              tabindex="0"
+              data-js-dots-content
+              >
+              Lorem ipsum dolor sit amet.6
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="hero__cities">
+        <h2 class="visually-hidden">Popular cities</h2>
+       <div class="hero__cities-body cities container">
+        <h3 class="cities__title h4">Most popular cities</h3>
+        <ul class="cities__list">
+          <li class="cities__item">
+            <div class="cities__card ">
+              <img
+                class="cities__card-image"
+                src="./images/hero/hero-cities/nicosia.jpg"
+                alt=""
+                width="129"
+                height="123"
+                loading="lazy"
+                >
+                <p class="cities__card-title">Nicosia</p>
+            </div>
+          </li>
+          <li class="cities__item">
+            <div class="cities__card ">
+              <img
+                class="cities__card-image"
+                src="./images/hero/hero-cities/limassol.jpg"
+                alt=""
+                width="129"
+                height="123"
+                loading="lazy"
+                >
+                <p class="cities__card-title">Limassol</p>
+            </div>
+          </li>
+          <li class="cities__item">
+            <div class="cities__card ">
+              <img
+                class="cities__card-image"
+                src="./images/hero/hero-cities/paphos.jpg"
+                alt=""
+                width="129"
+                height="123"
+                loading="lazy"
+                >
+                <p class="cities__card-title">Paphos</p>
+            </div>
+          </li>
+          <li class="cities__item">
+            <div class="cities__card ">
+              <img
+                class="cities__card-image"
+                src="./images/hero/hero-cities/larnaka.jpg"
+                alt=""
+                width="129"
+                height="123"
+                loading="lazy"
+                >
+                <p class="cities__card-title">Larnaka</p>
+            </div>
+          </li>
+        </ul>
+       </div>
+      </div>
+    </section>
+  </main>
 </body>
 
-</html>
+</html> 

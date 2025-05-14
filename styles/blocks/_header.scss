@@ -1,13 +1,13 @@
 @use '../helpers' as *;
 
 .header {
-    position: fixed;
-    z-index: 100;
+
     background: var(--gradient-header);
     width: 100%;
     padding-block: rem(20);
 
     &__body {
+
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -25,7 +25,7 @@
         align-items: center;
         justify-content: space-between;
         column-gap: fluid(41, 16);
-
+        z-index: 2;
         @include tablet-l {
           position: fixed;
           inset: 0;

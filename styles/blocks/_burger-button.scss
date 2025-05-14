@@ -10,6 +10,7 @@
   width: rem(40);
   height: rem(30);
   position: relative;
+  z-index: 3;
 
 
   @include hover {

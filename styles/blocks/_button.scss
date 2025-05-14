@@ -21,4 +21,12 @@
       );
       box-shadow: 0 4px 35px 0 rgba(255, 185, 175, 0.3);
   }
+
+  &-gradient {
+    box-shadow: 0 4px 35px 0 rgba(255, 185, 175, 0.3);
+    background: linear-gradient(
+      152deg,
+      var(--color-pale-yellow-orange) 0%,
+      var(--color-pale-pink-orange) 100%);
+  }
 }
