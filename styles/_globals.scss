@@ -7,13 +7,14 @@ html {
 }
 
 body {
-  @include fluid-text(16, 14);
+  @include fluid-text(18, 14);
 
   display: flex;
   flex-direction: column;
-  font-family: var(--font-family-avenir-next);
+  font-family: var(--font-family-inter);
   letter-spacing: -0.03em;
-  color: var(--color-white);
+  color: var(--color-medium-gray);
+  background-color: var(--color-extra-light-gray);
 }
 
 main {
@@ -26,40 +27,34 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  color: var(--color-white);
-}
-
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6  {
-  font-family: var(--font-family-avenir-next);
+  color: var(--color-dark-gray);
+  font-family: var(--font-family-poppins);
   font-weight: 600;
 }
 
 
 h1, .h1 {
-  @include fluid-text(72, 36);
+  @include fluid-text(75, 46);
 
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 h2, .h2 {
-  @include fluid-text(58, 28);
+  @include fluid-text(51, 30);
+
+  line-height: 1.3;
 }
 
 h3, .h3 {
-  @include fluid-text(40, 24);
+  @include fluid-text(45, 30);
 }
 
 h4, .h4 {
-  @include fluid-text(26, 18);
+  @include fluid-text(26, 20);
 }
 
 h5, .h5 {
-  @include fluid-text(24, 18);
+  @include fluid-text(23, 15);
 }
 
 h6, .h6 {
@@ -84,7 +79,7 @@ a {
   color: inherit;
 
   @include hover {
-    color: var(--color-pale-pink-orange);
+    color: var(--color-purple);
   }
 
   &[class] {
@@ -92,9 +87,22 @@ a {
   }
 }
 
-:focus-visible {
-  outline: rem(2) solid var(--color-white);
-  outline-offset: rem(4);
-  transition-duration: 0s !important;
-}
+// :focus-visible {
+//   outline: rem(2) dashed var(--color-light);
+//   outline-offset: rem(4);
+//   transition-duration: 0s !important;
+// }
 
+// a,
+// button {
+//   &[aria-label] {
+//     position: relative;
+
+//     &::before {
+//       @include abs-center;
+//       @include square(rem(44));
+
+//       content: '';
+//     }
+//   }
+// }

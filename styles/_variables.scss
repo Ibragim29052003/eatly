@@ -1,31 +1,63 @@
 @use 'helpers' as *;
 
 :root {
-  --color-pale-orange: #FFDB80;
+  /* Основные цвета */
+  --color-black: #000000;
   --color-white: #FFFFFF;
-  --color-deep-purple: #6D31D0;
-  --color-pale-pink-orange: #FDBFA3;
-  --color-pale-yellow-orange: #FFEB80;
-  --color-lavender-blue: #828CDE;
-  --color-dark-gray-purple: #434364;
 
-  --gradient-header: linear-gradient(
-    141deg,
-    #53269d 0%,
-    var(--color-deep-purple) 100%
-    );
+  /* Серые */
+  --color-dark-gray: #151515;
+  --color-gray: #3E3E3E;
+  --color-medium-gray: #606060;
+  --color-light-gray: #E7E7E7;
+  --color-extra-light-gray: #F7F7F7;
 
-  --font-family-avenir-next: 'Avenir Next', sans-serif;
-  --font-family-montserrat: 'Montserrat', sans-serif;
+  /* Синие */
+  --color-dark-blue: #081420;
+  --color-blue: #002073;
+  --color-light-blue: #5AB5FF;
+  --color-lavender: #6C5FBC;
 
-  --container-width: #{rem(1180)};
-  --container-padding-x: #{rem(50)};
+  /* Фиолетовые */
+  --color-purple: #665AB5;
+  --color-light-purple: #A596FF;
+
+  /* Зеленые */
+  --color-dark-green: #005128;
+  --color-green: #00B67A;
+  --color-light-green: #3DE25C;
+
+  /* Красные/Розовые */
+  --color-red: #EB3F5E;
+  --color-light-red: #FF5C5C;
+  --color-pink: #DB79AD;
+
+  /* Оранжевые/Желтые */
+  --color-orange: #FBAD18;
+  --color-light-orange: #FFBB71;
+  --color-yellow: #F6E259;
+
+  /* Коричневые */
+  --color-brown: #4C2F1B;
+  --color-light-brown: #86522C;
+
+
+  --font-family-inter: 'Inter', sans-serif;
+  --font-family-manrope: 'Manrope', sans-serif;
+  --font-family-plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-family-poppins: 'Poppins', sans-serif;
+  --font-family-public-sans: 'Public Sans', sans-serif;
+  --font-family-quicksand: 'Quicksand', sans-serif;
+  --font-family-roboto: 'Roboto', sans-serif;
+
+  --container-width: #{rem(1250)};
+  --container-padding-x: #{rem(30)};
 
   --transition-duration: 0.2s;
 
 
 
   @include tablet {
-    --container-width: #{rem(780)};
+    --container-width: #{rem(890)};
   }
 }
