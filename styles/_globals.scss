@@ -93,16 +93,16 @@ a {
 //   transition-duration: 0s !important;
 // }
 
-// a,
-// button {
-//   &[aria-label] {
-//     position: relative;
+a,
+button {
+  &[aria-label] {
+    position: relative;
 
-//     &::before {
-//       @include abs-center;
-//       @include square(rem(44));
+    &::before {
+      @include abs-center;
+      @include square(rem(44));
 
-//       content: '';
-//     }
-//   }
-// }
+      content: '';
+    }
+  }
+}

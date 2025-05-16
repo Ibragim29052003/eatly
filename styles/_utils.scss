@@ -21,3 +21,9 @@
     display: none !important;
   }
 }
+
+.visible-mobile-s {
+  @include mobile-s-above {
+    display: none !important;
+  }
+}
