@@ -1,0 +1,41 @@
+@use '../helpers' as *;
+
+.trustpilot {
+  display: flex;
+  width: fluid(123, 98);
+  column-gap: fluid(20, 16);
+  align-items: end;
+  @include mobile {
+    justify-self: center;
+    width: inherit;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    column-gap: fluid(9, 5);
+  }
+
+
+  &__stars {
+    display: inline-flex;
+    column-gap: fluid(4, 3);
+    align-items: center;
+
+  }
+  &__star {
+    --size: #{rem(16)};
+    @include square(var(--size));
+    background: url('../../icons/star-gray.svg') center/contain no-repeat;
+
+    &.is-active {
+      background-image: url('../../icons/star-orange.svg');
+    }
+    @include tablet {
+      --size: #{rem(12)};
+    }
+  }
+  &__count {
+    display: inline-flex;
+  }
+}

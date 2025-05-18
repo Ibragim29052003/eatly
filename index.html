@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eatly | Home</title>
   <link rel="stylesheet" href="./styles/main.css">
-  <script src="./scripts/main.js" type="module" defer></script>
+  <script src="./scripts/main.js" type="module"></script>
 </head>
 <body>
   <header class="header" data-js-header>
@@ -62,7 +62,192 @@
     </div>
   </header>
 
+  <main>
 
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__main container">
+        <div class="hero__body">
+          <div class="hero__promo">
+            <span class="hero__promo-line"></span>
+            <p class="hero__promo-info">OVER 1000 USERS</p>
+          </div>
+          <h1 class="hero__title">Enjoy Foods <span class="hidden-mobile-s">All</span> Over <span class="hidden-mobile-s">The</span> <span class="hero__title-highlight ">World</span></h1>
+          <div class="hero__description">
+            <p>EatLy help you set saving goals, earn cash back offers, Go to disclaimer for more details and get paychecks up to two days early. Get a <span class="hero__description-highlight">$20 bonus.</span></p>
+          </div>
+          <div class="hero__action">
+            <button class="hero__action-button button">Get Started</button>
+            <button class="hero__action-button button button-light">Go Pro</button>
+          </div>
+          <div class="hero__trustpilot trustpilot">
+            <img src="./images/hero/trustpilot/logo.svg" alt="" class="trustpilot__logo">
+            <div class="trustpilot__info">
+              <div
+              class="trustpilot__stars"
+              aria-label="Rating 5 star"
+              title="Rating 5 star"
+            >
+              <div class="trustpilot__star is-active"></div>
+              <div class="trustpilot__star is-active"></div>
+              <div class="trustpilot__star is-active"></div>
+              <div class="trustpilot__star is-active"></div>
+              <div class="trustpilot__star is-active"></div>
+            </div>
+              <span class="trustpilot__count">4900+</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__food-info">
+          <div class="hero__dish dish">
+            <img
+              class="dish__img"
+              src="./images/hero/dish.png"
+              alt=""
+              width="430" height="430"
+              >
+              <div class="dish__circle"></div>
+              <div class="hero__card-status card-status">
+                <div class="card-status__inner">
+                  <div class="card-status__block">
+                    <img
+                      class="card-status__img"
+                      src="./images/hero/dish.png"
+                      alt=""
+                      width="74" height="81"
+                    >
+                    <div class="card-status__content" aria-labelledby="card-status__title">
+                      <h2 class="visually-hidden">Chicken Hell</h2>
+                      <p class="card-status__title" id="card-status__title">Chicken Hell</p>
+                      <p class="card-status__status">On The Way</p>
+                    </div>
+                  </div>
+                  <div class="card-status__time">
+                    <time class="card-status__time-time" datetime="2025-05-16T15:09">3:09 PM</time>
+                  </div>
+                </div>
+              </div>
+              <div class="hero__chart-activity chart-activity">
+                <nav class="chart-activity__navigation" role="tablist" aria-label="Chart time range selection">
+                  <ul class="chart-activity__list">
+                    <li class="chart-activity__item">
+                      <button
+                      class="chart-activity__tab button is-active"
+                      aria-selected="true"
+                      role="tab"
+                      >Main</button>
+                    </li>
+                    <li class="chart-activity__item">
+                      <button
+                      class="chart-activity__tab button button-light"
+                      aria-selected="false"
+                      role="tab"
+                      >Weekly</button>
+                    </li>
+                    <li class="chart-activity__item">
+                      <button
+                      class="chart-activity__tab button button-light"
+                      aria-selected="false"
+                      role="tab"
+                      >Montly</button>
+                    </li>
+                    <li class="chart-activity__item">
+                      <button
+                      class="chart-activity__tab button button-light"
+                      aria-selected="false"
+                      role="tab"
+                      >Yearly</button>
+                    </li>
+                  </ul>
+                </nav>
+                <img
+                  class="chart-activity__graph"
+                  src="./images/hero/graph.png"
+                  alt=""
+                  width="207" height="97"
+                  aria-label="Chart showing activity"
+                  title="Chart showing activity"
+                  role="img"
+                  >
+                  <ul class="chart-activity__x-axis">
+                    <li class="chart-activity__x-axis-item is-active" aria-current="true">2D</li>
+                    <li class="chart-activity__x-axis-item">4D</li>
+                    <li class="chart-activity__x-axis-item">5D</li>
+                    <li class="chart-activity__x-axis-item">6D</li>
+                    <li class="chart-activity__x-axis-item">7D</li>
+                  </ul>
+              </div>
+              <div class="dish__icons">
+                <img class="dish__icons-top-right" src="./icons/hero/top-right.svg" alt="">
+                <img class="dish__icons-center-right" src="./icons/hero/center-right.svg" alt="">
+                <img class="dish__icons-bottom-left" src="./icons/hero/bottom-left.svg" alt="">
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__metrics metrics ">
+        <picture class="metrics__picture metrics__icon--left-left metrics__icon">
+          <source
+            srcset="./icons/metrics/left-left-mobile.svg"
+            media="(max-width: 767.98px)"
+          >
+          <source
+            srcset="./icons/metrics/left-left.svg"
+            media="(min-width: 768px)"
+          >
+          <img src="./icons/metrics/left-left.svg" alt="">
+        </picture>
+        <picture class="metrics__picture metrics__icon-left metrics__icon">
+          <source
+            srcset="./icons/metrics/left-mobile.svg"
+            media="(max-width: 767.98px)"
+          >
+          <source
+            srcset="./icons/metrics/left.svg"
+            media="(min-width: 768px)"
+          >
+          <img src="./icons/metrics/left.svg" alt="">
+        </picture>
+        <dl class="metrics__list container">
+          <div class="metrics__item">
+            <dt class="metrics__key">Satisfied Costumers All&nbspGreat&nbspOver&nbspThe&nbspWorld</dt>
+            <dd class="metrics__value">10K+</dd>
+          </div>
+          <div class="metrics__item">
+            <dt class="metrics__key">Healthy Dishes Sold Including&nbspMilk&nbspShakes&nbspSmooth</dt>
+            <dd class="metrics__value">4M</dd>
+          </div>
+          <div class="metrics__item">
+            <dt class="metrics__key">Reliable Customer Support We&nbspProvide&nbspGreat&nbspExperiences</dt>
+            <dd class="metrics__value">99.99%</dd>
+          </div>
+        </dl>
+        <picture class="metrics__picture metrics__icon--right-right metrics__icon">
+          <source
+            srcset="./icons/metrics/right-right-mobile.svg"
+            media="(max-width: 767.98px)"
+          >
+          <source
+            srcset="./icons/metrics/right-right.svg"
+            media="(min-width: 768px)"
+          >
+          <img src="./icons/metrics/right-right.svg" alt="">
+        </picture>
+        <picture class="metrics__picture metrics__icon-right metrics__icon">
+          <source
+            srcset="./icons/metrics/right-mobile.svg"
+            media="(max-width: 767.98px)"
+          >
+          <source
+            srcset="./icons/metrics/right.svg"
+            media="(min-width: 768px)"
+          >
+          <img src="./icons/metrics/right.svg" alt="">
+        </picture>
+
+      </div>
+    </section>
+  </main>
 
 
 </body>

@@ -6,6 +6,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  background-color: var(--color-extra-light-gray);
 
 
   &__body {
@@ -39,6 +40,7 @@
       justify-content: center;
       row-gap: 3rem;
       transition-duration: var(--transition-duration);
+      background-color: var(--color-extra-light-gray);
 
       &:not(.is-active) {
         @include hide;

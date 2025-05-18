@@ -12,4 +12,14 @@
     color: var(--color-lavender);
     background-color: var(--color-extra-light-gray);
   }
+
+  &-light {
+    color: var(--color-lavender);
+    background-color: var(--color-extra-light-gray);
+
+    @include hover {
+      color: var(--color-extra-light-gray);
+      background-color: var(--color-lavender);
+    }
+  }
 }
