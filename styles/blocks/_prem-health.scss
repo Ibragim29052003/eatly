@@ -1,0 +1,138 @@
+@use '../helpers' as *;
+
+.prem-health {
+
+  border-bottom: var(--border);
+  &__body {
+    display: flex;
+    justify-content: space-around ;
+    column-gap: 5rem;
+    padding-block: rem(120);
+    @include tablet {
+      padding-block: rem(85);
+    }
+    @include mobile {
+      padding-block: rem(116) rem(66);
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
+    &-inner {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      row-gap: fluid(63, 35);
+      max-width: fluid(490, 329);
+      @include mobile {
+        align-items: center;
+      }
+    }
+    @include mobile {
+      row-gap: rem(101);
+      align-items: center;
+    }
+  }
+  &__title {
+    max-width: rem(442);
+    font-weight: 700;
+    @include tablet {
+      max-width: rem(404);
+    }
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__highlight {
+    color: var(--color-purple);
+  }
+  &__list {
+    list-style-type: disc;
+    display: grid;
+    row-gap: fluid(28, 16);
+    padding-left: 1rem;
+  }
+
+  &__link {
+    width: fit-content;
+    @include hover {
+      .icon--right-arrow::after {
+      background-image: url('../../icons/prem-health/arrow-right-purple.svg');
+    }
+  }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 36%;
+      transform: translateY(35%);
+      background: url('../../icons/prem-health/arrow-curve-laptop.svg') center/contain no-repeat;
+      width: fluid(155.5, 57);
+      height: fluid(87, 101);
+      @include tablet {
+        background-image: url('../../icons/prem-health/arrow-curve-tablet.svg');
+        bottom: -1%;
+      }
+      @include mobile {
+        background-image: url('../../icons/prem-health/arrow-curve-mobile.svg');
+        bottom: -15%;
+        right: 0;
+        left: 10%;
+      }
+    }
+  }
+  &__description {
+    color: var(--color-ml-gray);
+    line-height: 1.5;
+    font-size: fluid(20.3, 12);
+  }
+
+  &__image {
+    display: block;
+    width: fluid(304, 170.7);
+    height: fluid(609, 342);
+
+    &-wrapper {
+      position: relative;
+      width: fit-content;
+
+      &::after {
+        --size: 96%;
+        @include square(var(--size));
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url('../../images/prem-health/screenshot-iphone-13.png') center/contain no-repeat;
+        z-index: -1;
+      }
+
+      &::before {
+        --width: #{rem(52)};
+        --height: #{rem(61)};
+        width: var(--width);
+        height: var(--height);
+        content: '';
+        position: absolute;
+        right: -20%;
+        top: 0%;
+        transform: translate(-1%, -23%);
+        background: url('../../icons/prem-health/top-right.svg') center/contain no-repeat;
+
+        @include tablet {
+          --width: #{rem(37.3)};
+          --height: #{rem(44)};
+          right: -16%;
+        }
+
+        @include mobile {
+          --width: #{rem(29.5)};
+          --height: #{rem(34.7)};
+          right: -21%;
+        }
+      }
+    }
+
+  }
+}
