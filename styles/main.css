@@ -521,6 +521,12 @@ a[class] {
   text-decoration: none;
 }
 
+:focus-visible {
+  outline: 0.125rem dashed var(--color-black);
+  outline-offset: 0.25rem;
+  transition-duration: 0s !important;
+}
+
 a[aria-label],
 button[aria-label] {
   position: relative;
@@ -930,15 +936,18 @@ button[aria-label]::before {
 .chart-activity__tab:not(.is-active) {
   border: none;
   color: var(--color-ml-gray);
+  background-color: inherit;
 }
 @media (any-hover: hover) {
   .chart-activity__tab:not(.is-active):hover {
-    color: var(--color-extra-light-gray);
+    color: var(--color-white);
+    background-color: var(--color-lavender);
   }
 }
 @media (any-hover: none) {
   .chart-activity__tab:not(.is-active):active {
-    color: var(--color-extra-light-gray);
+    color: var(--color-white);
+    background-color: var(--color-lavender);
   }
 }
 .chart-activity__x-axis {

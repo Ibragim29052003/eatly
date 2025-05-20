@@ -40,8 +40,11 @@
     &:not(.is-active) {
       border: none;
       color: var(--color-ml-gray);
+      background-color: inherit;
       @include hover {
-        color: var(--color-extra-light-gray);
+        color: var(--color-white);
+        background-color: var(--color-lavender);
+
       }
     }
   }
