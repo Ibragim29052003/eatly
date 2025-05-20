@@ -27,5 +27,10 @@
       background-image: url('../../icons/prem-health/arrow-right.svg');
     }
 
+    &-gray {
+      &::after{
+        background-image: url('../../icons/arrow-right-gray.svg');
+      }
+    }
   }
 }

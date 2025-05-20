@@ -343,6 +343,7 @@ svg * {
   /* Серые */
   --color-dark-gray: #151515;
   --color-gray: #3E3E3E;
+  --color-gray-accent: #98989A;
   --color-medium-gray: #606060;
   --color-ml-gray: #7f7e7e;
   --color-light-gray: #CBCBCB;
@@ -363,10 +364,13 @@ svg * {
   --color-red: #EB3F5E;
   --color-light-red: #FF5C5C;
   --color-pink: #DB79AD;
+  --color-light-pink: #DBD9EE;
+  --color-red-pink: #F7C5BA;
   /* Оранжевые/Желтые */
   --color-orange: #FBAD18;
   --color-light-orange: #FFBB71;
   --color-yellow: #F6E259;
+  --color-light-yellow: #F7EDD0;
   /* Коричневые */
   --color-brown: #4C2F1B;
   --color-light-brown: #86522C;
@@ -1387,6 +1391,202 @@ button[aria-label]::before {
 }
 .icon--right-arrow::after {
   background-image: url("../../icons/prem-health/arrow-right.svg");
+}
+.icon--right-arrow-gray::after {
+  background-image: url("../../icons/arrow-right-gray.svg");
+}
+
+.top-restaurants {
+  border-bottom: var(--border);
+}
+.top-restaurants__body {
+  display: grid;
+  row-gap: 4.0625rem;
+}
+.top-restaurants__title {
+  font-size: clamp(1.875rem, 1.4296875rem + 1.875vw, 2.8125rem);
+  text-align: center;
+  padding-bottom: 1.25rem;
+}
+.top-restaurants__list {
+  display: flex;
+  column-gap: 1.90625rem;
+}
+@media (width <= 63.99875rem) {
+  .top-restaurants__list {
+    column-gap: 1.375rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .top-restaurants__list {
+    flex-direction: column;
+    row-gap: 2.51875rem;
+    align-items: center;
+  }
+}
+.top-restaurants__item {
+  box-shadow: 6px 71px 36px 0 rgba(229, 229, 229, 0.7);
+  background: var(--color-white);
+}
+.top-restaurants__card {
+  border-bottom: var(--border);
+}
+.top-restaurants__card-body {
+  padding: 0.6875rem 1.625rem 1.125rem 2.125rem;
+}
+@media (width <= 63.99875rem) {
+  .top-restaurants__card-body {
+    padding: 0.4875rem 1.3125rem 0.8rem 1.5625rem;
+  }
+}
+.top-restaurants__card-image {
+  border-top-left-radius: 1.875rem;
+  border-top-right-radius: 1.875rem;
+}
+.top-restaurants__card-badge {
+  color: var(--color-light-orange);
+  background-color: var(--color-light-yellow);
+  font-size: 0.8rem;
+  padding: 0.1875rem 0.53125rem;
+  border-radius: 0.34375rem;
+}
+@media (width <= 63.99875rem) {
+  .top-restaurants__card-badge {
+    font-size: 0.625rem;
+    padding: 0.15625rem 0.40625rem;
+  }
+}
+.top-restaurants__card-badge-red {
+  color: var(--color-light-red);
+  background-color: var(--color-red-pink);
+}
+.top-restaurants__card-meta {
+  display: flex;
+  justify-content: space-between;
+}
+.top-restaurants__card-meta-info {
+  display: flex;
+  align-items: center;
+  column-gap: 0.65rem;
+}
+@media (width <= 63.99875rem) {
+  .top-restaurants__card-meta-info {
+    column-gap: 0.4rem;
+  }
+}
+.top-restaurants__card-meta-favorites {
+  --size: 2.125rem;
+  position: relative;
+  cursor: pointer;
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-restaurants__card-meta-favorites::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--color-light-pink);
+  z-index: 0;
+}
+.top-restaurants__card-meta-favorites:not(.is-active)::before {
+  background-color: inherit;
+}
+.top-restaurants__card-meta-favorites::after {
+  content: "";
+  position: relative;
+  z-index: 1;
+  width: 0.9125rem;
+  height: 1.23125rem;
+  mask: url("../../icons/favorites-gray.svg") no-repeat center;
+  mask-size: contain;
+  background-color: var(--color-ml-gray);
+  transition-duration: var(--transition-duration);
+}
+@media (width <= 63.99875rem) {
+  .top-restaurants__card-meta-favorites::after {
+    width: 0.725rem;
+    height: 0.98125rem;
+  }
+}
+.top-restaurants__card-meta-favorites.is-active::after {
+  background-color: var(--color-lavender);
+}
+.top-restaurants__card-star {
+  --size: 1.0625rem;
+  width: var(--size);
+  height: var(--size);
+  background: url("../../icons/star-gray.svg") center/contain no-repeat;
+  cursor: pointer;
+}
+@media (width <= 63.99875rem) {
+  .top-restaurants__card-star {
+    --size: 0.85625rem;
+  }
+}
+.top-restaurants__card-star.is-active {
+  background-image: url("../../icons/star-purple.svg");
+}
+@media (any-hover: hover) {
+  .top-restaurants__card-title:hover {
+    color: var(--color-lavender);
+  }
+}
+@media (any-hover: none) {
+  .top-restaurants__card-title:active {
+    color: var(--color-lavender);
+  }
+}
+@media (width <= 63.99875rem) {
+  .top-restaurants__card-title {
+    font-size: 1.14375rem;
+  }
+}
+.top-restaurants__card-time, .top-restaurants__card-rating {
+  font-size: clamp(0.9625rem, 0.84375rem + 0.5vw, 1.2125rem);
+}
+@media (width <= 63.99875rem) {
+  .top-restaurants__card-time, .top-restaurants__card-rating {
+    font-size: 0.925rem;
+  }
+}
+.top-restaurants__link {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--color-gray-accent);
+}
+@media (any-hover: hover) {
+  .top-restaurants__link:hover .icon--right-arrow-gray::after {
+    background-image: url("../../icons/prem-health/arrow-right-purple.svg");
+  }
+}
+@media (any-hover: none) {
+  .top-restaurants__link:active .icon--right-arrow-gray::after {
+    background-image: url("../../icons/prem-health/arrow-right-purple.svg");
+  }
+}
+
+.overall-top {
+  padding-block: 6.25rem 7.5rem;
+}
+@media (width <= 63.99875rem) {
+  .overall-top {
+    padding-block: 4.4375rem 5.3125rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .overall-top {
+    padding-block: 5.25rem 4.125rem;
+  }
+}
+.overall-top__highlight {
+  color: var(--color-purple);
 }
 
 /*# sourceMappingURL=main.css.map */
