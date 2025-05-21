@@ -17,6 +17,13 @@ class TopRestaurants {
     element.classList.toggle(this.stateClasses.isActive)
   }
 
+  _handleKeyDown(event, element) {
+    if (event.key === 'Enter') {
+      event.preventDefault() // Предотвращаем возможные побочные эффекты
+      this._onIconClick(element)
+    }
+  }
+
   init() {
     this.rootElements.forEach((rootEl) => {
       const starElement = rootEl.querySelector(this.selectors.star)
@@ -28,6 +35,9 @@ class TopRestaurants {
       starElement.addEventListener('click', () => this._onIconClick(starElement))
       favoriteElement.addEventListener('click', () => this._onIconClick(favoriteElement))
 
+       // Обработчик нажатия клавиши (Enter)
+       starElement.addEventListener('keydown', (e) => this._handleKeyDown(e, starElement))
+       favoriteElement.addEventListener('keydown', (e) => this._handleKeyDown(e, favoriteElement))
     })
   }
 

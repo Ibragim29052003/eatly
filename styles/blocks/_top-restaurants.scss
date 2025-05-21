@@ -29,16 +29,16 @@
   &__item {
     box-shadow: 6px 71px 36px 0 rgba(229, 229, 229, 0.7);
     background: var(--color-white);
+    border-radius: rem(30);
   }
 
   &__card {
-
     &-body {
       padding: rem(11) rem(26) rem(18) rem(34) ;
       @include tablet {
         padding: rem(7.8) rem(21) rem(12.8) rem(25) ;
       }
-    }    border-bottom: var(--border);
+    }
     &-image {
       border-top-left-radius: rem(30);
       border-top-right-radius: rem(30);
