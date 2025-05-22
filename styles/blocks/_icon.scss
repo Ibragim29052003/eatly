@@ -33,4 +33,20 @@
       }
     }
   }
+  &--bottom-arrow {
+    &::after {
+      background-image: url('../../icons/arrow-bottom-black.svg');
+      --size: #{rem(13)};
+      transition-duration: var(--transition-duration);
+      @include tablet {
+        --size: #{rem(9)};
+      }
+      @include mobile {
+        --size: #{rem(7.5)};
+      }
+    }
+    &.is-active::after {
+      transform: rotate(180deg);
+    }
+  }
 }

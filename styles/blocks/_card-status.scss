@@ -37,6 +37,9 @@
   &__status {
     font-weight: 500;
     font-size: fluid(9.8, 4.7);
+    &-red {
+      color: var(--color-light-red);
+    }
   }
   &__time {
     display: flex;
@@ -45,6 +48,7 @@
     font-weight: 500;
     font-size: fluid(10.6, 5.06);
     color: var(--color-light-gray);
+    font-family: var(--font-family-poppins);
   }
 
   &__img {

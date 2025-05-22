@@ -675,6 +675,126 @@
       </div>
     </section>
 
+  <section class="purchases" aria-labelledby="purchases__title">
+    <div class="purchases__body container">
+      <div class="purchases__body-inner">
+        <h2 class="purchases__title" id="purchases__title">Control <span class="overall-top__highlight">Purchases</span> Via&nbspDashboard</h2>
+        <div class="purchases__card-status card-status">
+          <ul class="purchases__list">
+            <li class="purchases__item">
+              <div class="card-status__inner">
+                <div class="card-status__block">
+                  <img
+                    class="card-status__img"
+                    src="./images/hero/dish.png"
+                    alt=""
+                    width="74" height="81">
+                  <div class="card-status__content" aria-labelledby="card-status__title">
+                    <h2 class="visually-hidden">Chicken Hell</h2>
+                    <p class="card-status__title purchases__card-title" id="card-status__title">Chicken Hell</p>
+                    <p class="card-status__status purchases__card-status-inner">On The Way</p>
+                  </div>
+                </div>
+                <div class="card-status__time">
+                  <time class="card-status__time-time" datetime="2025-05-16T15:09">3:09 PM</time>
+                </div>
+              </div>
+            </li>
+            <li class="purchases__item">
+              <div class="card-status__inner">
+                <div class="card-status__block">
+                  <img
+                    class="card-status__img"
+                    src="./images/top-dishes/swe-dish-1.png"
+                    alt=""
+                    width="74" height="81">
+                  <div class="card-status__content" aria-labelledby="card-status__title">
+                    <h2 class="visually-hidden">Swe Dish</h2>
+                    <p class="card-status__title purchases__card-title" id="card-status__title">Swe Dish</p>
+                    <p class="card-status__status purchases__card-status-inner">Delivered</p>
+                  </div>
+                </div>
+                <div class="card-status__time">
+                  <time class="card-status__time-time">Yesterday</time>
+                </div>
+              </div>
+            </li>
+            <li class="purchases__item">
+              <div class="card-status__inner">
+                <div class="card-status__block">
+                  <img
+                    class="card-status__img"
+                    src="./images/top-dishes/swe-dish-2.png"
+                    alt=""
+                    width="74" height="81">
+                  <div class="card-status__content" aria-labelledby="card-status__title">
+                    <h2 class="visually-hidden">Fish Hell Veg</h2>
+                    <p class="card-status__title purchases__card-title" id="card-status__title">Fish Hell Veg</p>
+                    <p class="card-status__status card-status__status-red purchases__card-status-inner">Cancelled</p>
+                  </div>
+                </div>
+                <div class="card-status__time">
+                  <time class="card-status__time-time">Yesterday</time>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="purchases__accordion" data-js-purchases>
+        <div class="purchases__accordion-header">
+          <h3 class="purchases__accordion-title">Purchases</h3>
+          <button
+            class="purchases__accordion-button"
+            aria-expanded="true"
+            aria-controls="purchases-content"
+            data-js-purchases-toggle
+            >
+            <span class="icon icon--bottom-arrow is-active" aria-hidden="true" data-js-purchases-icon>This month</span>
+          </button>
+        </div>
+        <div class="purchases__accordion-content is-active" id="purchases-content" data-js-purchases-content>
+          <ul class="purchases__accordion-list">
+            <li class="purchases__accordion-item purchases__accordion-item-expense">
+              <div class="purchases__accordion-content-info">
+                <div class="purchases__accordion-content-body">
+                <div class="purchases__accordion-content-body--info">
+                  <div class="purchases__accordion-icon purchases__accordion-icon--purple"></div>
+                  <div class="purchases__accordion-content-body--inner">
+                    <h4 class="purchases__accordion-content-body--title">Expense</h4>
+                    <div class="purchases__accordion-content-body--description">
+                      <p>Increased By 10%</p>
+                    </div>
+                  </div>
+                </div>
+                  <span class="purchases__accordion-content--price">$409.00</span>
+                </div>
+                <div class="purchases__accordion-content--bar purchases__accordion-content--bar-purple"></div>
+              </div>
+            </li>
+            <li class="purchases__accordion-item purchases__accordion-item-vocher">
+              <div class="purchases__accordion-content-info">
+                <div class="purchases__accordion-content-body">
+                  <div class="purchases__accordion-content-body--info">
+                  <div class="purchases__accordion-icon purchases__accordion-icon--green"></div>
+                  <div class="purchases__accordion-content-body--inner">
+                    <h4 class="purchases__accordion-content-body--title">Vocher Usage</h4>
+                    <div class="purchases__accordion-content-body--description">
+                      <p>Increased By 5%</p>
+                    </div>
+                  </div>
+                </div>
+                  <span class="purchases__accordion-content--price">$45.78</span>
+                </div>
+                <div class="purchases__accordion-content--bar purchases__accordion-content--bar-orange"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
 
   </main>
