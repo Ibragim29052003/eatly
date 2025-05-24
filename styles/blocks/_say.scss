@@ -1,0 +1,195 @@
+@use '../helpers' as *;
+
+.say {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(80, 55);
+    padding-block: fluid(116, 90) fluid(182, 79);
+    background-image: url('../../icons/say/shadow-bg.svg');
+    background-size: cover;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    position: relative;
+    column-gap: fluid(42, 28);
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__card {
+    display: grid;
+    row-gap: fluid(32, 21);
+    padding: fluid(38, 22.6) fluid(43, 26);
+    background-color: var(--color-white);
+    border-radius: rem(21);
+    max-height: fluid(400, 315);
+    overflow-y: auto;
+    flex: 0 0 auto;
+    max-width: fluid(528, 315);
+
+    &-fixed {
+      position: sticky;
+      left: 0;
+      z-index: 1;
+    }
+    @include mobile {
+      position: static;
+      margin-bottom: rem(20);
+    }
+
+    &--no-scroll {
+      overflow-y: hidden;
+      @include mobile-above {
+        display: grid !important;
+      }
+    }
+  }
+
+  &__header {
+    &-main {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-inner {
+      display: flex;
+      align-items: center;
+      column-gap: fluid(20.9, 12.5);
+    }
+  }
+
+  &__avatar {
+    --size: #{rem(71)};
+    @include square(var(--size));
+    border-radius: 50%;
+    object-fit: cover;
+    @include tablet {
+      --size: #{rem(50.5)};
+    }
+    @include mobile {
+      --size: #{rem(42.3)};
+    }
+  }
+
+  &__info {
+    display: grid;
+    row-gap: fluid(0.4, 0.3);
+  }
+
+  &__name {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  &__duration {
+    font-weight: 500;
+    font-size: fluid(16.7, 10);
+    color: var(--color-ml-gray);
+    font-family: var(--font-family-quicksand);
+
+  }
+
+  &__quote {
+  width: fluid(26.5, 15.8);
+  height: fluid(44.3, 26.4);
+
+  &-block {
+    display: flex;
+    column-gap: rem(6);
+  }
+}
+
+  &__description {
+    font-style: italic;
+    font-size: fluid(18, 10.7);
+    color: var(--color-ml-gray);
+    font-weight: 400;
+    font-family: var(--font-family-poppins);
+
+    &-light {
+      color: var(--color-gray-accent);
+    }
+  }
+
+  &__rating {
+    display: inline-flex;
+    column-gap: fluid(5.8, 3.4);
+    &-star {
+      --size: #{rem(23)};
+      @include square(var(--size));
+      background: url('../../icons/say/star-gray.svg') center/contain no-repeat;
+      @include tablet {
+        --size: #{rem(16.4)};
+      }
+      @include mobile {
+        --size: #{rem(13.7)};
+      }
+      &.is-active {
+        background-image: url('../../icons/say/star-orange.svg');
+      }
+    }
+  }
+
+  &__scroll-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-grow: 1;
+    justify-content: space-between;
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    column-gap: fluid(42, 28);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__scrollbar {
+    height: fluid(11, 5);
+    background-color: var(--color-extra-light-purple);
+    border-radius: rem(50);
+    overflow: hidden;
+  }
+
+  &__progress {
+    height: 100%;
+    width: 0%;
+    border-radius: rem(50);
+    background-color: var(--color-lavender);
+    transition-duration: var(--transition-duration);
+  }
+
+  &__mobile-container {
+    display: none;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    @include mobile {
+      column-gap: rem(28);
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

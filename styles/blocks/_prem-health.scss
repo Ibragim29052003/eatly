@@ -2,8 +2,8 @@
 
 .prem-health {
 
-  border-bottom: var(--border);
   &__body {
+    border-bottom: var(--border);
     display: flex;
     justify-content: space-around ;
     column-gap: 5rem;

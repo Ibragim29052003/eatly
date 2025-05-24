@@ -1,8 +1,8 @@
 @use '../helpers' as *;
 
 .purchases {
-  border-bottom: var(--border);
   &__body {
+    border-bottom: var(--border);
     display: flex;
     justify-content: space-between;
     column-gap: 2rem;
@@ -58,6 +58,12 @@
     &::after {
       content: '';
       position: absolute;
+    }
+    @include mobile {
+      position: relative;
+      &::after {
+        content: '';
+      position: absolute;
       background-image: url('../../icons/prem-health/arrow-curve-mobile.svg');
       background-repeat: no-repeat;
       bottom: 8%;
@@ -65,9 +71,7 @@
       width: rem(57);
       height: rem(101);
       rotate: 150deg;
-    }
-    @include mobile {
-      position: relative;
+      }
     }
   }
   &__accordion {

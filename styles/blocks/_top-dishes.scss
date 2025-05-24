@@ -1,8 +1,8 @@
 @use '../helpers' as *;
 
 .top-dishes {
-  border-bottom: var(--border);
   &__body {
+    border-bottom: var(--border);
     display: grid;
     row-gap: rem(65);
   }

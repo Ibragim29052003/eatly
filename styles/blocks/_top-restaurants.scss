@@ -1,8 +1,8 @@
 @use '../helpers' as *;
 
 .top-restaurants {
-  border-bottom: var(--border);
   &__body {
+    border-bottom: var(--border);
     display: grid;
     row-gap: rem(65);
   }
