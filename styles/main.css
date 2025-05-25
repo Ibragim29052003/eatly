@@ -2410,4 +2410,108 @@ button[aria-label]::before {
   display: none;
 }
 
+.get-discount {
+  font-family: var(--font-family-poppins);
+  padding-bottom: clamp(12.375rem, 11.840625rem + 2.25vw, 13.5rem);
+}
+.get-discount__container {
+  position: relative;
+  display: flex;
+  background-color: var(--color-lavender);
+  background-image: url("../../icons/get-discount/bg.svg");
+  border-radius: 1.875rem;
+}
+@media (width <= 47.99875rem) {
+  .get-discount__container {
+    background-image: none;
+    justify-content: center;
+  }
+}
+.get-discount__subscribe {
+  position: relative;
+  display: flex;
+}
+.get-discount__field {
+  width: 26.25rem;
+  padding: clamp(1rem, 0.821875rem + 0.75vw, 1.375rem) clamp(3.125rem, 2.53125rem + 2.5vw, 4.375rem) clamp(1rem, 0.821875rem + 0.75vw, 1.375rem) clamp(1rem, 0.821875rem + 0.75vw, 1.375rem);
+  border-radius: 0.875rem;
+  font-size: clamp(0.6625rem, 0.5021875rem + 0.675vw, 1rem);
+  border: none;
+}
+.get-discount__field:user-invalid {
+  outline: 2px solid var(--color-red);
+}
+@media (width <= 63.99875rem) {
+  .get-discount__field {
+    width: 21.875rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .get-discount__field {
+    width: 17.5rem;
+  }
+}
+.get-discount__field::placeholder {
+  color: var(--color-gray-accent);
+}
+.get-discount__title {
+  color: var(--color-white);
+  font-size: clamp(2.5625rem, 1.7015625rem + 3.625vw, 4.375rem);
+  font-weight: 800;
+}
+@media (width <= 47.99875rem) {
+  .get-discount__title {
+    text-align: center;
+  }
+}
+.get-discount__button {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  right: 1%;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: clamp(0.625rem, 0.446875rem + 0.75vw, 1rem) clamp(1rem, 0.7625rem + 1vw, 1.5rem);
+  font-size: clamp(0.6rem, 0.445625rem + 0.65vw, 0.925rem);
+  font-weight: 500;
+  border-radius: 0.70625rem;
+}
+.get-discount__image {
+  position: absolute;
+  right: 6%;
+  bottom: -21%;
+  --size: 17.125rem;
+  width: var(--size);
+  height: var(--size);
+}
+@media (width <= 63.99875rem) {
+  .get-discount__image {
+    --size: 12.1875rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .get-discount__image {
+    --size: 10.625rem;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    bottom: -42%;
+  }
+}
+.get-discount__info {
+  display: grid;
+  row-gap: 1rem;
+  padding: 2.25rem 0 3.8125rem 4.125rem;
+}
+@media (width <= 63.99875rem) {
+  .get-discount__info {
+    padding: 1.625rem 0 2.6875rem 2.9375rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .get-discount__info {
+    padding: 2.25rem 0 5.9375rem 0;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
