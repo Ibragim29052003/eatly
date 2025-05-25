@@ -1,0 +1,77 @@
+@use '../helpers' as *;
+
+.footer {
+  background-color: var(--color-dark-el-gray);
+  color: var(--color-gray-accent);
+  font-weight: 500;
+  &__body {
+
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: var(--border);
+      padding-block: rem(96) rem(29);
+      @include tablet {
+        padding-block: rem(68.3) rem(21);
+      }
+      @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-block: rem(55) rem(32.5);
+      }
+      &-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-self: stretch;
+        align-items: center;
+        padding-bottom: rem(53);
+        @include mobile-above {
+          display: contents;
+        }
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    column-gap: rem(70);
+    @include tablet {
+      column-gap: rem(50);
+    }
+    @include mobile {
+      flex-direction: column;
+      row-gap: rem(30);
+      color: var(--color-medium-gray);
+      text-transform: uppercase;
+    }
+  }
+  &__extra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: rem(57) rem(81);
+    @include tablet {
+      padding-block: rem(40.5) rem(57.4);
+    }
+    @include mobile {
+      justify-content: center;
+      padding-block: rem(26) rem(36);
+    }
+  }
+
+  &__soc1als {
+
+    &-mobile {
+      @include mobile-above {
+        display: none;
+      }
+    }
+
+    &-desktop {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+}

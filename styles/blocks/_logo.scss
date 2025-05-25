@@ -9,6 +9,10 @@
 .logo {
  max-width: fluid(115, 110);
 
+ &.footer__logo {
+   max-width: fluid(150, 100);
+ }
+
  @include hover {
   animation: pulse 1s infinite;
  }
