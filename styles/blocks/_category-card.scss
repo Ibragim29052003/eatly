@@ -1,0 +1,88 @@
+@use '../helpers' as *;
+
+.category-card {
+  border-radius: rem(14.7);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-width: rem(66.2);
+  min-height: rem(96.4);
+  padding-block: rem(8);
+  @include tablet {
+    min-width: rem(55.2);
+    min-height: rem(80.4);
+
+  }
+
+  &-pizza {
+    background-color: var(--color-light-yellow);
+  }
+
+  &-asian {
+    background-color: var(--color-extra-light-red);
+  }
+
+  &-donat {
+    background-color: var(--color-extra-light-orange);
+  }
+
+  &-ice {
+    background-color: var(--color-extra-light-blue);
+  }
+
+  &__img {
+    margin-inline: auto;
+    &-pizza {
+      width: fluid(34.6, 29);
+      height: fluid(34.6, 29);
+    }
+
+    &-asian {
+      rotate: -43.11deg;
+      width: fluid(45, 37.7);
+      height: fluid(25.7, 21.5);
+    }
+
+    &-donat {
+      width: fluid(34.6, 29);
+      height: fluid(34.6, 29);
+    }
+
+    &-ice {
+      width: fluid(22.1, 18.5);
+      height: fluid(41.2, 34.5);
+    }
+  }
+  &.is-active {
+    &.category-card-pizza {
+      outline: rem(3.5) solid var(--color-orange);
+    }
+    &.category-card-asian {
+      outline: rem(3.5) solid var(--color-red);
+    }
+    &.category-card-donat {
+      outline: rem(3.5) solid var(--color-orange);
+    }
+    &.category-card-ice {
+      outline: rem(3.5) solid var(--color-lavender);
+    }
+  }
+  &__title {
+    &-pizza {
+      color: var(--color-light-orange);
+    }
+
+    &-asian {
+      color: var(--color-red);
+    }
+
+    &-donat {
+      color: var(--color-extra-light-brown);
+    }
+
+    &-ice {
+      color: var(--color-blue);
+    }
+
+  }
+}

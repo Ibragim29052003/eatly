@@ -74,4 +74,10 @@
     }
   }
 
+  &__logo {
+    &.is-active {
+      pointer-events: none;
+    }
+  }
+
 }

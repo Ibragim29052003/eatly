@@ -8,6 +8,7 @@ class GetDiscount {
 
   constructor() {
     this.fieldElement = document.querySelector(this.selectors.field)
+    if (!this.fieldElement) {return}
     this.init()
     this.bindEvents()
   }

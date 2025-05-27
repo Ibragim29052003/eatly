@@ -150,10 +150,17 @@
     display: flex;
     justify-content: flex-end;
     color: var(--color-gray-accent);
+    font-size: rem(20);
     @include hover {
       .icon--right-arrow-gray::after {
       background-image: url('../../icons/prem-health/arrow-right-purple.svg');
     }
   }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }

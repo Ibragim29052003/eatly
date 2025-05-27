@@ -1,0 +1,102 @@
+@use '../helpers' as *;
+
+.price-filter {
+  display: grid;
+  row-gap: fluid(28.5, 22);
+  min-width: rem(316);
+  background-color: var(--color-white);
+  padding: fluid(32, 26.8);
+  border-radius: rem(23.8);
+  font-family: var(--font-family-poppins);
+  box-shadow: 6px 10px 29px 1px rgb(95 85 158 / 38%);
+  max-height: rem(591);
+
+  &__category {
+    display: grid;
+    row-gap: fluid(17.4, 14);
+    &-title {
+      font-size: fluid(21.5, 18);
+      font-weight: 600;
+    }
+    &-list {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      column-gap: fluid(12.9, 10.8);
+    }
+  }
+
+  &__sort-by {
+    display: grid;
+    row-gap: fluid(17.4, 14);
+    &--title {
+      font-size: fluid(21.5, 18);
+      font-weight: 600;
+    }
+
+    &--body {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+      color: var(--color-gray-accent);
+      font-size: fluid(15.5, 13);
+    }
+
+    &--subtitles {
+      display: grid;
+      row-gap: fluid(8.8, 6.7);
+    }
+
+    &--value {
+      color: var(--color-lavender);
+    }
+  }
+  &__price {
+    display: grid;
+    row-gap: fluid(17.4, 14);
+    &--title {
+      font-size: fluid(21.5, 18);
+      font-weight: 600;
+    }
+    &--labels {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+      color: var(--color-gray-accent);
+      font-size: fluid(10.6, 8.9);
+    }
+    &--slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: fluid(5.3, 4.4);
+      background-color: var(--color-lavender);
+      border-radius: rem(8.8);
+      outline: none;
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: fluid(20.6, 16.6);
+        height: fluid(20.6, 16.6);
+        border-radius: 50%;
+        background: var(--color-lavender);
+        cursor: pointer;
+        border: rem(3) solid var(--color-light-purple);
+      }
+
+      &::-moz-range-thumb {
+        width: fluid(20.6, 16.6);
+        height: fluid(20.6, 16.6);
+        border-radius: 50%;
+        background: var(--color-lavender);
+        cursor: pointer;
+        border: rem(3) solid var(--color-light-purple);
+      }
+    }
+  }
+
+  &__button {
+    font-size: fluid(13.7, 11.5);
+  }
+
+}

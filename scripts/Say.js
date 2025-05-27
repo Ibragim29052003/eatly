@@ -10,6 +10,7 @@ class Say {
 
   constructor() {
     this.desktopWrapper = document.querySelector(this.selectors.root)
+    if (!this.desktopWrapper) {return}
     this.scrollContainer = this.desktopWrapper.querySelector(this.selectors.scroll)
     this.progressBar = this.desktopWrapper.querySelector(this.selectors.progress)
     this.fixedCard = document.querySelector(this.selectors.fixedCard)

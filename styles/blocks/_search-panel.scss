@@ -1,0 +1,63 @@
+@use '../helpers' as *;
+
+.search-panel {
+  display: grid;
+  row-gap: fluid(35.1, 18);
+  padding-top: fluid(143, 80);
+  font-family: var(--font-family-poppins);
+  @include mobile {
+    padding-top: 0;
+  }
+
+  &__box {
+    position: relative;
+  }
+  &__img {
+    @include abs-y;
+    left: 5%;
+    rotate: -45deg;
+  }
+  &__input {
+    width: 100%;
+    padding: fluid(24.5, 20) 0 fluid(24.5, 20) fluid(91.3, 63);
+    border: none;
+    border-radius: rem(19.5);
+    background-color: var(--color-dark-el-gray);
+
+    &::placeholder {
+      font-size: fluid(20.5, 12);
+      color: var(--color-gray-accent);
+    }
+  }
+  &__tabs {
+
+    &-item {
+      width: 50%;
+      border-radius: rem(15);
+      &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      text-align: center;
+
+    }
+
+    &-content {
+      &:not(.is-active) {
+        display: none;
+      }
+
+      &:focus-visible {
+        outline-offset: -1rem;
+      }
+    }
+    &-buttons {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

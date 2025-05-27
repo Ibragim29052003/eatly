@@ -16,6 +16,7 @@ class Purchases {
 
   constructor() {
     this.rootElement = document.querySelector(this.selectors.root)
+    if (!this.rootElement) {return}
     this.toggleElement = this.rootElement.querySelector(this.selectors.toggle)
     this.iconElement = this.rootElement.querySelector(this.selectors.icon)
     this.contentElement = this.rootElement.querySelector(this.selectors.content)

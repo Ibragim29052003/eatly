@@ -6,6 +6,9 @@ import FinancialChart from './FinancialChart.js'
 import Purchases from './Purchases.js'
 import Say from './Say.js'
 import GetDiscount from './GetDiscount.js'
+import Slider from './hero-alt/Slider.js'
+import TabsCollection from './hero-alt/Tabs.js'
+import FilterCollection from './hero-alt/Filter.js'
 
 
 
@@ -16,3 +19,6 @@ new FinancialChart()
 new Purchases()
 new Say()
 new GetDiscount()
+new Slider()
+new TabsCollection()
+new FilterCollection()

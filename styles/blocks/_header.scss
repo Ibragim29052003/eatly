@@ -93,4 +93,9 @@
       justify-content: center;
     }
   }
+  &__logo {
+    &.is-active {
+      pointer-events: none;
+    }
+  }
 }
