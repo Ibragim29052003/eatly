@@ -1467,7 +1467,7 @@ button[aria-label]::before {
   }
 }
 .top-restaurants__item {
-  box-shadow: 6px 71px 36px 0 rgba(229, 229, 229, 0.7);
+  box-shadow: 6px 71px 36px 0 rgba(212, 208, 208, 0.7);
   background: var(--color-white);
   border-radius: 1.875rem;
 }
@@ -1679,7 +1679,7 @@ button[aria-label]::before {
   padding: 1.75rem 0.625rem;
   row-gap: 0.71875rem;
   border-radius: 2.1875rem;
-  box-shadow: 0.4375rem 5.125rem 2.5625rem 0 rgba(229, 229, 229, 0.7);
+  box-shadow: 0.4375rem 5.125rem 2.5625rem 0 rgba(212, 208, 208, 0.7);
   background-color: var(--color-white);
 }
 @media (width <= 63.99875rem) {
@@ -1934,6 +1934,11 @@ button[aria-label]::before {
   width: clamp(8.1875rem, 6.109375rem + 8.75vw, 12.5625rem);
   height: clamp(8.4375rem, 6.2703125rem + 9.125vw, 13rem);
 }
+.top-dishes__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .purchases__body {
   border-bottom: var(--border);
@@ -2029,7 +2034,7 @@ button[aria-label]::before {
   border-radius: 1.5625rem;
   width: 50%;
   height: fit-content;
-  box-shadow: 0.25rem 3.1875rem 1.5625rem 0 rgba(229, 229, 229, 0.7);
+  box-shadow: 0.25rem 3.1875rem 1.5625rem 0 rgba(212, 208, 208, 0.7);
 }
 @media (width <= 63.99875rem) {
   .purchases__accordion {

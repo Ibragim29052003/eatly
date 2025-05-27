@@ -44,7 +44,7 @@
     padding: rem(28) rem(10);
     row-gap: rem(11.5);
     border-radius: rem(35);
-    box-shadow: rem(7) rem(82) rem(41) 0 rgba(229, 229, 229, 0.7);
+    box-shadow: rem(7) rem(82) rem(41) 0 rgb(212 208 208 / 70%);
     background-color: var(--color-white);
     @include tablet {
       padding: rem(18) rem(7);
@@ -271,5 +271,11 @@
       height: fluid(208, 135);
 
     }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
