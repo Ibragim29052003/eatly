@@ -46,6 +46,7 @@
     border-radius: rem(35);
     box-shadow: rem(7) rem(82) rem(41) 0 rgb(212 208 208 / 70%);
     background-color: var(--color-white);
+    outline: var(--border-light);
     @include tablet {
       padding: rem(18) rem(7);
       row-gap: rem(8.5);
@@ -130,10 +131,16 @@
       }
 
       @include tablet {
+        top: 5%;
+        right: 8%;
+        transform: translate(-8%, -5%);
         width: rem(15.6);
         height: rem(13);
       }
       @include mobile {
+        top: 6%;
+        right: 8%;
+        transform: translate(-8%, -6%);
         width: rem(14.4);
         height: rem(12);
       }
@@ -277,5 +284,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &__popular {
+    border-bottom: none;
   }
 }

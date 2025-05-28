@@ -11,6 +11,7 @@
     transition-duration: .3s;
 
     &-body {
+      max-width: 90%;
       font-family: var(--font-family-poppins);
       font-weight: 400;
       font-size: fluid(20, 11);
@@ -52,7 +53,7 @@
 
     &::-webkit-details-marker {
       display: none;
-    } 
+    }
     &::after {
       @include abs-y;
 

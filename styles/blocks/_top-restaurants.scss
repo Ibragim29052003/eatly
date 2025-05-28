@@ -67,6 +67,7 @@
         display: flex;
         align-items: center;
         column-gap: rem(10.4);
+        font-family: var(--font-family-manrope);
         @include tablet {
           column-gap: rem(6.4);
         }

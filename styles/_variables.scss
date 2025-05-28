@@ -36,7 +36,7 @@
   --color-el-green: #cafadc;
 
   /* Красные/Розовые */
-  --color-red: #EB3F5E; 
+  --color-red: #EB3F5E;
   --color-light-red: #FF5C5C;
   --color-extra-light-red: #fcaaaa;
 
@@ -69,6 +69,7 @@
   --container-padding-x: #{rem(30)};
 
   --border: #{rem(1)} solid var(--color-light-gray);
+  --border-light: #{rem(1.25)} solid var(--color-dark-el-gray);
 
   --transition-duration: 0.2s;
 

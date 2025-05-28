@@ -393,6 +393,7 @@ svg * {
   --container-width: 78.125rem;
   --container-padding-x: 1.875rem;
   --border: 0.0625rem solid var(--color-light-gray);
+  --border-light: 0.078125rem solid var(--color-dark-el-gray);
   --transition-duration: 0.2s;
 }
 @media (width <= 63.99875rem) {
@@ -1511,6 +1512,7 @@ button[aria-label]::before {
   display: flex;
   align-items: center;
   column-gap: 0.65rem;
+  font-family: var(--font-family-manrope);
 }
 @media (width <= 63.99875rem) {
   .top-restaurants__card-meta-info {
@@ -1684,6 +1686,7 @@ button[aria-label]::before {
   border-radius: 2.1875rem;
   box-shadow: 0.4375rem 5.125rem 2.5625rem 0 rgba(212, 208, 208, 0.7);
   background-color: var(--color-white);
+  outline: var(--border-light);
 }
 @media (width <= 63.99875rem) {
   .top-dishes__card {
@@ -1782,12 +1785,18 @@ button[aria-label]::before {
 }
 @media (width <= 63.99875rem) {
   .top-dishes__card-icon-heart {
+    top: 5%;
+    right: 8%;
+    transform: translate(-8%, -5%);
     width: 0.975rem;
     height: 0.8125rem;
   }
 }
 @media (width <= 47.99875rem) {
   .top-dishes__card-icon-heart {
+    top: 6%;
+    right: 8%;
+    transform: translate(-8%, -6%);
     width: 0.9rem;
     height: 0.75rem;
   }
@@ -1941,6 +1950,9 @@ button[aria-label]::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.top-dishes__popular {
+  border-bottom: none;
 }
 
 .purchases__body {
@@ -3042,6 +3054,7 @@ button[aria-label]::before {
   transition-duration: 0.3s;
 }
 .accordion__content-body {
+  max-width: 90%;
   font-family: var(--font-family-poppins);
   font-weight: 400;
   font-size: clamp(0.6875rem, 0.4203125rem + 1.125vw, 1.25rem);
@@ -3206,6 +3219,92 @@ button[aria-label]::before {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.chicken {
+  padding-top: clamp(10.375rem, 8.1484375rem + 9.375vw, 15.0625rem);
+}
+.chicken__body {
+  box-shadow: 6px 71px 36px 0 rgba(212, 208, 208, 0.7);
+  background: var(--color-white);
+  border-radius: 1.875rem;
+}
+.chicken__card-image {
+  min-height: 8.75rem;
+}
+.chicken__card-title {
+  font-size: clamp(1.28125rem, 0.70234375rem + 2.4375vw, 2.5rem);
+}
+@media (any-hover: hover) {
+  .chicken__card-title:hover {
+    color: var(--color-dark-gray);
+  }
+}
+@media (any-hover: none) {
+  .chicken__card-title:active {
+    color: var(--color-dark-gray);
+  }
+}
+.chicken__card-time, .chicken__card-rating {
+  font-size: clamp(0.9625rem, 0.641875rem + 1.35vw, 1.6375rem);
+}
+@media (width > 47.99875rem) {
+  .chicken__card-meta {
+    display: contents;
+  }
+}
+.chicken__card-meta-favorites {
+  --size: 3.8625rem;
+  width: var(--size);
+  height: var(--size);
+}
+.chicken__card-meta-favorites::after {
+  width: 1.4rem;
+  height: 1.9rem;
+}
+@media (width <= 63.99875rem) {
+  .chicken__card-meta-favorites::after {
+    width: 0.9375rem;
+    height: 1.35rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .chicken__card-meta-favorites::after {
+    width: 0.725rem;
+    height: 0.98125rem;
+  }
+}
+@media (width <= 63.99875rem) {
+  .chicken__card-meta-favorites {
+    --size: 2.74375rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .chicken__card-meta-favorites {
+    --size: 1.99375rem;
+  }
+}
+.chicken__card-star {
+  --size: 1.45625rem;
+  width: var(--size);
+  height: var(--size);
+}
+@media (width <= 63.99875rem) {
+  .chicken__card-star {
+    --size: 1.0375rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .chicken__card-star {
+    --size: 0.85625rem;
+  }
+}
+@media (width > 47.99875rem) {
+  .chicken__card-body {
+    display: flex;
+    justify-content: space-between;
+    padding-block: clamp(1.3125rem, 1.1640625rem + 0.625vw, 1.625rem);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

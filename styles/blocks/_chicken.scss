@@ -1,0 +1,76 @@
+@use '../helpers' as *;
+
+.chicken {
+  padding-top: fluid(241, 166);
+
+  &__body {
+    box-shadow: 6px 71px 36px 0 rgba(212, 208, 208, 0.7);
+    background: var(--color-white);
+    border-radius: 1.875rem;
+  }
+
+  &__card {
+
+    &-image {
+      min-height: rem(140);
+    }
+    &-title {
+      font-size: fluid(40, 20.5);
+      @include hover {
+        color: var(--color-dark-gray);
+      }
+    }
+
+    &-time,
+    &-rating {
+      font-size: fluid(26.2, 15.4);
+    }
+    &-meta {
+      @include mobile-above {
+        display: contents;
+      }
+      &-favorites {
+        --size: #{rem(61.8)};
+        @include square(var(--size));
+        &::after {
+          width: rem(22.4);
+          height: rem(30.4);
+
+          @include tablet {
+            width: rem(15);
+            height: rem(21.6);
+          }
+          @include mobile {
+            width: rem(11.6);
+            height: rem(15.7);
+          }
+        }
+        @include tablet {
+          --size: #{rem(43.9)};
+        }
+        @include mobile {
+          --size: #{rem(31.9)};
+        }
+      }
+    }
+    &-star {
+      --size: #{rem(23.3)};
+      @include square(var(--size));
+
+      @include tablet {
+        --size: #{rem(16.6)};
+      }
+      @include mobile {
+        --size: #{rem(13.7)};
+      }
+    }
+
+    &-body {
+      @include mobile-above {
+        display: flex;
+        justify-content: space-between;
+        padding-block: fluid(26, 21);
+      }
+    }
+  }
+}

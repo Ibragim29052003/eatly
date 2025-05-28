@@ -4,6 +4,7 @@
     star: '[data-js-top-restaurants-star]',
     favorite: '[data-js-top-restaurants-favorite]',
     card: '[data-js-top-restaurants-card]',
+    heart: '[data-js-top-restaurants-heart]',
   }
   stateClasses = {
     isActive: 'is-active',
@@ -65,7 +66,10 @@
         const favoriteClicked = target.closest(this.selectors.favorite)
 
         if (!startClicked && !favoriteClicked) {
-          window.location.href = rootEl.dataset.productUrl
+          const productUrl = rootEl.dataset.productUrl
+          if (productUrl) {
+            window.location.href = productUrl
+          }
         }
 
       })
@@ -74,8 +78,19 @@
        starElement.addEventListener('keydown', (e) => this._handleKeyDown(e, starElement))
        favoriteElement.addEventListener('keydown', (e) => this._handleKeyDown(e, favoriteElement))
     })
+
+    this._initHearts()
   }
 
+// так как при создании функционала для кликабельной карточки, сломался функционал с сердечками
+  _initHearts() {
+    document.querySelectorAll(this.selectors.heart).forEach(heart => {
+      heart.addEventListener('click', (e) => {
+        e.stopPropagation()
+        this._onIconClick(heart)
+      })
+    })
+  }
 }
 
 export default TopRestaurants
