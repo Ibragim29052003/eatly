@@ -1,0 +1,52 @@
+@use '../helpers' as *;
+
+.faq {
+  padding-block: fluid(170, 95);
+  &__title {
+    position: relative;
+    text-align: center;
+    font-size: fluid(45, 23.6);
+    max-width: rem(480);
+    padding-bottom: fluid(90, 67);
+    @include tablet {
+      max-width: rem(400);
+    }
+    @include mobile {
+      max-width: rem(350);
+    }
+    @include mobile-s {
+      max-width: rem(215);
+    }
+
+    &::before {
+      --size: #{rem(41)};
+      @include square(var(--size));
+      position: absolute;
+      content: '';
+      top: -22%;
+      right: -1%;
+      background: url('../../icons/faq/top-right.svg') center/contain no-repeat;
+      @include tablet {
+        --size: #{rem(29)};
+        top: -14%;
+        right: -2%;
+      }
+
+      @include mobile {
+        --size: #{rem(21)};
+        top: -11%;
+        right: 3%;
+      }
+
+      @include mobile-s {
+        right: -14%;
+      }
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -33,6 +33,7 @@
   }
 
   &__card {
+    cursor: pointer;
     &-body {
       padding: rem(11) rem(26) rem(18) rem(34) ;
       @include tablet {

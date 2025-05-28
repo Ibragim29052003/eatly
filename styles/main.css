@@ -1471,6 +1471,9 @@ button[aria-label]::before {
   background: var(--color-white);
   border-radius: 1.875rem;
 }
+.top-restaurants__card {
+  cursor: pointer;
+}
 .top-restaurants__card-body {
   padding: 0.6875rem 1.625rem 1.125rem 2.125rem;
 }
@@ -3026,6 +3029,183 @@ button[aria-label]::before {
 }
 .hero-alt__price-filter {
   grid-area: filter;
+}
+
+.accordion {
+  display: grid;
+  row-gap: clamp(0.84375rem, 0.665625rem + 0.75vw, 1.21875rem);
+  border-bottom: var(--border);
+}
+.accordion__content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition-duration: 0.3s;
+}
+.accordion__content-body {
+  font-family: var(--font-family-poppins);
+  font-weight: 400;
+  font-size: clamp(0.6875rem, 0.4203125rem + 1.125vw, 1.25rem);
+  color: var(--color-gray-accent);
+  padding-bottom: clamp(2.5625rem, 2.503125rem + 0.25vw, 2.6875rem);
+}
+.accordion__content-inner {
+  overflow: hidden;
+}
+.accordion__details[open] .accordion__title::before, .accordion__details[open] .accordion__title::after {
+  background-color: var(--color-white);
+}
+.accordion__details[open] .accordion__title::after {
+  rotate: 0deg;
+}
+.accordion__details[open] + .accordion__content {
+  grid-template-rows: 1fr;
+}
+.accordion__summary {
+  position: relative;
+  list-style: none;
+  color: var(--color-dark-gray);
+}
+@media (any-hover: hover) {
+  .accordion__summary:hover {
+    color: var(--color-lavender);
+  }
+}
+@media (any-hover: none) {
+  .accordion__summary:active {
+    color: var(--color-lavender);
+  }
+}
+.accordion__summary::-webkit-details-marker {
+  display: none;
+}
+.accordion__summary::after {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  content: "";
+  right: 0;
+  --size: 1.88125rem;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background-color: var(--color-lavender);
+  z-index: -1;
+}
+@media (width <= 63.99875rem) {
+  .accordion__summary::after {
+    --size: 1.3375rem;
+  }
+}
+@media (width <= 29.99875rem) {
+  .accordion__summary::after {
+    --size: 0.9875rem;
+  }
+}
+.accordion__title {
+  position: relative;
+  padding-right: 3.125rem;
+  color: inherit;
+  transition-duration: var(--transition-duration);
+  cursor: pointer;
+}
+@media (width <= 29.99875rem) {
+  .accordion__title {
+    font-size: 0.76875rem;
+  }
+}
+.accordion__title::before, .accordion__title::after {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  content: "";
+  right: 9.75px;
+  width: 0.6625rem;
+  height: 0.06875rem;
+  background-color: var(--color-white);
+  transition-duration: var(--transition-duration);
+}
+@media (width <= 63.99875rem) {
+  .accordion__title::before, .accordion__title::after {
+    right: 6.95px;
+    width: 0.46875rem;
+    height: 0.05rem;
+  }
+}
+@media (width <= 29.99875rem) {
+  .accordion__title::before, .accordion__title::after {
+    right: 5.1px;
+    width: 0.35rem;
+    height: 0.0375rem;
+  }
+}
+.accordion__title::after {
+  rotate: 90deg;
+}
+
+.accordion-group {
+  display: grid;
+  row-gap: clamp(0.9625rem, 0.5646875rem + 1.675vw, 1.8rem);
+}
+
+.faq {
+  padding-block: clamp(5.9375rem, 3.7109375rem + 9.375vw, 10.625rem);
+}
+.faq__title {
+  position: relative;
+  text-align: center;
+  font-size: clamp(1.475rem, 0.8396875rem + 2.675vw, 2.8125rem);
+  max-width: 30rem;
+  padding-bottom: clamp(4.1875rem, 3.5046875rem + 2.875vw, 5.625rem);
+}
+@media (width <= 63.99875rem) {
+  .faq__title {
+    max-width: 25rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .faq__title {
+    max-width: 21.875rem;
+  }
+}
+@media (width <= 29.99875rem) {
+  .faq__title {
+    max-width: 13.4375rem;
+  }
+}
+.faq__title::before {
+  --size: 2.5625rem;
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+  content: "";
+  top: -22%;
+  right: -1%;
+  background: url("../../icons/faq/top-right.svg") center/contain no-repeat;
+}
+@media (width <= 63.99875rem) {
+  .faq__title::before {
+    --size: 1.8125rem;
+    top: -14%;
+    right: -2%;
+  }
+}
+@media (width <= 47.99875rem) {
+  .faq__title::before {
+    --size: 1.3125rem;
+    top: -11%;
+    right: 3%;
+  }
+}
+@media (width <= 29.99875rem) {
+  .faq__title::before {
+    right: -14%;
+  }
+}
+.faq__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=main.css.map */

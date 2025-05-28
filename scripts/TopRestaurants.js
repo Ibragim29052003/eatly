@@ -1,15 +1,16 @@
-class TopRestaurants {
+ class TopRestaurants {
   selectors = {
-    root: '[data-js-top-restaurants]',
+    container: '[data-js-top-restaurants]',
     star: '[data-js-top-restaurants-star]',
     favorite: '[data-js-top-restaurants-favorite]',
+    card: '[data-js-top-restaurants-card]',
   }
   stateClasses = {
     isActive: 'is-active',
   }
 
   constructor() {
-    this.rootElements = document.querySelectorAll(this.selectors.root)
+    this.rootElements = document.querySelectorAll(this.selectors.card)
     this.init()
   }
 
@@ -24,16 +25,50 @@ class TopRestaurants {
     }
   }
 
+  // переход на страницу товара, если клик не по звезде и не по избранному
+  _handleCardClick(event, cardElement) {
+    // closest - ищет ближайшего родителя (был ли клик по звезде или ее потомку)
+    const starElement = event.target.closest(this.selectors.star)
+    const favoriteElement = event.target.closest(this.selectors.favorite)
+    if(!starElement && !favoriteElement) {
+      const productUrl = cardElement.dataset.productUrl
+
+      if (productUrl) {
+        window.location.href = productUrl
+      }
+    }
+  }
+
   init() {
     this.rootElements.forEach((rootEl) => {
+      const bodyElement = rootEl.querySelector(this.selectors.container)
       const starElement = rootEl.querySelector(this.selectors.star)
       const favoriteElement = rootEl.querySelector(this.selectors.favorite)
 
       // на случай если ничего в блоке карточки не будет
-      if(!starElement || !favoriteElement) return
+      if(!bodyElement || !starElement || !favoriteElement) return
 
-      starElement.addEventListener('click', () => this._onIconClick(starElement))
-      favoriteElement.addEventListener('click', () => this._onIconClick(favoriteElement))
+      // stopPropagation() - предотвращаем всплытие кликов по иконкам
+      starElement.addEventListener('click', (event) => {
+        event.stopPropagation()
+        this._onIconClick(starElement)
+      })
+      favoriteElement.addEventListener('click', (event) => {
+        event.stopPropagation()
+        this._onIconClick(favoriteElement)
+      })
+
+      // обработчик для всей карточки
+      rootEl.addEventListener('click', (event) => {
+         const { target } = event
+        const startClicked = target.closest(this.selectors.star)
+        const favoriteClicked = target.closest(this.selectors.favorite)
+
+        if (!startClicked && !favoriteClicked) {
+          window.location.href = rootEl.dataset.productUrl
+        }
+
+      })
 
        // Обработчик нажатия клавиши (Enter)
        starElement.addEventListener('keydown', (e) => this._handleKeyDown(e, starElement))
