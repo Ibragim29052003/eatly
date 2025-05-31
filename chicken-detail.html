@@ -37,6 +37,11 @@
               <li class="header__nav-item">
                 <a class="header__nav-link" href="/">Contact</a>
               </li>
+              <li class="header__nav-item">
+                <a href="/basket.html" class="header__nav-link header__nav-link-basket " aria-label="Перейти в корзину">
+                  Basket <span aria-live="polite" class="header__nav-link-badge" data-js-link-badge style="display:none;">0</span>
+                </a>
+              </li>
             </ul>
           </nav>
           <div class="header__authorization">
@@ -53,6 +58,8 @@
           <span class="burger-button__line"></span>
           <span class="burger-button__line"></span>
           <span class="burger-button__line"></span>
+          <span aria-live="polite" class="header__nav-link-badge" data-js-link-badge-mobile style="display:none;">0</span>
+
         </button>
       </div>
     </div>
@@ -95,7 +102,7 @@
       </div>
         <ul class="top-dishes__list">
           <li class="top-dishes__item">
-            <div class="top-dishes__card" data-js-top-restaurants>
+            <div class="top-dishes__card" data-js-top-restaurants data-js-parent-cart data-name="Chicken Hell" data-price="12.99" data-img="./images/top-dishes/chicken.png">
               <img
                 class="top-dishes__card-image"
                 src="./images/top-dishes/chicken.png"
@@ -127,13 +134,13 @@
                   </div>
                   <div class="top-dishes__card-action">
                     <span class="top-dishes__card-price"><span class="top-dishes__card-price-highlight">$12</span>.99</span>
-                    <button class="top-dishes__card-add-to-basket" tabindex="0"></button>
+                    <button class="top-dishes__card-add-to-basket" data-js-card-add-to-basket tabindex="0"></button>
                   </div>
                 </div>
             </div>
           </li>
           <li class="top-dishes__item">
-            <div class="top-dishes__card" data-js-top-restaurants>
+            <div class="top-dishes__card" data-js-top-restaurants data-js-parent-cart data-name="Swe Dish" data-price="19.99" data-img="./images/top-dishes/swe-dish-1.png">
               <img
                 class="top-dishes__card-image"
                 src="./images/top-dishes/swe-dish-1.png"
@@ -165,13 +172,13 @@
                   </div>
                   <div class="top-dishes__card-action">
                     <span class="top-dishes__card-price"><span class="top-dishes__card-price-highlight">$19</span>.99</span>
-                    <button class="top-dishes__card-add-to-basket" tabindex="0"></button>
+                    <button class="top-dishes__card-add-to-basket" data-js-card-add-to-basket tabindex="0"></button>
                   </div>
                 </div>
             </div>
           </li>
           <li class="top-dishes__item">
-            <div class="top-dishes__card" data-js-top-restaurants>
+            <div class="top-dishes__card" data-js-top-restaurants data-js-parent-cart data-name="Swe Dish" data-price="19.99" data-img="./images/top-dishes/swe-dish-1.png">
               <img
                 class="top-dishes__card-image"
                 src="./images/top-dishes/swe-dish-2.png"
@@ -203,13 +210,13 @@
                   </div>
                   <div class="top-dishes__card-action">
                     <span class="top-dishes__card-price"><span class="top-dishes__card-price-highlight">$19</span>.99</span>
-                    <button class="top-dishes__card-add-to-basket" tabindex="0"></button>
+                    <button class="top-dishes__card-add-to-basket" data-js-card-add-to-basket tabindex="0"></button>
                   </div>
                 </div>
             </div>
           </li>
           <li class="top-dishes__item">
-            <div class="top-dishes__card" data-js-top-restaurants>
+            <div class="top-dishes__card" data-js-top-restaurants data-js-parent-cart data-name="Chicken Hell" data-price="12.99" data-img="./images/top-dishes/chicken.png">
               <img
                 class="top-dishes__card-image"
                 src="./images/top-dishes/chicken.png"
@@ -241,13 +248,13 @@
                   </div>
                   <div class="top-dishes__card-action">
                     <span class="top-dishes__card-price"><span class="top-dishes__card-price-highlight">$12</span>.99</span>
-                    <button class="top-dishes__card-add-to-basket" tabindex="0"></button>
+                    <button class="top-dishes__card-add-to-basket" data-js-card-add-to-basket tabindex="0"></button>
                   </div>
                 </div>
             </div>
           </li>
           <li class="top-dishes__item hidden-mobile-s">
-            <div class="top-dishes__card" data-js-top-restaurants>
+            <div class="top-dishes__card" data-js-top-restaurants data-js-parent-cart data-name="Swe Dish" data-price="19.99" data-img="./images/top-dishes/swe-dish-1.png">
               <img
                 class="top-dishes__card-image"
                 src="./images/top-dishes/swe-dish-1.png"
@@ -279,7 +286,7 @@
                   </div>
                   <div class="top-dishes__card-action">
                     <span class="top-dishes__card-price"><span class="top-dishes__card-price-highlight">$19</span>.99</span>
-                    <button class="top-dishes__card-add-to-basket" tabindex="0"></button>
+                    <button class="top-dishes__card-add-to-basket" data-js-card-add-to-basket tabindex="0"></button>
                   </div>
                 </div>
             </div>
@@ -295,7 +302,7 @@
       </div>
         <ul class="top-dishes__list" style="justify-content: flex-start;">
           <li class="top-dishes__item">
-            <div class="top-dishes__card" data-js-top-restaurants>
+            <div class="top-dishes__card" data-js-top-restaurants data-js-parent-cart data-name="Chicken Hell" data-price="12.99" data-img="./images/top-dishes/chicken.png">
               <img
                 class="top-dishes__card-image"
                 src="./images/top-dishes/chicken.png"
@@ -327,13 +334,13 @@
                   </div>
                   <div class="top-dishes__card-action">
                     <span class="top-dishes__card-price"><span class="top-dishes__card-price-highlight">$12</span>.99</span>
-                    <button class="top-dishes__card-add-to-basket" tabindex="0"></button>
+                    <button class="top-dishes__card-add-to-basket" data-js-card-add-to-basket tabindex="0"></button>
                   </div>
                 </div>
             </div>
           </li>
           <li class="top-dishes__item">
-            <div class="top-dishes__card" data-js-top-restaurants>
+            <div class="top-dishes__card" data-js-top-restaurants data-js-parent-cart data-name="Swe Dish" data-price="19.99" data-img="./images/top-dishes/swe-dish-1.png">
               <img
                 class="top-dishes__card-image"
                 src="./images/top-dishes/swe-dish-1.png"
@@ -365,7 +372,7 @@
                   </div>
                   <div class="top-dishes__card-action">
                     <span class="top-dishes__card-price"><span class="top-dishes__card-price-highlight">$19</span>.99</span>
-                    <button class="top-dishes__card-add-to-basket" tabindex="0"></button>
+                    <button class="top-dishes__card-add-to-basket" data-js-card-add-to-basket tabindex="0"></button>
                   </div>
                 </div>
             </div>

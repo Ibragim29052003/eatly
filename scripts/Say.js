@@ -1,3 +1,5 @@
+import MatchMedia from "./MatchMedia.js"
+
 class Say {
 
   selectors = {
@@ -45,8 +47,8 @@ class Say {
 
   // метод переключения видимости блоков карточек в зависимости от ширины экрана
   toggleCardsVisibility() {
-    const isMobile = window.matchMedia('(max-width: 767.98px)').matches
-
+    // matches будет true, если будет выполняться условие в файле MatchMedia.js
+    const isMobile = MatchMedia.mobile.matches
     if (isMobile) {
       if (this.desktopWrapper) this.desktopWrapper.style.display = 'none'
       if (this.mobileContainer) this.mobileContainer.style.display = 'flex'

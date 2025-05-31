@@ -9,8 +9,7 @@ import GetDiscount from './GetDiscount.js'
 import Slider from './hero-alt/Slider.js'
 import TabsCollection from './hero-alt/Tabs.js'
 import FilterCollection from './hero-alt/Filter.js'
-
-
+import CartManager from './CartManager.js'
 
 new Header() // запускаем/инициализируем класс Header
 new TopRestaurants()
@@ -22,3 +21,4 @@ new GetDiscount()
 new Slider()
 new TabsCollection()
 new FilterCollection()
+new CartManager()

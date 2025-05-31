@@ -26,7 +26,7 @@
       &:nth-child(2) {
         rotate: -45deg;
       }
-      &:last-child {
+      &:nth-child(3) {
         width: 0;
       }
     }

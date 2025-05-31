@@ -59,7 +59,7 @@
       column-gap: rem(53);
 
       @include tablet {
-        column-gap: rem(38);
+        column-gap: rem(37);
       }
 
       @include mobile {
@@ -74,6 +74,21 @@
         color: var(--color-lavender);
         pointer-events: none;
       }
+
+      &-basket {
+        position: relative;
+      }
+
+      &-badge {
+        background-color: var(--color-red);
+        color: var(--color-white);
+        border-radius: 50%;
+        padding: rem(1) rem(7);
+        font-size: rem(14);
+        position: absolute;
+        top: -21px;
+        right: -26px;
+      }
     }
   }
 
@@ -86,7 +101,7 @@
       column-gap: rem(6);
     }
     &-login {
-      padding: fluid(20, 13) fluid(26, 17);
+      padding: fluid(20, 13) fluid(23, 17);
 
     }
     @include mobile {
