@@ -1,0 +1,20 @@
+// чтобы получить этот файл, нужно в терминале ввести команду npm init
+{
+  "name": "future-tech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-watch": "sass --watch ." // написал сам (этой командой мы запустим препроцессор, чтобы он автоматически отслеживал изменения scss файлов в рамках папки текущего проекта и компилировал в css файлы)
+  },
+  //  запуск sass команда npm run sass-watch  
+  "author": "",
+  "license": "ISC",
+  
+  "devDependencies": { // npm install sass --save-dev 
+    "sass": "^1.87.0"
+  }
+}
+
+ 
