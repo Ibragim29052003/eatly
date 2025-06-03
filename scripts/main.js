@@ -3,7 +3,7 @@ import Header from './Header.js'
 import TopRestaurants from './TopRestaurants.js'
 import ChartActivityRange from './ChartActivityRange.js'
 import FinancialChart from './FinancialChart.js'
-import Purchases from './Purchases.js'
+import PurchasesCollection from './Purchases.js'
 import Say from './Say.js'
 import GetDiscount from './GetDiscount.js'
 import Slider from './hero-alt/Slider.js'
@@ -15,7 +15,7 @@ new Header() // запускаем/инициализируем класс Heade
 new TopRestaurants()
 new ChartActivityRange()
 new FinancialChart()
-new Purchases()
+new PurchasesCollection()
 new Say()
 new GetDiscount()
 new Slider()

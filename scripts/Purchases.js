@@ -1,6 +1,8 @@
+const rootSelector = '[data-js-purchases]'
+
 class Purchases {
   selectors = {
-    root: '[data-js-purchases]',
+    root: rootSelector,
     toggle: '[data-js-purchases-toggle]',
     icon: '[data-js-purchases-icon]',
     content: '[data-js-purchases-content]',
@@ -14,8 +16,8 @@ class Purchases {
     ariaExpanded: 'aria-expanded'
   }
 
-  constructor() {
-    this.rootElement = document.querySelector(this.selectors.root)
+  constructor(rootElement) {
+    this.rootElement = rootElement
     if (!this.rootElement) {return}
     this.toggleElement = this.rootElement.querySelector(this.selectors.toggle)
     this.iconElement = this.rootElement.querySelector(this.selectors.icon)
@@ -37,8 +39,16 @@ class Purchases {
 
 }
 
-export default Purchases
+class PurchasesCollection {
+  constructor() {
+    this.init()
+  }
 
+  init() {
+    document.querySelectorAll(rootSelector).forEach((element) => {
+      new Purchases(element)
+    })
+  }
+}
 
-
-
+export default PurchasesCollection

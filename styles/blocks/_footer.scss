@@ -80,4 +80,12 @@
     }
   }
 
+  &__link {
+    &.is-active {
+      font-weight: 600;
+      color: var(--color-lavender);
+      pointer-events: none;
+    }
+  }
+
 }
