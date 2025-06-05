@@ -6,9 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eatly | Menu</title>
   <link rel="stylesheet" href="./styles/main.css">
-  <script src="./scripts/Basket/Cart.js" type="module"></script>
   <script src="./scripts/main.js" type="module"></script>
-
 </head>
 
 <body>
@@ -31,7 +29,7 @@
                 <a class="header__nav-link" href="/menu.html">Menu</a>
               </li>
               <li class="header__nav-item">
-                <a class="header__nav-link" href="/blog.html">Blog</a>
+                <a class="header__nav-link is-active" href="/blog.html">Blog</a>
               </li>
               <li class="header__nav-item">
                 <a class="header__nav-link" href="/pricing.html">Pricing</a>
@@ -40,7 +38,9 @@
                 <a class="header__nav-link" href="/">Contact</a>
               </li>
               <li class="header__nav-item">
-                <a class="header__nav-link is-active" href="/basket.html">Basket</a>
+                <a href="/basket.html" class="header__nav-link header__nav-link-basket " aria-label="Перейти в корзину">
+                  Basket <span aria-live="polite" class="header__nav-link-badge" data-js-link-badge style="display:none;">0</span>
+                </a>
               </li>
             </ul>
           </nav>
@@ -58,6 +58,7 @@
           <span class="burger-button__line"></span>
           <span class="burger-button__line"></span>
           <span class="burger-button__line"></span>
+          <span aria-live="polite" class="header__nav-link-badge" data-js-link-badge-mobile style="display:none;">0</span>
         </button>
       </div>
     </div>
@@ -65,106 +66,195 @@
 
   <main>
 
-    <section class="map container">
-      <picture class="map__picture">
-        <source srcset="./images/basket/map-mobile.png" media="(max-width: 767.98px)">
-        <source srcset="./images/basket/map-tablet.png" media="(min-width: 767.98px)">
-        <source srcset="./images/basket/map-desktop.png" media="(min-width: 1023.98px)">
-        <img
-          src="./images/basket/map-desktop.png"
-          alt=""
-          class="map__image">
-      </picture>
-
-      <div class="map__delivery">
-        <div class="map__delivery-body">
-          <div class="map__delivery-person">
-            <img
-            src="./images/basket/person-1.png"
-            alt=""
-            class="map__delivery-avatar"
-            width="59" height="59"
+  <section class="get-discount container get-discount__blog" aria-labelledby="get-discount__title" data-js-discount>
+    <div class="get-discount__container get-discount__container--blog">
+      <div class="get-discount__info">
+        <h2 class="get-discount__title" id="get-discount__title">GET 50%</h2>
+        <div class="get-discount__subscribe">
+            <label class="get-discount__label visually-hidden" for="email">Email</label>
+            <input
+              class="get-discount__field"
+              id="email"
+              placeholder="Enter Your Email Address"
+              type="email"
+              data-js-get-discount-field
             >
-            <div class="map__delivery-person-data">
-              <p class="map__delivery-name h5">David Smith</p>
-              <p class="map__delivery-role">Food Rider</p>
+            <button class="get-discount__button button" type="submit">subscribe</button>
+        </div>
+      </div>
+      <img
+      class="get-discount__image"
+      src="./images/top-dishes/swe-dish-1.png"
+      alt=""
+      width="274"
+      height="276"
+      >
+    </div>
+  </section>
+
+
+  <section class="articles container" aria-labelledby="articles__title" aria-label="List of articles" data-js-articles-view>
+    <h1 class="articles__title h3" id="articles__title">Latest <span class="overall-top__highlight">Articles</span></h1>
+    <ul class="articles__grid" role="list" data-js-articles-grid></ul>
+    <div class="articles__pagination">
+      <button class="articles__button articles__button-prev" aria-label="Previous page" disabled data-js-prev-page-btn></button>
+      <button class="articles__button articles__button-next" aria-label="Next page" data-js-next-page-btn></button>
+    </div>
+  </section>
+
+
+  <section class="article-view container" aria-labelledby="article-view__title" hidden data-js-article-view>
+    <article class="article-view__content" tabindex="-1" aria-live="polite">
+      <h2 class="article-view__title" id="article-view__title" data-js-article-view-title></h2>
+      <div class="articles__item-info-user">
+        <img class="articles__item-info-image" src="../images/article/ava.png" alt="" width="43.7" height="43.7">
+        <div class="articles__item-author">
+          <p class="articles__item-info-subtitle">Written By</p>
+          <h4 class="articles__item-info-title">Perperzon</h4>
+        </div>
+      </div>
+    <div class="article-view__image-wrapper">
+      <img
+      class="article-view__image"
+      src=""
+      alt=""
+      data-js-article-view-image
+    >
+    </div>
+    <div class="article-view__content-inner">
+      <div class="article-view__body" data-js-article-view-body></div>
+      <aside class="article__related related hidden-mobile" aria-labelledby="related__title">
+        <h3 class="related__title" id="related__title">Top Articles</h3>
+        <ul class="related__list" data-js-related-list></ul>
+      </aside>
+    </div>
+
+
+      <button class="article-view__button button" aria-label="Next article" data-js-article-view-next-btn>
+        <span class="icon icon--right-arrow">Next article</span>
+        </button>
+    </article>
+
+  </section>
+
+
+  <section class="faq" aria-labelledby="faq__title" data-js-faq>
+    <div class="faq__body container">
+      <h2 class="faq__title" id="faq__title">Frequently&nbsp;Asked <span class="overall-top__highlight">Questions</span></h2>
+      <div class="faq__body-inner">
+        <div class="accordion-group">
+          <div class="accordion">
+            <details class="accordion__details" name="faq">
+              <summary class="accordion__summary">
+                <h3 class="accordion__title h5">
+                  <span role="term" aria-details="faq-1">How long does delivery take?</span>
+                </h3>
+              </summary>
+            </details>
+            <div
+            class="accordion__content"
+            id="faq-1"
+            role="definition"
+            >
+            <div class="accordion__content-inner">
+              <div class="accordion__content-body">
+                <p>You Can Get Information By Contacting Our Support Team Have 24/7 Service. What's The Difference Between Free And Paid Plan ?</p>
+              </div>
             </div>
           </div>
-          <div class="map__delivery-content">
-            <div class="map__delivery-details">
-              <div class="map__delivery-address">
-                <p class="map__delivery-label">Your Address</p>
-                <address class="map__delivery-text">Horizenal Road Stree 1178 California, USA</address>
+          </div>
+
+          <div class="accordion">
+            <details class="accordion__details" name="faq">
+              <summary class="accordion__summary">
+                <h3 class="accordion__title h5">
+                  <span role="term" aria-details="faq-2">How Does It Work ?</span>
+                </h3>
+              </summary>
+            </details>
+            <div
+            class="accordion__content"
+            id="faq-2"
+            role="definition"
+            >
+            <div class="accordion__content-inner">
+              <div class="accordion__content-body">
+                <p>Our service is simple! Just place your order online, choose your preferred delivery time, and our team will handle the rest. You'll receive updates on your order status until it arrives at your doorstep.
+                </p>
               </div>
-              <div class="map__delivery-time">
-                <p class="map__delivery-label">Delivery Time</p>
-                <time class="map__delivery-text" datetime="PT15M">15 Minutes</time>
-              </div>
-              <span class="map__delivery-divider" aria-hidden="true"></span>
             </div>
-            <div class="map__delivery-status map__delivery-status--pending button">Pending</div>
+          </div>
+          </div>
+
+          <div class="accordion">
+            <details class="accordion__details" name="faq">
+              <summary class="accordion__summary">
+                <h3 class="accordion__title h5">
+                  <span role="term" aria-details="faq-3">How does your food delivery service work?</span>
+                </h3>
+              </summary>
+            </details>
+            <div
+            class="accordion__content"
+            id="faq-3"
+            role="definition"
+            >
+            <div class="accordion__content-inner">
+              <div class="accordion__content-body">
+                <p>You can browse restaurants, select your meals, and place an order through our app or website. After checkout, the restaurant prepares your food, and our courier delivers it to you as quickly as possible.
+                </p>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="accordion">
+            <details class="accordion__details" name="faq">
+              <summary class="accordion__summary">
+                <h3 class="accordion__title h5">
+                  <span role="term" aria-details="faq-4">What payment options do you accept?</span>
+                </h3>
+              </summary>
+            </details>
+            <div
+            class="accordion__content"
+            id="faq-4"
+            role="definition"
+            >
+            <div class="accordion__content-inner">
+              <div class="accordion__content-body">
+                <p>We accept various payment methods, including credit/debit cards, digital wallets (like Apple Pay, Google Pay), and cash on delivery in select areas.
+                </p>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="accordion">
+            <details class="accordion__details" name="faq">
+              <summary class="accordion__summary">
+                <h3 class="accordion__title h5">
+                  <span role="term" aria-details="faq-5">Do you offer discounts or promotions?</span>
+                </h3>
+              </summary>
+            </details>
+            <div
+            class="accordion__content"
+            id="faq-5"
+            role="definition"
+            >
+            <div class="accordion__content-inner">
+              <div class="accordion__content-body">
+                <p>Yes! We regularly run special offers, promo codes, and loyalty discounts. Check our app, website, or social media for the latest deals.</p>
+              </div>
+            </div>
+          </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-
-
-
-    <section class="basket">
-      <div class="basket__inner container">
-        <div class="basket__empty-card h4" data-js-basket-empty-card>
-          Your cart is empty.
-        </div>
-
-        <div class="basket__card" data-js-basket-card></div>
-
-        <div class="basket__coupon">
-          <div class="basket__coupon-field-wrapper">
-            <label class="basket__coupon-label visually-hidden" aria-label="Apply Coupon" for="coupon"></label>
-            <input class="basket__coupon-field" id="coupon" type="text" placeholder="Apply Coupon"></div>
-          <button class="basket__coupon-button button">Apply</button>
-
-        </div>
-
-        <div class="basket__totals">
-          <p class="basket__totals-item basket__subtotal-text">Subtotal: <span class="basket__subtotal-container">$<span class="basket__subtotal" data-js-basket-subtotal>0.00</span></span></p>
-          <p class="basket__totals-item basket__delivery-text">Delivery: <span class="basket__delivery-container">$<span class="basket__delivery" data-js-basket-delivery>0.00</span></span></p>
-          <p class="basket__totals-item basket__total-text">Total: <span class="basket__total-container">$<span class="basket__total" data-js-basket-total>0.00</span></span></p>
-        </div>
-
-        <button class="basket__checkout-button button" data-js-basket-button-checkout>Review Payment</button>
-        <div class="basket__confirmation-msg" data-js-basket-confirm-msg>Thanks for your order!</div>
-      </div>
-    </section>
-
-
-
-    <section class="get-discount container" aria-labelledby="get-discount__title">
-      <div class="get-discount__container">
-        <div class="get-discount__info">
-          <h2 class="get-discount__title" id="get-discount__title">GET 50%</h2>
-          <div class="get-discount__subscribe">
-              <label class="get-discount__label visually-hidden" for="email">Email</label>
-              <input
-                class="get-discount__field"
-                id="email"
-                placeholder="Enter Your Email Address"
-                type="email"
-                data-js-get-discount-field
-              >
-              <button class="get-discount__button button" type="submit">subscribe</button>
-          </div>
-        </div>
-        <img
-        class="get-discount__image"
-        src="./images/top-dishes/swe-dish-1.png"
-        alt=""
-        width="274"
-        height="276"
-        >
-      </div>
-    </section>
   </main>
 
 <footer class="footer">
@@ -245,7 +335,7 @@
       <nav class="footer__navigation">
         <ul class="footer__list">
           <li class="footer__item">
-            <a href="/blog.html" class="footer__link">Blog</a>
+            <a href="/blog.html" class="footer__link is-active">Blog</a>
           </li>
           <li class="footer__item">
             <a href="/pricing.html" class="footer__link">Pricing</a>

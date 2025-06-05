@@ -3,6 +3,9 @@
 .get-discount {
   font-family: var(--font-family-poppins);
   padding-bottom: fluid(216, 198);
+  &__blog {
+    padding-top: fluid(230, 173);
+  }
 
   &__container {
     position: relative;

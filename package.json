@@ -1,5 +1,6 @@
 {
-  "name": "emigration-to-other-countries",
+  "$schema": "./package.schema.json",
+  "name": "eatly",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

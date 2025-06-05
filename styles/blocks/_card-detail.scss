@@ -1,0 +1,37 @@
+@use "../helpers" as *;
+
+
+.card-detail {
+  display: grid;
+  row-gap: fluid(95, 54);
+  font-family: var(--font-family-poppins);
+  padding-bottom: fluid(100, 55);
+  padding-right: rem(75);
+  border-right: var(--border);
+  @include tablet {
+    padding-right: rem(53.3);
+  }
+  @include mobile {
+    padding-right: 0;
+    border-right: none;
+  }
+
+  &__subtitle {
+    font-size: fluid(33, 17.4);
+    padding-bottom: fluid(35, 18);
+  }
+  &__item,
+  &__text {
+    font-size: fluid(22, 11.6);
+    font-weight: 400;
+    line-height: 2;
+  }
+
+  &__list {
+    display: grid;
+    row-gap: fluid(10, 4);
+    list-style-type: disc;
+    padding-top: fluid(56, 27.5);
+  }
+
+}

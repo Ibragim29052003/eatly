@@ -1,0 +1,78 @@
+@use "../helpers" as *;
+
+.related {
+  width: 31.8%;
+  padding-left: rem(46.7);
+  @include tablet {
+    padding-left: rem(33.2);
+    width: 35.8%;
+  }
+  &__title {
+    font-size: rem(30);
+    padding-bottom: rem(34.2);
+    @include tablet {
+      font-size: rem(21.3);
+      padding-bottom: rem(24.3);
+    }
+  }
+
+  &__list {
+    display: grid;
+    row-gap: fluid(60.5, 43);
+    scroll-behavior: smooth;
+    max-height: rem(1150);
+    overflow-y: auto;
+  }
+
+  &__item {
+    display: grid;
+    row-gap: fluid(22, 14.8);
+    cursor: pointer;
+    border-radius: fluid(15.8, 10.9);
+    padding: rem(22) rem(16);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    transition-duration: var(--transition-duration);
+    background-color: var(--color-white);
+
+    @include tablet {
+      padding: rem(16) rem(12);
+
+    }
+
+    @include hover {
+      outline: none;
+      transform: translateY(rem(-5));
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    &:focus {
+       outline: none;
+      transform: translateY(rem(-5));
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    &-image {
+      // width: fluid(309.7, 212.7);
+      width: 100%;
+      height: rem(232.8);
+      object-fit: cover;
+      border-radius: fluid(12.2, 8.4);
+      @include tablet {
+        height: rem(165.5);
+
+      }
+    }
+
+    &-title {
+      color: var(--color-black);
+      font-size: fluid(21.1, 14.5);
+      font-weight: 600;
+      font-family: var(--font-family-poppins);
+    }
+
+    &--next {
+      background-color: var(--color-extra-light-purple);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+    }
+  }
+}

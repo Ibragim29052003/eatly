@@ -10,6 +10,9 @@ import Slider from './hero-alt/Slider.js'
 import TabsCollection from './hero-alt/Tabs.js'
 import FilterCollection from './hero-alt/Filter.js'
 import CartManager from './CartManager.js'
+import Blog from './Blog.js'
+
+
 
 new Header() // запускаем/инициализируем класс Header
 new TopRestaurants()
@@ -22,3 +25,5 @@ new Slider()
 new TabsCollection()
 new FilterCollection()
 new CartManager()
+new Blog()
+
