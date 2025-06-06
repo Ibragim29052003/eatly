@@ -4,11 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eatly | Menu</title>
+  <title>Eatly | Home</title>
   <link rel="stylesheet" href="./styles/main.css">
-  <script src="./scripts/Basket/Cart.js" type="module"></script>
   <script src="./scripts/main.js" type="module"></script>
-
 </head>
 
 <body>
@@ -37,11 +35,12 @@
                 <a class="header__nav-link" href="/pricing.html">Pricing</a>
               </li>
               <li class="header__nav-item">
-                               <a class="header__nav-link" href="/contact.html">Contact</a>
-
+                <a class="header__nav-link is-active" href="/contact.html">Contact</a>
               </li>
               <li class="header__nav-item">
-                <a class="header__nav-link is-active" href="/basket.html">Basket</a>
+                <a href="/basket.html" class="header__nav-link header__nav-link-basket " aria-label="Перейти в корзину">
+                  Basket <span aria-live="polite" class="header__nav-link-badge" data-js-link-badge style="display:none;">0</span>
+                </a>
               </li>
             </ul>
           </nav>
@@ -59,6 +58,7 @@
           <span class="burger-button__line"></span>
           <span class="burger-button__line"></span>
           <span class="burger-button__line"></span>
+          <span aria-live="polite" class="header__nav-link-badge" data-js-link-badge-mobile style="display:none;">0</span>
         </button>
       </div>
     </div>
@@ -66,114 +66,85 @@
 
   <main>
 
-    <section class="map container">
-      <picture class="map__picture">
-        <source srcset="./images/basket/map-mobile.png" media="(max-width: 767.98px)">
-        <source srcset="./images/basket/map-tablet.png" media="(min-width: 767.98px)">
-        <source srcset="./images/basket/map-desktop.png" media="(min-width: 1023.98px)">
-        <img
-          src="./images/basket/map-desktop.png"
-          alt=""
-          class="map__image">
-      </picture>
-
-      <div class="map__delivery">
-        <div class="map__delivery-body">
-          <div class="map__delivery-person">
-            <img
-            src="./images/basket/person-1.png"
-            alt=""
-            class="map__delivery-avatar"
-            width="59" height="59"
-            >
-            <div class="map__delivery-person-data">
-              <p class="map__delivery-name h5">David Smith</p>
-              <p class="map__delivery-role">Food Rider</p>
-            </div>
+    <section class="support" aria-labelledby="support__title">
+      <div class="support__inner container">
+        <div class="support__info">
+          <h1 class="support__title hidden-mobile" id="support__title">
+            Customer
+            <span class="overall-top__highlight">Support</span>
+          </h1>
+          <div class="support__contact-us visible-mobile" aria-labelledby="support__contact-us--title">
+            <h2 class="support__contact-us--title" id="support__contact-us--title">Contact Us</h2>
           </div>
-          <div class="map__delivery-content">
-            <div class="map__delivery-details">
-              <div class="map__delivery-address">
-                <p class="map__delivery-label">Your Address</p>
-                <address class="map__delivery-text">Horizenal Road Stree 1178 California, USA</address>
-              </div>
-              <div class="map__delivery-time">
-                <p class="map__delivery-label">Delivery Time</p>
-                <time class="map__delivery-text" datetime="PT15M">15 Minutes</time>
-              </div>
-              <span class="map__delivery-divider" aria-hidden="true"></span>
-            </div>
-            <div class="map__delivery-status map__delivery-status--pending button">Pending</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-
-    <section class="basket">
-      <div class="basket__inner container">
-        <div class="basket__empty-card h4" data-js-basket-empty-card>
-          Your cart is empty.
-        </div>
-
-        <div class="basket__card" data-js-basket-card></div>
-
-        <div class="basket__coupon">
-          <div class="basket__coupon-field-wrapper">
-            <label class="basket__coupon-label visually-hidden" aria-label="Apply Coupon" for="coupon"></label>
-            <input class="basket__coupon-field" id="coupon" type="text" placeholder="Apply Coupon"></div>
-          <button class="basket__coupon-button button">Apply</button>
-
-        </div>
-
-        <div class="basket__totals">
-          <p class="basket__totals-item basket__subtotal-text">Subtotal: <span class="basket__subtotal-container">$<span class="basket__subtotal" data-js-basket-subtotal>0.00</span></span></p>
-          <p class="basket__totals-item basket__delivery-text">Delivery: <span class="basket__delivery-container">$<span class="basket__delivery" data-js-basket-delivery>0.00</span></span></p>
-          <p class="basket__totals-item basket__total-text">Total: <span class="basket__total-container">$<span class="basket__total" data-js-basket-total>0.00</span></span></p>
-        </div>
-
-        <button class="basket__checkout-button button" data-js-basket-button-checkout>Review Payment</button>
-        <div class="basket__confirmation-msg" data-js-basket-confirm-msg>Thanks for your order!</div>
-      </div>
-    </section>
-
-
-
-    <section class="get-discount container" aria-labelledby="get-discount__title">
-      <div class="get-discount__container">
-        <div class="get-discount__info">
-          <h2 class="get-discount__title" id="get-discount__title">GET 50%</h2>
-          <div class="get-discount__subscribe">
-              <label class="get-discount__label visually-hidden" for="email">Email</label>
+          <form action="/" class="support__form" novalidate data-js-form>
+            <div class="support__field">
+              <label for="name" class="support__label visually-hidden">Name</label>
               <input
-                class="get-discount__field"
+                id="name"
+                class="support__control"
+                name="name"
+                required
+                minlength="2"
+                maxlength="12"
+                aria-errormessage="name-errors"
+                placeholder="full name"
+                >
+                <span class="support__errors" id="name-errors" data-js-form-field-errors></span>
+            </div>
+            <div class="support__field">
+              <label for="email" class="support__label visually-hidden">Email</label>
+              <input
                 id="email"
-                placeholder="Enter Your Email Address"
+                class="support__control"
+                name="email"
+                required
+                aria-errormessage="email-errors"
                 type="email"
-                data-js-get-discount-field
-              >
-              <button class="get-discount__button button" type="submit">subscribe</button>
+                pattern="^\S+@\S+\.\S+$"
+                placeholder="enter your email"
+                title="Please enter a complete and correct email address"
+                >
+                <span class="support__errors" id="email-errors" data-js-form-field-errors></span>
+            </div>
+            <div class="support__field">
+              <label for="request" class="support__label visually-hidden">Enter The Problem Or Query </label>
+              <textarea
+                class="support__control support__control-textaria"
+                name="request"
+                id="request"
+                placeholder="Enter The Problem Or Query "
+              ></textarea>
+            </div>
+            <button class="support__button button" type="submit">Send Now</button >
+
+          </form>
+
+
+
+          <div class="support__image-wrapper prem-health__image-wrapper">
+            <img class="support__image prem-health__image hidden-mobile" src="./images/prem-health/iphone-13.png" alt="">
           </div>
         </div>
-        <img
-        class="get-discount__image"
-        src="./images/top-dishes/swe-dish-1.png"
-        alt=""
-        width="274"
-        height="276"
-        >
+
+
+        <div class="support__preview hidden-mobile" aria-labelledby="support__preview-title">
+          <h2 class="support__preview-title" id="support__preview-title">Just Contact</h2>
+        </div>
+
       </div>
+
     </section>
-  </main>
+
+
+
+</main>
 
 <footer class="footer">
   <div class="footer__inner container">
     <div class="footer__body">
      <div class="footer__body-inner">
        <div class="footer__body-inner-mobile">
-        <a class="footer__logo logo"
+        <a class="footer__logo logo is-active"
         href="/"
         aria-label="Home"
         title="Home">
@@ -255,7 +226,7 @@
             <a href="/" class="footer__link">About Us</a>
           </li>
           <li class="footer__item">
-            <a href="/contact.html" class="footer__link">Contact</a>
+            <a href="/contact.html" class="footer__link is-active">Contact</a>
           </li>
         </ul>
       </nav>
