@@ -12,6 +12,7 @@ import FilterCollection from './hero-alt/Filter.js'
 import CartManager from './CartManager.js'
 import Blog from './Blog.js'
 import Support from './Support.js'
+import AuthSystem from './AuthSystem.js'
 
 
 
@@ -28,3 +29,4 @@ new FilterCollection()
 new CartManager()
 new Blog()
 new Support()
+new AuthSystem()

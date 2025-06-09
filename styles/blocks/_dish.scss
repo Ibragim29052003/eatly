@@ -7,6 +7,12 @@
   &__img {
     @include square(var(--size));
     display: block;
+    &-register {
+      --size: #{rem(358)};
+      @include tablet {
+        --size: #{rem(255)}; 
+      }
+    }
   }
   &__circle {
     position: absolute;

@@ -72,6 +72,7 @@
   --border-light: #{rem(1.25)} solid var(--color-dark-el-gray);
 
   --transition-duration: 0.2s;
+  --transition-duration-05: 0.5s;
 
 
   @include tablet {

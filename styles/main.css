@@ -395,6 +395,7 @@ svg * {
   --border: 0.0625rem solid var(--color-light-gray);
   --border-light: 0.078125rem solid var(--color-dark-el-gray);
   --transition-duration: 0.2s;
+  --transition-duration-05: 0.5s;
 }
 @media (width <= 63.99875rem) {
   :root {
@@ -683,6 +684,19 @@ button[aria-label]::before {
     padding-bottom: 1.875rem;
   }
 }
+.header__body-inner-register {
+  border-bottom: none;
+}
+@media (width > 47.99875rem) {
+  .header__body-inner-register {
+    padding: 2rem 3rem 0;
+  }
+}
+@media (width > 47.99875rem) and (width <= 63.99875rem) {
+  .header__body-inner-register {
+    padding: 1.425rem 2.1375rem 0;
+  }
+}
 @media (width > 47.99875rem) {
   .header__overlay {
     display: contents;
@@ -819,6 +833,14 @@ button[aria-label]::before {
   height: var(--size);
   display: block;
 }
+.dish__img-register {
+  --size: 22.375rem;
+}
+@media (width <= 63.99875rem) {
+  .dish__img-register {
+    --size: 15.9375rem;
+  }
+}
 .dish__circle {
   position: absolute;
   bottom: 4%;
@@ -948,6 +970,16 @@ button[aria-label]::before {
   .chart-activity {
     bottom: -8%;
     left: -17%;
+  }
+}
+.chart-activity__register {
+  bottom: -22%;
+  left: -12%;
+}
+@media (width <= 63.99875rem) {
+  .chart-activity__register {
+    bottom: -29%;
+    left: -16%;
   }
 }
 .chart-activity__graph {
@@ -4766,6 +4798,763 @@ button[aria-label]::before {
   background: url("../../icons/support/mobile-arrow.svg") center/contain no-repeat;
   width: 6.24375rem;
   height: 6.9125rem;
+}
+
+.sign-up.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  right: 2%;
+}
+.sign-up__title {
+  font-size: clamp(1.775rem, 1.54046875rem + 0.9875vw, 2.26875rem);
+  text-align: center;
+}
+.sign-up__using {
+  display: flex;
+  column-gap: clamp(1.0625rem, 0.94078125rem + 0.5125vw, 1.31875rem);
+  justify-content: space-between;
+}
+.sign-up__using-use {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-block: clamp(0.5rem, 0.440625rem + 0.25vw, 0.625rem);
+  border-radius: clamp(0.675rem, 0.60078125rem + 0.3125vw, 0.83125rem);
+  color: var(--color-black);
+  background-color: var(--color-dark-el-gray);
+}
+@media (any-hover: hover) {
+  .sign-up__using-use:hover {
+    color: var(--color-white);
+    background-color: var(--color-light-gray);
+  }
+}
+@media (any-hover: none) {
+  .sign-up__using-use:active {
+    color: var(--color-white);
+    background-color: var(--color-light-gray);
+  }
+}
+.sign-up__light-options {
+  display: grid;
+  row-gap: clamp(2.4rem, 2.10609375rem + 1.2375vw, 3.01875rem);
+}
+.sign-up__variant {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--font-family-poppins);
+  font-size: clamp(1.00625rem, 0.89046875rem + 0.4875vw, 1.25rem);
+  font-weight: 500;
+  color: var(--color-light-gray);
+  padding-block: clamp(1.5625rem, 1.2953125rem + 1.125vw, 2.125rem);
+}
+.sign-up__control {
+  height: clamp(3.75rem, 3.31953125rem + 1.8125vw, 4.65625rem);
+  width: 100%;
+  border: none;
+  border-radius: clamp(0.71875rem, 0.635625rem + 0.35vw, 0.89375rem);
+  background-color: var(--color-dark-el-gray);
+  padding-left: clamp(3.98125rem, 3.53rem + 1.9vw, 4.93125rem);
+  color: var(--color-lavender);
+}
+.sign-up__control::placeholder {
+  text-transform: uppercase;
+  color: var(--color-light-gray);
+  font-family: var(--font-family-poppins);
+  font-weight: 600;
+  font-size: clamp(0.84375rem, 0.74875rem + 0.4vw, 1.04375rem);
+}
+@media (any-hover: hover) {
+  .sign-up__control:hover {
+    background-color: var(--color-light-gray);
+  }
+  .sign-up__control:hover::placeholder {
+    color: var(--color-white);
+  }
+}
+@media (any-hover: none) {
+  .sign-up__control:active {
+    background-color: var(--color-light-gray);
+  }
+  .sign-up__control:active::placeholder {
+    color: var(--color-white);
+  }
+}
+.sign-up__control:focus-visible {
+  background-color: var(--color-white);
+  outline: none;
+  border: var(--border);
+  border-color: var(--color-lavender);
+  border-width: 0.1875rem;
+}
+@media (width <= 47.99875rem) {
+  .sign-up__control:focus-visible {
+    border-width: 0.08125rem;
+  }
+}
+.sign-up__control:focus-visible::placeholder {
+  color: var(--color-lavender);
+}
+.sign-up__control:not(:placeholder-shown) {
+  background-color: var(--color-white);
+  border: var(--border);
+  border-color: var(--color-lavender);
+  border-width: 0.1875rem;
+}
+@media (width <= 47.99875rem) {
+  .sign-up__control:not(:placeholder-shown) {
+    border-width: 0.08125rem;
+  }
+}
+.sign-up__form {
+  display: grid;
+  row-gap: clamp(1.23125rem, 1.08875rem + 0.6vw, 1.53125rem);
+}
+.sign-up__field {
+  position: relative;
+  --heightInput: clamp(3.75rem, 3.31953125rem + 1.8125vw, 4.65625rem);
+}
+.sign-up__field-name::before {
+  --heightIcon: clamp(1.1375rem, 1.00984375rem + 0.5375vw, 1.40625rem);
+  position: absolute;
+  top: calc((var(--heightInput) - var(--heightIcon)) / 2);
+  left: 7%;
+  content: "";
+  width: clamp(1.0375rem, 0.91875rem + 0.5vw, 1.2875rem);
+  height: clamp(1.1375rem, 1.00984375rem + 0.5375vw, 1.40625rem);
+  mask: url("../../icons/register/human.svg") no-repeat center;
+  mask-size: contain;
+  background-color: var(--color-light-gray);
+}
+@media (any-hover: hover) {
+  .sign-up__field-name:hover::before {
+    background-color: var(--color-white);
+  }
+}
+@media (any-hover: none) {
+  .sign-up__field-name:active::before {
+    background-color: var(--color-white);
+  }
+}
+.sign-up__field-name:has(.sign-up__control:focus-visible)::before, .sign-up__field-name:has(.sign-up__control:not(:placeholder-shown):not(:focus-visible))::before {
+  mask-image: url("../../icons//register/human-active.svg");
+  background-color: var(--color-lavender);
+}
+.sign-up__field-email::before {
+  --heightIcon: clamp(0.875rem, 0.77703125rem + 0.4125vw, 1.08125rem);
+  position: absolute;
+  top: calc((var(--heightInput) - var(--heightIcon)) / 2);
+  left: 7%;
+  content: "";
+  width: clamp(1.1375rem, 1.006875rem + 0.55vw, 1.4125rem);
+  height: clamp(0.875rem, 0.77703125rem + 0.4125vw, 1.08125rem);
+  mask: url("../../icons/register//message.svg") no-repeat center;
+  mask-size: contain;
+  background-color: var(--color-light-gray);
+}
+@media (any-hover: hover) {
+  .sign-up__field-email:hover::before {
+    background-color: var(--color-white);
+  }
+}
+@media (any-hover: none) {
+  .sign-up__field-email:active::before {
+    background-color: var(--color-white);
+  }
+}
+.sign-up__field-email:has(.sign-up__control:focus-visible)::before, .sign-up__field-email:has(.sign-up__control:not(:placeholder-shown):not(:focus-visible))::before {
+  mask-image: url("../../icons//register/message-active.svg");
+  background-color: var(--color-lavender);
+}
+.sign-up__field-password::before {
+  --heightIcon: clamp(1.19375rem, 1.0571875rem + 0.575vw, 1.48125rem);
+  position: absolute;
+  top: calc((var(--heightInput) - var(--heightIcon)) / 2);
+  left: 7%;
+  content: "";
+  width: clamp(0.925rem, 0.52125rem + 1.7vw, 1.775rem);
+  height: clamp(1.19375rem, 1.0571875rem + 0.575vw, 1.48125rem);
+  mask: url("../../icons/register/lock.svg") no-repeat center;
+  mask-size: contain;
+  background-color: var(--color-light-gray);
+}
+.sign-up__field-password .sign-up__toggle-password {
+  --heightIcon: clamp(0.98125rem, 0.8684375rem + 0.475vw, 1.21875rem);
+  position: absolute;
+  top: calc((var(--heightInput) - var(--heightIcon)) / 2);
+  right: 7%;
+  width: clamp(1.09375rem, 0.9690625rem + 0.525vw, 1.35625rem);
+  height: clamp(0.98125rem, 0.8684375rem + 0.475vw, 1.21875rem);
+  mask: url("../../icons/register/eye.svg") no-repeat center;
+  mask-size: contain;
+  background-color: var(--color-light-gray);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.sign-up__field-password .sign-up__toggle-password.is-active {
+  mask-image: url("../../icons/register/eye-active.svg");
+}
+@media (any-hover: hover) {
+  .sign-up__field-password:hover::before,
+  .sign-up__field-password:hover .sign-up__toggle-password {
+    background-color: var(--color-white);
+  }
+}
+@media (any-hover: none) {
+  .sign-up__field-password:active::before,
+  .sign-up__field-password:active .sign-up__toggle-password {
+    background-color: var(--color-white);
+  }
+}
+.sign-up__field-password:has(.sign-up__control:focus-visible)::before,
+.sign-up__field-password:has(.sign-up__control:focus-visible) .sign-up__toggle-password, .sign-up__field-password:has(.sign-up__control:not(:placeholder-shown):not(:focus-visible))::before,
+.sign-up__field-password:has(.sign-up__control:not(:placeholder-shown):not(:focus-visible)) .sign-up__toggle-password {
+  background-color: var(--color-lavender);
+}
+.sign-up__field-password:has(.sign-up__control:focus-visible)::before, .sign-up__field-password:has(.sign-up__control:not(:placeholder-shown):not(:focus-visible))::before {
+  mask-image: url("../../icons//register/lock-active.svg");
+}
+.sign-up__question {
+  display: flex;
+  justify-content: center;
+  column-gap: clamp(0.25rem, 0.13125rem + 0.5vw, 0.5rem);
+  font-family: var(--font-family-poppins);
+  font-weight: 400;
+  font-size: clamp(0.95625rem, 0.849375rem + 0.45vw, 1.18125rem);
+}
+.sign-up__link {
+  color: var(--color-lavender);
+  font-weight: 700;
+}
+@media (any-hover: hover) {
+  .sign-up__link:hover {
+    transition-duration: var(--transition-duration);
+    color: var(--color-black);
+  }
+}
+@media (any-hover: none) {
+  .sign-up__link:active {
+    transition-duration: var(--transition-duration);
+    color: var(--color-black);
+  }
+}
+.sign-up__button {
+  text-transform: uppercase;
+}
+.sign-up__errors {
+  display: grid;
+  row-gap: clamp(0.25rem, 0.071875rem + 0.75vw, 0.625rem);
+  padding-top: clamp(0.3125rem, 0.19375rem + 0.5vw, 0.5625rem);
+  padding-inline: clamp(0.99375rem, 0.7146875rem + 1.175vw, 1.58125rem);
+  font-size: clamp(0.75rem, 0.6015625rem + 0.625vw, 1.0625rem);
+  color: var(--color-red);
+  line-height: 1.25;
+}
+.sign-up__errors:empty {
+  display: none;
+}
+
+.sign-in.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  right: 2%;
+}
+.sign-in__title {
+  font-size: clamp(1.775rem, 1.54046875rem + 0.9875vw, 2.26875rem);
+  text-align: center;
+}
+.sign-in__using {
+  display: flex;
+  column-gap: clamp(1.0625rem, 0.94078125rem + 0.5125vw, 1.31875rem);
+  justify-content: space-between;
+}
+.sign-in__using-use {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-block: clamp(0.5rem, 0.440625rem + 0.25vw, 0.625rem);
+  border-radius: clamp(0.675rem, 0.60078125rem + 0.3125vw, 0.83125rem);
+  color: var(--color-black);
+  background-color: var(--color-dark-el-gray);
+}
+@media (any-hover: hover) {
+  .sign-in__using-use:hover {
+    color: var(--color-white);
+    background-color: var(--color-light-gray);
+  }
+}
+@media (any-hover: none) {
+  .sign-in__using-use:active {
+    color: var(--color-white);
+    background-color: var(--color-light-gray);
+  }
+}
+.sign-in__light-options {
+  display: grid;
+  row-gap: clamp(2.4rem, 2.10609375rem + 1.2375vw, 3.01875rem);
+}
+.sign-in__variant {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--font-family-poppins);
+  font-size: clamp(1.00625rem, 0.89046875rem + 0.4875vw, 1.25rem);
+  font-weight: 500;
+  color: var(--color-light-gray);
+  padding-block: clamp(1.5625rem, 1.2953125rem + 1.125vw, 2.125rem);
+}
+.sign-in__control {
+  height: clamp(3.75rem, 3.31953125rem + 1.8125vw, 4.65625rem);
+  width: 100%;
+  border: none;
+  border-radius: clamp(0.71875rem, 0.635625rem + 0.35vw, 0.89375rem);
+  background-color: var(--color-dark-el-gray);
+  padding-left: clamp(3.98125rem, 3.53rem + 1.9vw, 4.93125rem);
+  color: var(--color-lavender);
+}
+.sign-in__control::placeholder {
+  text-transform: uppercase;
+  color: var(--color-light-gray);
+  font-family: var(--font-family-poppins);
+  font-weight: 600;
+  font-size: clamp(0.84375rem, 0.74875rem + 0.4vw, 1.04375rem);
+}
+@media (any-hover: hover) {
+  .sign-in__control:hover {
+    background-color: var(--color-light-gray);
+  }
+  .sign-in__control:hover::placeholder {
+    color: var(--color-white);
+  }
+}
+@media (any-hover: none) {
+  .sign-in__control:active {
+    background-color: var(--color-light-gray);
+  }
+  .sign-in__control:active::placeholder {
+    color: var(--color-white);
+  }
+}
+.sign-in__control:focus-visible {
+  background-color: var(--color-white);
+  outline: none;
+  border: var(--border);
+  border-color: var(--color-lavender);
+  border-width: 0.1875rem;
+}
+@media (width <= 47.99875rem) {
+  .sign-in__control:focus-visible {
+    border-width: 0.08125rem;
+  }
+}
+.sign-in__control:focus-visible::placeholder {
+  color: var(--color-lavender);
+}
+.sign-in__control:not(:placeholder-shown) {
+  background-color: var(--color-white);
+  border: var(--border);
+  border-color: var(--color-lavender);
+  border-width: 0.1875rem;
+}
+@media (width <= 47.99875rem) {
+  .sign-in__control:not(:placeholder-shown) {
+    border-width: 0.08125rem;
+  }
+}
+.sign-in__form {
+  display: grid;
+  row-gap: clamp(1.23125rem, 1.08875rem + 0.6vw, 1.53125rem);
+}
+.sign-in__field {
+  position: relative;
+  --heightInput: clamp(3.75rem, 3.31953125rem + 1.8125vw, 4.65625rem);
+}
+.sign-in__field-email::before {
+  --heightIcon: clamp(0.875rem, 0.77703125rem + 0.4125vw, 1.08125rem);
+  position: absolute;
+  top: calc((var(--heightInput) - var(--heightIcon)) / 2);
+  left: 7%;
+  content: "";
+  width: clamp(1.1375rem, 1.006875rem + 0.55vw, 1.4125rem);
+  height: clamp(0.875rem, 0.77703125rem + 0.4125vw, 1.08125rem);
+  mask: url("../../icons/register//message.svg") no-repeat center;
+  mask-size: contain;
+  background-color: var(--color-light-gray);
+}
+@media (any-hover: hover) {
+  .sign-in__field-email:hover::before {
+    background-color: var(--color-white);
+  }
+}
+@media (any-hover: none) {
+  .sign-in__field-email:active::before {
+    background-color: var(--color-white);
+  }
+}
+.sign-in__field-email:has(.sign-in__control:focus-visible)::before, .sign-in__field-email:has(.sign-in__control:not(:placeholder-shown):not(:focus-visible))::before {
+  mask-image: url("../../icons//register/message-active.svg");
+  background-color: var(--color-lavender);
+}
+.sign-in__field-password::before {
+  --heightIcon: clamp(1.19375rem, 1.0571875rem + 0.575vw, 1.48125rem);
+  position: absolute;
+  top: calc((var(--heightInput) - var(--heightIcon)) / 2);
+  left: 7%;
+  content: "";
+  width: clamp(0.925rem, 0.52125rem + 1.7vw, 1.775rem);
+  height: clamp(1.19375rem, 1.0571875rem + 0.575vw, 1.48125rem);
+  mask: url("../../icons/register/lock.svg") no-repeat center;
+  mask-size: contain;
+  background-color: var(--color-light-gray);
+}
+.sign-in__field-password .sign-in__toggle-password {
+  --heightIcon: clamp(0.98125rem, 0.8684375rem + 0.475vw, 1.21875rem);
+  position: absolute;
+  top: calc((var(--heightInput) - var(--heightIcon)) / 2);
+  right: 7%;
+  width: clamp(1.09375rem, 0.9690625rem + 0.525vw, 1.35625rem);
+  height: clamp(0.98125rem, 0.8684375rem + 0.475vw, 1.21875rem);
+  mask: url("../../icons/register/eye.svg") no-repeat center;
+  mask-size: contain;
+  background-color: var(--color-light-gray);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.sign-in__field-password .sign-in__toggle-password.is-active {
+  mask-image: url("../../icons/register/eye-active.svg");
+}
+@media (any-hover: hover) {
+  .sign-in__field-password:hover::before,
+  .sign-in__field-password:hover .sign-in__toggle-password {
+    background-color: var(--color-white);
+  }
+}
+@media (any-hover: none) {
+  .sign-in__field-password:active::before,
+  .sign-in__field-password:active .sign-in__toggle-password {
+    background-color: var(--color-white);
+  }
+}
+.sign-in__field-password:has(.sign-in__control:focus-visible)::before,
+.sign-in__field-password:has(.sign-in__control:focus-visible) .sign-in__toggle-password, .sign-in__field-password:has(.sign-in__control:not(:placeholder-shown):not(:focus-visible))::before,
+.sign-in__field-password:has(.sign-in__control:not(:placeholder-shown):not(:focus-visible)) .sign-in__toggle-password {
+  background-color: var(--color-lavender);
+}
+.sign-in__field-password:has(.sign-in__control:focus-visible)::before, .sign-in__field-password:has(.sign-in__control:not(:placeholder-shown):not(:focus-visible))::before {
+  mask-image: url("../../icons//register/lock-active.svg");
+}
+.sign-in__question {
+  display: flex;
+  justify-content: center;
+  column-gap: clamp(0.25rem, 0.13125rem + 0.5vw, 0.5rem);
+  font-family: var(--font-family-poppins);
+  font-weight: 400;
+  font-size: clamp(0.95625rem, 0.849375rem + 0.45vw, 1.18125rem);
+}
+.sign-in__link {
+  color: var(--color-lavender);
+  font-weight: 700;
+}
+@media (any-hover: hover) {
+  .sign-in__link:hover {
+    transition-duration: var(--transition-duration);
+    color: var(--color-black);
+  }
+}
+@media (any-hover: none) {
+  .sign-in__link:active {
+    transition-duration: var(--transition-duration);
+    color: var(--color-black);
+  }
+}
+.sign-in__button {
+  text-transform: uppercase;
+}
+.sign-in__forget-password {
+  justify-self: end;
+  font-family: var(--font-family-poppins);
+  font-weight: 400;
+  font-size: clamp(0.7875rem, 0.6984375rem + 0.375vw, 0.975rem);
+  color: var(--color-lavender);
+}
+@media (any-hover: hover) {
+  .sign-in__forget-password:hover {
+    color: var(--color-black);
+  }
+}
+@media (any-hover: none) {
+  .sign-in__forget-password:active {
+    color: var(--color-black);
+  }
+}
+.sign-in__errors {
+  display: grid;
+  row-gap: clamp(0.25rem, 0.071875rem + 0.75vw, 0.625rem);
+  padding-top: clamp(0.3125rem, 0.19375rem + 0.5vw, 0.5625rem);
+  padding-inline: clamp(0.99375rem, 0.7146875rem + 1.175vw, 1.58125rem);
+  font-size: clamp(0.75rem, 0.6015625rem + 0.625vw, 1.0625rem);
+  color: var(--color-red);
+  line-height: 1.25;
+}
+.sign-in__errors:empty {
+  display: none;
+}
+
+.forget-password.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  right: 2%;
+}
+.forget-password__caption {
+  display: grid;
+  row-gap: clamp(1.25rem, 1.1075rem + 0.6vw, 1.55rem);
+}
+.forget-password__title {
+  font-size: clamp(1.775rem, 1.54046875rem + 0.9875vw, 2.26875rem);
+  text-align: center;
+}
+.forget-password__inner {
+  display: grid;
+  row-gap: clamp(4.55rem, 4.0275rem + 2.2vw, 5.65rem);
+}
+.forget-password__description {
+  font-family: var(--font-family-poppins);
+  font-weight: 500;
+  font-size: clamp(1.14375rem, 1.01609375rem + 0.5375vw, 1.4125rem);
+  text-align: center;
+  color: var(--color-light-gray);
+}
+.forget-password__control {
+  height: clamp(3.75rem, 3.31953125rem + 1.8125vw, 4.65625rem);
+  width: 100%;
+  border: none;
+  border-radius: clamp(0.71875rem, 0.635625rem + 0.35vw, 0.89375rem);
+  background-color: var(--color-dark-el-gray);
+  padding-left: clamp(3.98125rem, 3.53rem + 1.9vw, 4.93125rem);
+  color: var(--color-lavender);
+}
+.forget-password__control::placeholder {
+  text-transform: uppercase;
+  color: var(--color-light-gray);
+  font-family: var(--font-family-poppins);
+  font-weight: 600;
+  font-size: clamp(0.84375rem, 0.74875rem + 0.4vw, 1.04375rem);
+}
+@media (any-hover: hover) {
+  .forget-password__control:hover {
+    background-color: var(--color-light-gray);
+  }
+  .forget-password__control:hover::placeholder {
+    color: var(--color-white);
+  }
+}
+@media (any-hover: none) {
+  .forget-password__control:active {
+    background-color: var(--color-light-gray);
+  }
+  .forget-password__control:active::placeholder {
+    color: var(--color-white);
+  }
+}
+.forget-password__control:focus-visible {
+  background-color: var(--color-white);
+  outline: none;
+  border: var(--border);
+  border-color: var(--color-lavender);
+  border-width: 0.1875rem;
+}
+@media (width <= 47.99875rem) {
+  .forget-password__control:focus-visible {
+    border-width: 0.08125rem;
+  }
+}
+.forget-password__control:focus-visible::placeholder {
+  color: var(--color-lavender);
+}
+.forget-password__control:not(:placeholder-shown) {
+  background-color: var(--color-white);
+  border: var(--border);
+  border-color: var(--color-lavender);
+  border-width: 0.1875rem;
+}
+@media (width <= 47.99875rem) {
+  .forget-password__control:not(:placeholder-shown) {
+    border-width: 0.08125rem;
+  }
+}
+.forget-password__form {
+  display: grid;
+  row-gap: clamp(1.23125rem, 1.08875rem + 0.6vw, 1.53125rem);
+}
+.forget-password__field {
+  position: relative;
+  --heightInput: clamp(3.75rem, 3.31953125rem + 1.8125vw, 4.65625rem);
+}
+.forget-password__field-email::before {
+  --heightIcon: clamp(0.875rem, 0.77703125rem + 0.4125vw, 1.08125rem);
+  position: absolute;
+  top: calc((var(--heightInput) - var(--heightIcon)) / 2);
+  left: 7%;
+  content: "";
+  width: clamp(1.1375rem, 1.006875rem + 0.55vw, 1.4125rem);
+  height: clamp(0.875rem, 0.77703125rem + 0.4125vw, 1.08125rem);
+  mask: url("../../icons/register//message.svg") no-repeat center;
+  mask-size: contain;
+  background-color: var(--color-light-gray);
+}
+@media (any-hover: hover) {
+  .forget-password__field-email:hover::before {
+    background-color: var(--color-white);
+  }
+}
+@media (any-hover: none) {
+  .forget-password__field-email:active::before {
+    background-color: var(--color-white);
+  }
+}
+.forget-password__field-email:has(.forget-password__control:focus-visible)::before, .forget-password__field-email:has(.forget-password__control:not(:placeholder-shown):not(:focus-visible))::before {
+  mask-image: url("../../icons//register/message-active.svg");
+  background-color: var(--color-lavender);
+}
+.forget-password__button {
+  text-transform: uppercase;
+}
+.forget-password__errors {
+  display: grid;
+  row-gap: clamp(0.25rem, 0.071875rem + 0.75vw, 0.625rem);
+  padding-top: clamp(0.3125rem, 0.19375rem + 0.5vw, 0.5625rem);
+  padding-inline: clamp(0.99375rem, 0.7146875rem + 1.175vw, 1.58125rem);
+  font-size: clamp(0.75rem, 0.6015625rem + 0.625vw, 1.0625rem);
+  color: var(--color-red);
+  line-height: 1.25;
+}
+.forget-password__errors:empty {
+  display: none;
+}
+
+.register__forms {
+  position: relative;
+  display: grid;
+  align-self: center;
+  flex-grow: 1;
+  min-width: clamp(19.3125rem, 16.9671875rem + 9.875vw, 24.25rem);
+  max-width: 49.8%;
+  overflow: hidden;
+}
+.register__body {
+  display: flex;
+  justify-content: space-between;
+}
+.register__body-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 54%;
+  height: 100vh;
+}
+@media (width <= 47.99875rem) {
+  .register__body-inner {
+    width: 100%;
+  }
+}
+.register__preview {
+  width: 46%;
+  background-color: var(--color-lavender);
+}
+.register__preview-info {
+  display: flex;
+  justify-content: center;
+  padding-right: 0;
+  margin-inline: 0;
+  padding-block: 18.9375rem 8rem;
+}
+@media (width <= 63.99875rem) {
+  .register__preview-info {
+    padding-block: 13.4375rem 5.96875rem;
+  }
+}
+.register__preview-body {
+  display: grid;
+}
+.register__preview-caption {
+  display: grid;
+  justify-self: center;
+  row-gap: 1.25rem;
+  max-width: 31.25rem;
+}
+@media (width <= 63.99875rem) {
+  .register__preview-caption {
+    row-gap: 0.8875rem;
+    max-width: 22.21875rem;
+  }
+}
+.register__preview-title {
+  color: var(--color-white);
+  font-family: var(--font-family-manrope);
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+}
+@media (width <= 63.99875rem) {
+  .register__preview-title {
+    font-size: 1.775rem;
+  }
+}
+.register__preview-description {
+  color: var(--color-light-gray);
+  font-family: var(--font-family-manrope);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+}
+@media (width <= 63.99875rem) {
+  .register__preview-description {
+    font-size: 0.625rem;
+  }
+}
+.register__header {
+  width: 54%;
+}
+@media (width <= 47.99875rem) {
+  .register__header {
+    width: 100%;
+  }
+}
+.register__footer {
+  font-family: var(--font-family-poppins);
+  font-weight: 500;
+  font-size: 1rem;
+}
+@media (width > 47.99875rem) {
+  .register__footer {
+    padding: 0 3rem 3rem;
+  }
+}
+@media (width > 47.99875rem) and (width <= 63.99875rem) {
+  .register__footer {
+    padding: 0 2.13125rem 2.13125rem;
+  }
+}
+@media (width <= 63.99875rem) {
+  .register__footer {
+    font-size: 1rem;
+  }
+}
+.register__footer-inner {
+  display: flex;
+  justify-content: space-between;
+}
+.register__container-form {
+  position: absolute;
+  top: 12%;
+  width: 98%;
+  transition-duration: var(--transition-duration-05);
+  opacity: 0;
+  pointer-events: none;
+  right: -100%;
 }
 
 /*# sourceMappingURL=main.css.map */

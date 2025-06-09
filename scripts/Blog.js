@@ -573,7 +573,7 @@ class Blog {
 
     // проверка на существование элементов
     if (!this.prevBtn || !this.nextBtn || !this.articleNextBtn) {
-      console.error('Не найдены необходимые элементы управления')
+      // console.error('Не найдены необходимые элементы управления')
       return
     }
 

@@ -24,6 +24,17 @@
       @include mobile {
         padding-bottom: rem(30);
       }
+
+      &-register {
+        border-bottom: none;
+
+        @include mobile-above {
+          padding: rem(32) rem(48) 0;
+          @include tablet {
+            padding: rem(22.8) rem(34.2) 0;
+          }
+        }
+      }
     }
   }
 

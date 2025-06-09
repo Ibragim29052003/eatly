@@ -19,6 +19,15 @@
     left: -17%;
   }
 
+  &__register {
+    bottom: -22%;
+    left: -12%;
+
+    @include tablet {
+      bottom: -29%;
+      left: -16%;
+    }
+  }
   &__graph {
     margin-block: fluid(30, 14.5) fluid(15, 7.5);
     width: fluid(207, 98.1);
