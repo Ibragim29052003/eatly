@@ -1,0 +1,97 @@
+@use '../helpers' as *;
+
+.get-discount {
+  font-family: var(--font-family-poppins);
+  padding-bottom: fluid(216, 198);
+  &__blog {
+    padding-top: fluid(230, 173);
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    background-color: var(--color-lavender);
+    background-image: url('../../icons/get-discount/bg.svg');
+    border-radius: rem(30);
+    @include mobile {
+      background-image: none;
+      justify-content: center;
+    }
+  }
+
+  &__subscribe {
+    position: relative;
+    display: flex;
+  }
+  &__field {
+    width: rem(420);
+    padding: fluid(22, 16) fluid(70, 50) fluid(22, 16) fluid(22, 16);
+    border-radius: rem(14);
+    font-size: fluid(16, 10.6);
+    border: none;
+    &:user-invalid {
+      outline: 2px solid var(--color-red);
+    }
+    @include tablet {
+      width: rem(350);
+    }
+    @include mobile {
+      width: rem(280);
+    }
+    &::placeholder {
+      color: var(--color-gray-accent);
+    }
+
+  }
+
+  &__title {
+    color: var(--color-white);
+    font-size: fluid(70, 41);
+    font-weight: 800;
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__button {
+    @include abs-y;
+    right: 1%;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: fluid(16, 10) fluid(24, 16);
+    font-size: fluid(14.8, 9.6);
+    font-weight: 500;
+    border-radius: rem(11.3);
+  }
+
+  &__image {
+    position: absolute;
+    right: 6%;
+    bottom: -21%;
+    --size: #{rem(274)};
+    @include square(var(--size));
+    @include tablet {
+      --size: #{rem(195)};
+    }
+    @include mobile {
+      --size: #{rem(170)};
+      @include abs-x;
+      bottom: -42%;
+      }
+  }
+  &__info {
+    display: grid;
+    row-gap: 1rem;
+    padding: rem(36) 0 rem(61) rem(66);
+    @include tablet {
+      padding: rem(26) 0 rem(43) rem(47);
+    }
+    @include mobile {
+      padding: rem(36) 0 rem(95) 0;
+    }
+  }
+}
+
+
+
+

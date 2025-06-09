@@ -1,0 +1,14 @@
+@use '../helpers' as *;
+
+.overall-top {
+  padding-block: rem(100) rem(120);
+  @include tablet {
+    padding-block: rem(71) rem(85);
+  }
+  @include mobile {
+    padding-block: rem(84) rem(66);
+  }
+  &__highlight {
+    color: var(--color-purple);
+  } 
+}

@@ -1,0 +1,187 @@
+@use '../helpers' as *;
+.map {
+  position: relative;
+  padding-block: fluid(214, 171) fluid(292, 207);
+  font-family: var(--font-family-poppins);
+
+  &__delivery {
+    @include abs-x;
+    bottom: 13%;
+    min-width: fluid(451, 301);
+    &-person {
+      display: flex;
+      column-gap: fluid(21, 14);
+      padding: fluid(23, 16) fluid(20, 13);
+      border-top-left-radius: rem(25);
+      border-top-right-radius: rem(25);
+      background-color: var(--color-gray);
+    }
+
+    &-name {
+      font-weight: 500;
+      color: var(--color-white);
+    }
+
+    &-role {
+      font-weight: 400;
+      color: var(--color-gray-accent);
+    }
+
+    &-content {
+      position: relative;
+      display: flex;
+      border-bottom-left-radius: rem(25);
+      border-bottom-right-radius: rem(25);
+      padding-block: fluid(31.5, 21) fluid(43.3, 29);
+      background-color: var(--color-white);
+      box-shadow: 6px 71px 36px 0 rgba(212, 208, 208, 0.7);
+
+    }
+
+    &-label {
+      font-size: fluid(11.7, 7.8);
+      font-weight: 400;
+      color: var(--color-gray-accent);
+    }
+
+    &-text {
+      font-weight: 500;
+      font-size: fluid(13, 8.7);
+      color: var(--color-gray);
+      max-width: fluid(161, 108);
+    }
+
+    &-details {
+      position: relative;
+      display: grid;
+      row-gap: fluid(29.6, 19.9);
+      padding-left: fluid(91.8, 61.4);
+    }
+
+    &-address {
+      position: relative;
+      display: grid;
+      row-gap: fluid(2.4, 1.3);
+
+      &::after,
+      &::before
+      {
+        @include abs-y;
+        content: '';
+        left: 0%;
+      }
+
+      &::after {
+        width: rem(18.8);
+        height: rem(23);
+        background: url('../../icons/basket/address.svg') center/contain no-repeat;
+        left: -37.6%;
+        z-index: 2;
+        @include tablet {
+          width: rem(13.4);
+          height: rem(16.4);
+          left: -39%;
+        }
+        @include mobile {
+          width: rem(12.6);
+          height: rem(15.4);
+        }
+        @include mobile-s {
+          left: -38%;
+        }
+      }
+
+      &::before {
+        --size: #{rem(42)};
+        @include square(var(--size));
+        border-radius: 50%;
+        background-color: var(--color-extra-light-purple);
+        left: -45%;
+        z-index: 1;
+        @include tablet {
+          --size: #{rem(29.9)};
+        }
+        @include mobile {
+          --size: #{rem(28)};
+        }
+      }
+    }
+
+    &-time {
+      position: relative;
+
+      &::after,
+      &::before
+      {
+        @include abs-y;
+        content: '';
+        left: 0%;
+      }
+
+      &::after {
+        --size: #{rem(22.3)};
+        @include square(var(--size));
+        background: url('../../icons/basket/time.svg') center/contain no-repeat;
+        left: -38.6%;
+        z-index: 2;
+        @include tablet {
+          --size: #{rem(15.9)};
+          left: -40%;
+        }
+        @include mobile {
+          --size: #{rem(14.9)};
+        }
+        @include mobile-s {
+          left: -39%;
+        }
+      }
+
+      &::before {
+        --size: #{rem(42)};
+        @include square(var(--size));
+        border-radius: 50%;
+        background-color: var(--color-extra-light-purple);
+        left: -45%;
+        z-index: 1;
+        @include tablet {
+          --size: #{rem(29.9)};
+        }
+        @include mobile {
+          --size: #{rem(28)};
+        }
+      }
+    }
+
+    &-status {
+      position: absolute;
+      bottom: 11%;
+      right: 4%;
+      font-size: fluid(15.6, 10.5);
+      font-weight: 500;
+
+      padding: fluid(10, 6.5) fluid(33, 21.5);
+      border-radius: rem(4);
+    }
+  &-divider {
+    @include abs-y;
+    left: 4%;
+    height: fluid(2, 1.3);
+    width: fluid(60, 28);
+    background: repeating-linear-gradient(
+        to right,
+        var(--color-lavender),
+        var(--color-lavender) fluid(2, 1),
+        transparent fluid(2, 1),
+        transparent fluid(4, 2)
+    );
+    rotate: 90deg;
+    @include mobile-s {
+      left: 6%;
+    }
+   }
+  }
+
+  &__image {
+    border-radius: 15.8;
+  }
+}

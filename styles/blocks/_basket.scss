@@ -1,0 +1,332 @@
+@use "../helpers" as *;
+
+.basket {
+  &__inner {
+    display: grid;
+    justify-content: center;
+    padding-bottom: fluid(255, 91.8);
+    @include mobile-s {
+      justify-content: initial;
+    }
+  }
+  &__card {
+    position: relative;
+    display: grid;
+    min-width: rem(681);
+    row-gap: fluid(25, 21);
+    @include tablet {
+      min-width: rem(484);
+    }
+    @include mobile {
+      min-width: rem(415);
+    }
+    @include mobile-s {
+      min-width: 100%;
+    }
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: fluid(8, 2) fluid(57, 16.4) rem(7) fluid(8, 2);
+      border-radius: rem(12);
+      background-color: var(--color-white);
+      box-shadow: 0 20px 30px 0 rgba(70, 70, 70, 0.1);
+
+      &-image {
+        --size: #{rem(99)};
+        @include square(var(--size));
+
+        @include tablet {
+          --size: #{rem(71)};
+        }
+        @include mobile {
+          --size: #{rem(60)};
+        }
+      }
+
+      &-info {
+        display: flex;
+        align-items: center;
+        column-gap: fluid(14, 8.4);
+      }
+      &-details {
+        font-weight: 600;
+        font-family: var(--font-family-poppins);
+        color: var(--color-dark-gray);
+      }
+
+      &-name {
+        font-size: fluid(22, 13.2);
+      }
+      &-price {
+        font-size: fluid(18, 10.8);
+      }
+      &-total {
+        text-align: center;
+        color: var(--color-dark-gray);
+        font-family: var(--font-family-poppins);
+        font-weight: 600;
+        font-size: fluid(16, 9.6);
+      }
+    }
+    &-qty {
+      &-button {
+        --size: #{rem(32)};
+        position: relative;
+        cursor: pointer;
+        @include square(var(--size));
+        @include flex-center;
+        background: transparent;
+        border: none;
+        padding: 0;
+        outline: none;
+        @include tablet {
+          --size: #{rem(23)};
+        }
+
+        @include mobile {
+          --size: #{rem(19)};
+        }
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          transition-duration: var(--transition-duration);
+        }
+
+        &::before {
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+          border-radius: fluid(9.9, 6);
+          background-color: transparent;
+          border: var(--border);
+          border-color: transparent;
+        }
+
+        &::after {
+          z-index: 1;
+          --icon-size: #{rem(12)};
+          @include square(var(--icon-size));
+          mask-size: contain;
+          background-color: var(--color-dark-gray);
+
+          @include tablet {
+            --icon-size: #{rem(8.6)};
+          }
+
+          @include mobile {
+            --icon-size: #{rem(7.3)};
+          }
+        }
+
+        &--add {
+          &::before {
+            background-color: var(--color-dark-gray);
+          }
+
+          &::after {
+            mask: url("../../icons/add.svg") no-repeat center;
+            background-color: var(--color-white);
+          }
+          @include hover {
+            &::before {
+              background-color: var(--color-white);
+              border-color: var(--color-dark-gray);
+            }
+            &::after {
+              background-color: var(--color-dark-gray);
+            }
+          }
+        }
+
+        &--remove {
+          &::before {
+            background-color: var(--color-white);
+            border-color: var(--color-dark-gray);
+          }
+
+          &::after {
+            mask: url("../../icons/remove.svg") no-repeat center;
+            background-color: var(--color-dark-gray);
+          }
+
+          @include hover {
+            &::before {
+              background-color: var(--color-dark-gray);
+              border-color: transparent;
+            }
+            &::after {
+              background-color: var(--color-white);
+            }
+          }
+        }
+      }
+
+      &-controls {
+        display: grid;
+        row-gap: fluid(8.5, 5.1);
+        &-info {
+          display: flex;
+          column-gap: fluid(8.7, 5);
+          align-items: center;
+        }
+      }
+    }
+    &::before {
+      --size: #{rem(41)};
+      @include square(var(--size));
+      position: absolute;
+      content: '';
+      top: -17%;
+      right: -7%;
+      background: url('../../icons/faq/top-right.svg') center/contain no-repeat;
+      @include tablet {
+        --size: #{rem(29)};
+      }
+
+      @include mobile {
+        --size: #{rem(21)};
+      }
+    }
+  }
+  &__empty-card, 
+  &__confirmation-msg{
+    display: none;
+    text-align: center;
+    color: var(--color-dark-gray);
+    font-weight: 600;
+    font-family: var(--font-family-plus-jakarta-sans);
+  }
+
+  &__confirmation-msg {
+    padding-top: fluid(20, 14);
+  }
+
+
+  &__coupon {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: rem(8);
+    min-width: rem(681);
+    padding-block: fluid(89, 44.6) fluid(38.2, 32.3);
+    font-family: var(--font-family-poppins);
+    @include tablet {
+      min-width: rem(484);
+    }
+    @include mobile {
+      min-width: rem(415);
+      padding-bottom: rem(62.7);
+    }
+    @include mobile-s {
+      min-width: 100%;
+    }
+
+    &-field {
+      width: 100%;
+      border: none;
+      border-radius: inherit;
+      font-family: inherit;
+      font-weight: 500;
+      font-size: fluid(18, 10.8);
+      padding: fluid(24.5, 14.5) fluid(64.8, 38.5);
+      color: var(--color-dark-gray);
+      background-color: var(--color-dark-el-gray);
+
+      &::placeholder {
+        color: var(--color-gray-accent);
+      }
+
+      &-wrapper {
+        position: relative;
+        border-radius: rem(10);
+        background-color: var(--color-dark-el-gray);
+
+        &::before {
+          @include abs-y;
+          content: '';
+          left: 5%;
+          background: url('../../icons/basket/coupon.svg') center/contain no-repeat;
+          width: rem(21.8);
+          height: rem(30);
+
+          @include tablet {
+            width: rem(15.2);
+            height: rem(21.3);
+          }
+          @include mobile {
+            width: rem(13.1);
+            height: rem(18);
+          }
+        }
+      }
+    }
+    &-button {
+      height: 100%;
+      border-radius: rem(10);
+      font-family: inherit;
+    }
+  }
+
+  &__totals {
+    font-family: var(--font-family-poppins);
+    font-size: fluid(20, 12);
+    color: var(--color-ml-gray);
+    font-weight: 400;
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__subtotal-text,
+  &__delivery-text {
+    border-bottom: 1.00px dashed var(--color-gray-accent);
+    padding-block: fluid(13.5, 7.7);
+
+  }
+
+  &__total-text {
+    color: var(--color-dark-gray);
+    font-size: fluid(25, 15);
+    font-weight: 600;
+    padding-block: fluid(28.7, 17.7);
+
+  }
+
+  &__checkout-button {
+    position: relative;
+    margin-top: fluid(32.3);
+    border-radius: rem(15);
+
+    @include mobile-above {
+      &::after,
+      &::before {
+        content: '';
+       @include abs-y;
+       --size: #{rem(120.3)};
+       @include square(var(--size));
+       background: url('../../icons/basket/arrow-curve-left.svg') center/contain no-repeat;
+       top: 0%;
+
+       @include tablet {
+         --size: #{rem(85.5)};
+        }
+    }
+
+    &::after {
+      right: -22%;
+    }
+
+    &::before {
+      left: -22%;
+      transform: scaleX(-1);
+    }
+  }
+  }
+}

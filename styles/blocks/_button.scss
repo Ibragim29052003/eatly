@@ -1,0 +1,25 @@
+@use '../helpers' as *;
+
+.button {
+  padding: fluid(20, 13) fluid(26, 17);
+  color: var(--color-extra-light-gray);
+  background-color: var(--color-lavender);
+  border-radius: rem(18);
+  border: var(--border);
+  border-color: var(--color-lavender);
+
+  @include hover {
+    color: var(--color-lavender);
+    background-color: var(--color-extra-light-gray);
+  }
+
+  &-light {
+    color: var(--color-lavender);
+    background-color: var(--color-extra-light-gray);
+
+    @include hover {
+      color: var(--color-extra-light-gray);
+      background-color: var(--color-lavender);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use '../helpers' as *;
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.logo {
+ max-width: fluid(115, 110);
+
+ &.footer__logo {
+   max-width: fluid(150, 100);
+ }
+
+ @include hover {
+  animation: pulse 1s infinite;
+ }
+}

@@ -1,0 +1,58 @@
+@use '../helpers' as *;
+
+.card-status {
+  position: absolute;
+  top: -16%;
+  right: -11%;
+  @include tablet {
+    right: -20%;
+  }
+  @include mobile {
+    right: -11%;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    column-gap: fluid(18, 9);
+    background-color: var(--color-white);
+    box-shadow: -7px 9px 15px 0 rgba(0, 0, 0, 0.15);
+    border-radius: rem(12);
+    padding: fluid(4, 2) fluid(16, 7.7);
+  }
+  &__block {
+    display: flex;
+    column-gap: fluid(18, 9);
+  }
+  &__content {
+    display: grid;
+    row-gap: fluid(4, 2);
+    padding-block: fluid(17, 8) fluid(23, 11);
+    font-family: var(--font-family-poppins);
+    color: var(--color-dark-gray);
+  }
+  &__title {
+    font-weight: 600;
+    font-size: fluid(16, 7.5);
+  }
+  &__status {
+    font-weight: 500;
+    font-size: fluid(9.8, 4.7);
+    &-red {
+      color: var(--color-light-red);
+    }
+  }
+  &__time {
+    display: flex;
+    align-items: end;
+    padding-block: fluid(10, 5);
+    font-weight: 500;
+    font-size: fluid(10.6, 5.06);
+    color: var(--color-light-gray);
+    font-family: var(--font-family-poppins);
+  }
+
+  &__img {
+    width: fluid(74, 35);
+    height: fluid(81, 38.5);
+  }
+}

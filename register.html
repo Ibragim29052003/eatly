@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eatly | Home</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <script src="./scripts/main.js" type="module"></script>
+</head>
+
+<body>
+<main>
+
+  <section class="register">
+
+    <div class="register__body" aria-labelledby="register__title">
+      <div class="register__body-inner">
+        <header class="register__header header">
+          <div class="header__body-inner header__body-inner-register hidden-mobile">
+            <a class="header__logo logo"
+              href="/index.html"
+              aria-label="Home"
+              title="Home">
+              <img src="./images/logo.svg"
+                alt=""
+                class="logo__image"
+                width="110" height="42">
+            </a>
+          </div>
+          <div class="header__body container">
+
+            <div class="header__body-inner visible-mobile">
+              <a class="header__logo logo"
+                href="/index.html"
+                aria-label="Home"
+                title="Home">
+                <img src="./images/logo.svg"
+                  alt=""
+                  class="logo__image"
+                  width="110" height="42">
+              </a>
+              <div class="header__overlay" data-js-header-overlay>
+                <nav class="header__nav">
+                  <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                      <a class="header__nav-link" href="/menu.html">Menu</a>
+                    </li>
+                    <li class="header__nav-item">
+                      <a class="header__nav-link" href="/blog.html">Blog</a>
+                    </li>
+                    <li class="header__nav-item">
+                      <a class="header__nav-link" href="/pricing.html">Pricing</a>
+                    </li>
+                    <li class="header__nav-item">
+                      <a class="header__nav-link" href="/contact.html">Contact</a>
+                    </li>
+                    <li class="header__nav-item">
+                      <a href="/basket.html" class="header__nav-link header__nav-link-basket " aria-label="Перейти в корзину">
+                        Basket <span aria-live="polite" class="header__nav-link-badge" data-js-link-badge style="display:none;">0</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="header__authorization">
+                  <a class="header__authorization-login" href="/register.html" data-js-login-btn>Login</a>
+                  <a class="header__authorization-sign-up button" href="/register.html" data-js-sign-up-btn>Sign up</a>
+                </div>
+              </div>
+              <button
+                class="header__burger-button burger-button visible-mobile"
+                type="button"
+                aria-label="Open menu"
+                title="Open menu"
+                data-js-header-burger-button>
+                <span class="burger-button__line"></span>
+                <span class="burger-button__line"></span>
+                <span class="burger-button__line"></span>
+                <span aria-live="polite" class="header__nav-link-badge" data-js-link-badge-mobile style="display:none;">0</span>
+              </button>
+            </div>
+          </div>
+        </header>
+
+
+
+       <div class="register__forms">
+        <div class="register__sign-up sign-up register__container-form" aria-labelledby="sign-up__title" data-js-form-sign-up>
+          <div class="sign-up__inner">
+            <div class="sign-up__light-options">
+              <h1 class="sign-up__title" id="sign-up__title">Sign Up To eatly</h1>
+              <div class="sign-up__using">
+                <a href="/" class="sign-up__using-use sign-up__using-google">
+                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.5331 7.09033C16.0351 6.17721 15.3502 5.482 14.4786 5.00469C13.607 4.52738 12.5901 4.28872 11.428 4.28872C10.1413 4.28872 8.99993 4.57926 8.00381 5.16033C7.00768 5.74141 6.22946 6.57151 5.66914 7.65065C5.10881 8.72978 4.82865 9.97494 4.82865 11.3861C4.82865 12.8388 5.10881 14.1047 5.66914 15.1839C6.25021 16.263 7.04919 17.0931 8.06606 17.6742C9.08294 18.2552 10.2658 18.5458 11.6148 18.5458C13.275 18.5458 14.6343 18.11 15.6927 17.2384C16.751 16.346 17.4463 15.1112 17.7783 13.534H10.3073V10.2032H22.0741V14.001C21.7836 15.5159 21.161 16.9167 20.2064 18.2034C19.2517 19.49 18.0169 20.5277 16.502 21.3163C15.0078 22.0841 13.3269 22.468 11.4591 22.468C9.3631 22.468 7.46424 22.0011 5.76252 21.0672C4.08156 20.1126 2.75339 18.7948 1.77802 17.1138C0.823397 15.4329 0.346087 13.5236 0.346087 11.3861C0.346087 9.2486 0.823397 7.33936 1.77802 5.65839C2.75339 3.95668 4.08156 2.63889 5.76252 1.70502C7.46424 0.750399 9.35273 0.273088 11.428 0.273088C13.8768 0.273088 16.0039 0.874914 17.8094 2.07857C19.6149 3.26147 20.8601 4.93205 21.5449 7.09033H16.5331Z" fill="#323142"/>
+                  </svg>
+                </a>
+                <a href="/" class="sign-up__using-use sign-up__using-apple">
+                  <svg width="27" height="31" viewBox="0 0 27 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_11797)">
+                    <path d="M25.5299 24.2333C25.0708 25.282 24.5274 26.2474 23.8978 27.1349C23.0396 28.3448 22.3369 29.1823 21.7954 29.6474C20.9559 30.4107 20.0565 30.8017 19.0933 30.8239C18.4019 30.8239 17.568 30.6294 16.5974 30.2347C15.6236 29.8419 14.7286 29.6474 13.9103 29.6474C13.0521 29.6474 12.1317 29.8419 11.1472 30.2347C10.1612 30.6294 9.36685 30.835 8.75955 30.8554C7.83594 30.8943 6.91533 30.4923 5.9964 29.6474C5.4099 29.1415 4.6763 28.2744 3.79747 27.046C2.85456 25.7341 2.07936 24.2129 1.47206 22.4787C0.821651 20.6054 0.495605 18.7915 0.495605 17.0353C0.495605 15.0237 0.935205 13.2887 1.81571 11.8347C2.50772 10.6669 3.42833 9.74565 4.58054 9.06936C5.73276 8.39307 6.97773 8.04843 8.31845 8.02639C9.05205 8.02639 10.0141 8.25077 11.2096 8.69175C12.4017 9.13421 13.1672 9.35859 13.5028 9.35859C13.7537 9.35859 14.604 9.09622 16.0455 8.57316C17.4087 8.08809 18.5593 7.88724 19.5018 7.96635C22.0558 8.17017 23.9746 9.16571 25.2507 10.9593C22.9665 12.3278 21.8366 14.2446 21.8591 16.7035C21.8797 18.6188 22.5824 20.2126 23.9634 21.4781C24.5892 22.0655 25.2882 22.5194 26.0658 22.8418C25.8972 23.3254 25.7192 23.7886 25.5299 24.2333ZM19.6723 1.44133C19.6723 2.94254 19.1177 4.3442 18.0121 5.64157C16.678 7.18389 15.0642 8.07512 13.3143 7.93448C13.292 7.75439 13.279 7.56484 13.279 7.36566C13.279 5.9245 13.9135 4.38219 15.0402 3.12113C15.6028 2.48264 16.3182 1.95174 17.1858 1.52823C18.0515 1.11104 18.8703 0.880329 19.6405 0.84082C19.663 1.04151 19.6723 1.24221 19.6723 1.44132V1.44133Z" fill="#323142"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1_11797">
+                    <rect width="25.5702" height="30.0172" fill="white" transform="translate(0.495605 0.839844)"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                </a>
+              </div>
+            </div>
+
+            <p class="sign-up__variant">or</p>
+
+            <form action="" class="sign-up__form" novalidate data-js-form>
+              <div class="sign-up__field sign-up__field-name">
+                <label for="signup-name" class="sign-up__label visually-hidden">Name</label>
+                <input
+                  id="signup-name"
+                  class="sign-up__control"
+                  name="name"
+                  required
+                  minlength="2"
+                  maxlength="12"
+                  aria-errormessage="signup-name-errors"
+                  placeholder="full name"
+                >
+                <span class="sign-up__errors" id="signup-name-errors" data-js-form-field-errors></span>
+              </div>
+              <div class="sign-up__field sign-up__field-email">
+                <label for="signup-email" class="sign-up__label visually-hidden">Email</label>
+                <input
+                  id="signup-email"
+                  class="sign-up__control"
+                  name="email"
+                  required
+                  pattern="^\S+@\S+\.\S+$"
+                  aria-errormessage="signup-email-errors"
+                  placeholder="email"
+                  type="email"
+                  autocomplete="username"
+                  title="Please enter a complete and correct email address"
+                >
+                <span class="sign-up__errors" id="signup-email-errors" data-js-form-field-errors></span>
+              </div>
+              <div class="sign-up__field sign-up__field-password">
+                <label for="signup-password" class="sign-up__label visually-hidden">Password</label>
+                <input
+                  id="signup-password"
+                  class="sign-up__control"
+                  name="password"
+                  required
+                  minlength="8"
+                  maxlength="16"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}"
+                  aria-errormessage="signup-password-errors"
+                  placeholder="password"
+                  type="password"
+                  autocomplete="new-password"
+                  title="Password must be between 8 and 16 characters long and include at least one number, one lowercase letter, and one uppercase letter."
+                  data-js-password-control
+                  >
+                <button
+                class="sign-up__toggle-password"
+                type="button"
+                aria-label="show password"
+                title="show password"
+                data-js-toggle-password
+                ></button>
+
+                <span class="sign-up__errors" id="signup-password-errors" data-js-form-field-errors></span>
+              </div>
+
+              <button class="sign-up__button button">sign up</button>
+
+              <div class="sign-up__question">
+                <p class="sign-up__text">Already Have An Account? </p>
+                <a href="/" class="sign-up__link" data-js-to-login>Log In</a>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+        <div class="register__sign-in sign-in register__container-form" aria-labelledby="sign-in__title" data-js-form-sign-in>
+          <div class="sign-in__inner">
+            <div class="sign-in__light-options">
+              <h1 class="sign-in__title" id="sign-in__title">Sign In To eatly</h1>
+              <div class="sign-in__using">
+                <a href="/" class="sign-in__using-use sign-in__using-google">
+                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.5331 7.09033C16.0351 6.17721 15.3502 5.482 14.4786 5.00469C13.607 4.52738 12.5901 4.28872 11.428 4.28872C10.1413 4.28872 8.99993 4.57926 8.00381 5.16033C7.00768 5.74141 6.22946 6.57151 5.66914 7.65065C5.10881 8.72978 4.82865 9.97494 4.82865 11.3861C4.82865 12.8388 5.10881 14.1047 5.66914 15.1839C6.25021 16.263 7.04919 17.0931 8.06606 17.6742C9.08294 18.2552 10.2658 18.5458 11.6148 18.5458C13.275 18.5458 14.6343 18.11 15.6927 17.2384C16.751 16.346 17.4463 15.1112 17.7783 13.534H10.3073V10.2032H22.0741V14.001C21.7836 15.5159 21.161 16.9167 20.2064 18.2034C19.2517 19.49 18.0169 20.5277 16.502 21.3163C15.0078 22.0841 13.3269 22.468 11.4591 22.468C9.3631 22.468 7.46424 22.0011 5.76252 21.0672C4.08156 20.1126 2.75339 18.7948 1.77802 17.1138C0.823397 15.4329 0.346087 13.5236 0.346087 11.3861C0.346087 9.2486 0.823397 7.33936 1.77802 5.65839C2.75339 3.95668 4.08156 2.63889 5.76252 1.70502C7.46424 0.750399 9.35273 0.273088 11.428 0.273088C13.8768 0.273088 16.0039 0.874914 17.8094 2.07857C19.6149 3.26147 20.8601 4.93205 21.5449 7.09033H16.5331Z" fill="#323142"/>
+                  </svg>
+                </a>
+                <a href="/" class="sign-in__using-use sign-in__using-apple">
+                  <svg width="27" height="31" viewBox="0 0 27 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_11797)">
+                    <path d="M25.5299 24.2333C25.0708 25.282 24.5274 26.2474 23.8978 27.1349C23.0396 28.3448 22.3369 29.1823 21.7954 29.6474C20.9559 30.4107 20.0565 30.8017 19.0933 30.8239C18.4019 30.8239 17.568 30.6294 16.5974 30.2347C15.6236 29.8419 14.7286 29.6474 13.9103 29.6474C13.0521 29.6474 12.1317 29.8419 11.1472 30.2347C10.1612 30.6294 9.36685 30.835 8.75955 30.8554C7.83594 30.8943 6.91533 30.4923 5.9964 29.6474C5.4099 29.1415 4.6763 28.2744 3.79747 27.046C2.85456 25.7341 2.07936 24.2129 1.47206 22.4787C0.821651 20.6054 0.495605 18.7915 0.495605 17.0353C0.495605 15.0237 0.935205 13.2887 1.81571 11.8347C2.50772 10.6669 3.42833 9.74565 4.58054 9.06936C5.73276 8.39307 6.97773 8.04843 8.31845 8.02639C9.05205 8.02639 10.0141 8.25077 11.2096 8.69175C12.4017 9.13421 13.1672 9.35859 13.5028 9.35859C13.7537 9.35859 14.604 9.09622 16.0455 8.57316C17.4087 8.08809 18.5593 7.88724 19.5018 7.96635C22.0558 8.17017 23.9746 9.16571 25.2507 10.9593C22.9665 12.3278 21.8366 14.2446 21.8591 16.7035C21.8797 18.6188 22.5824 20.2126 23.9634 21.4781C24.5892 22.0655 25.2882 22.5194 26.0658 22.8418C25.8972 23.3254 25.7192 23.7886 25.5299 24.2333ZM19.6723 1.44133C19.6723 2.94254 19.1177 4.3442 18.0121 5.64157C16.678 7.18389 15.0642 8.07512 13.3143 7.93448C13.292 7.75439 13.279 7.56484 13.279 7.36566C13.279 5.9245 13.9135 4.38219 15.0402 3.12113C15.6028 2.48264 16.3182 1.95174 17.1858 1.52823C18.0515 1.11104 18.8703 0.880329 19.6405 0.84082C19.663 1.04151 19.6723 1.24221 19.6723 1.44132V1.44133Z" fill="#323142"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1_11797">
+                    <rect width="25.5702" height="30.0172" fill="white" transform="translate(0.495605 0.839844)"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                </a>
+              </div>
+            </div>
+
+            <p class="sign-in__variant">or</p>
+
+            <form action="" class="sign-in__form" novalidate data-js-form>
+              <div class="sign-in__field sign-in__field-email">
+                <label for="signin-email" class="sign-in__label visually-hidden">Email</label>
+                <input
+                  id="signin-email"
+                  class="sign-in__control"
+                  name="email"
+                  required
+                  pattern="^\S+@\S+\.\S+$"
+                  aria-errormessage="signin-email-errors"
+                  placeholder="email"
+                  type="email"
+                  autocomplete="username"
+                  title="Please enter a complete and correct email address"
+                >
+                <span class="sign-in__errors" id="signin-email-errors" data-js-form-field-errors></span>
+              </div>
+              <div class="sign-in__field sign-in__field-password">
+                <label for="signin-password" class="sign-in__label visually-hidden">Password</label>
+                <input
+                  id="signin-password"
+                  class="sign-in__control"
+                  name="password"
+                  required
+                  minlength="8"
+                  maxlength="16"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}"
+                  aria-errormessage="signin-password-errors"
+                  placeholder="password"
+                  type="password"
+                  autocomplete="current-password"
+                  title="Password must be between 8 and 16 characters long and include at least one number, one lowercase letter, and one uppercase letter."
+                  data-js-password-control
+                >
+                <button
+                class="sign-in__toggle-password"
+                type="button"
+                aria-label="show password"
+                title="show password"
+                data-js-toggle-password
+                ></button>
+
+                <span class="sign-in__errors" id="signin-password-errors" data-js-form-field-errors></span>
+              </div>
+
+              <a href="/" class="sign-in__forget-password" data-js-to-forget-password>
+                Forget Password ?
+              </a>
+
+              <button class="sign-in__button button">sign in</button>
+
+              <div class="sign-up__question">
+                <p class="sign-in__text">Create A New Account?</p>
+                <a href="/" class="sign-in__link" data-js-to-register>Sign Up</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="register__forget-password forget-password register__container-form" aria-labelledby="forget-password__title" data-js-form-forget-password>
+
+          <div class="forget-password__inner">
+            <div class="forget-password__caption">
+              <h1 class="forget-password__title" id="forget-password__title">Forget Password</h1>
+              <p class="forget-password__description">Enter Your Mail To Reset</p>
+            </div>
+
+           <form action="" class="forget-password__form" novalidate data-js-form>
+            <div class="forget-password__field forget-password__field-email">
+              <label for="reset-email" class="forget-password__label visually-hidden">Email</label>
+              <input
+                id="reset-email"
+                class="forget-password__control"
+                name="email"
+                required
+                pattern="^\S+@\S+\.\S+$"
+                aria-errormessage="reset-email-errors"
+                placeholder="email"
+                type="email"
+                autocomplete="username"
+                title="Please enter a complete and correct email address"
+              >
+              <span class="forget-password__errors" id="reset-email-errors" data-js-form-field-errors></span>
+            </div>
+
+            <button class="forget-password__button button">verify</button>
+            </form>
+          </div>
+        </div>
+
+       </div>
+
+        <footer class="register__footer hidden-mobile">
+          <div class="register__footer-inner">
+            <p class="register__footer-policy">Privacy Policy</p>
+            <p class="register__footer-copyright">Copyright 2022</p>
+          </div>
+        </footer>
+      </div>
+
+      <div class="register__preview hidden-mobile">
+       <div class="register__preview-body">
+        <div class="register__preview-info hero__food-info">
+          <div class="hero__dish dish">
+            <img
+              class="dish__img dish__img-register"
+              src="./images/hero/dish.png"
+              alt=""
+              width="358" height="358">
+            <div class="dish__circle"></div>
+            <div class="hero__card-status card-status">
+              <div class="card-status__inner">
+                <div class="card-status__block">
+                  <img
+                    class="card-status__img"
+                    src="./images/hero/dish.png"
+                    alt=""
+                    width="74" height="81">
+                  <div class="card-status__content" aria-labelledby="card-status__title">
+                    <h2 class="visually-hidden">Chicken Hell</h2>
+                    <p class="card-status__title" id="card-status__title">Chicken Hell</p>
+                    <p class="card-status__status">On The Way</p>
+                  </div>
+                </div>
+                <div class="card-status__time">
+                  <time class="card-status__time-time" datetime="2025-05-16T15:09">3:09 PM</time>
+                </div>
+              </div>
+            </div>
+            <div class="hero__chart-activity chart-activity chart-activity__register">
+              <nav
+                class="chart-activity__navigation"
+                role="tablist"
+                aria-label="Chart time range selection"
+                data-js-tabs>
+                <ul class="chart-activity__list">
+                  <li class="chart-activity__item">
+                    <button
+                      class="chart-activity__tab button is-active"
+                      id="tab-main"
+                      role="tab"
+                      aria-selected="true"
+                      aria-controls="panel-main"
+                      tabindex="0"
+                      data-js-tabs-button
+                    >
+                    Main
+                  </button>
+                  </li>
+                  <li class="chart-activity__item">
+                    <button
+                      class="chart-activity__tab button"
+                      id="tab-weekly"
+                      role="tab"
+                      aria-selected="false"
+                      aria-controls="panel-weekly"
+                      tabindex="-1"
+                      data-js-tabs-button>
+                      Weekly
+                    </button>
+                  </li>
+                  <li class="chart-activity__item">
+                    <button
+                      class="chart-activity__tab button"
+                      id="tab-monthly"
+                      role="tab"
+                      aria-selected="false"
+                      aria-controls="panel-monthly"
+                      tabindex="-1"
+                      data-js-tabs-button>
+                      Monthly
+                    </button>
+                  </li>
+                  <li class="chart-activity__item">
+                    <button
+                      class="chart-activity__tab button"
+                      id="tab-yearly"
+                      role="tab"
+                      aria-selected="false"
+                      aria-controls="panel-yearly"
+                      tabindex="-1"
+                      data-js-tabs-button>
+                      Yearly
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+              <img
+                class="chart-activity__graph"
+                src="./images/hero/graph.png"
+                alt=""
+                width="207" height="97"
+                aria-label="Chart showing activity"
+                title="Chart showing activity"
+                role="img">
+
+                <div
+                  class="chart-activity__panel"
+                  id="panel-main"
+                  role="tabpanel"
+                  aria-labelledby="tab-main"
+                  hidden
+                  data-js-tabs-content>
+                  <!-- Контент Main -->
+               </div>
+                <div
+                  class="chart-activity__panel"
+                  id="panel-weekly"
+                  role="tabpanel"
+                  aria-labelledby="tab-weekly"
+                  hidden
+                  data-js-tabs-content>
+                  <!-- Контент Weekly -->
+              </div>
+               <div
+                  class="chart-activity__panel"
+                  id="panel-monthly"
+                  role="tabpanel"
+                  aria-labelledby="tab-monthly"
+                  hidden
+                  data-js-tabs-content>
+                  <!-- Контент Monthly -->
+              </div>
+                <div
+                  class="chart-activity__panel"
+                  id="panel-yearly"
+                  role="tabpanel"
+                  aria-labelledby="tab-yearly"
+                  hidden
+                  data-js-tabs-content>
+                  <!-- Контент Yearly -->
+              </div>
+
+
+              <form class="chart-activity__x-axis" data-js-range>
+                <label
+                  class="chart-activity__x-axis-item is-active"
+                  data-js-range-item
+                  tabindex="0"
+                  aria-checked="true">
+                  <input
+                    class="chart-activity__x-axis-input"
+                    type="radio"
+                    name="range"
+                    value="2D"
+                    checked
+                    hidden />
+                  <span
+                    class="chart-activity__x-axis-label"
+                    aria-hidden="false"
+                    data-js-range-span
+                    >2D
+                  </span>
+                </label>
+                <label
+                  class="chart-activity__x-axis-item"
+                  data-js-range-item
+                  tabindex="-1"
+                  aria-checked="false">
+                  <input
+                    class="chart-activity__x-axis-input"
+                    type="radio"
+                    name="range"
+                    value="4D"
+                    hidden />
+                  <span
+                    class="chart-activity__x-axis-label"
+                    aria-hidden="true"
+                    data-js-range-span
+                    >4D
+                  </span>
+                </label>
+                <label
+                  class="chart-activity__x-axis-item"
+                  data-js-range-item
+                  tabindex="-1"
+                  aria-checked="false">
+                  <input
+                    class="chart-activity__x-axis-input"
+                    type="radio"
+                    name="range"
+                    value="5D"
+                    hidden/>
+                  <span
+                    class="chart-activity__x-axis-label"
+                    aria-hidden="true"
+                    data-js-range-span
+                    >5D
+                  </span>
+                </label>
+                <label
+                  class="chart-activity__x-axis-item"
+                  data-js-range-item
+                  tabindex="-1"
+                  aria-checked="false">
+                  <input
+                    class="chart-activity__x-axis-input"
+                    type="radio"
+                    name="range"
+                    value="6D"
+                    hidden/>
+                  <span
+                    class="chart-activity__x-axis-label"
+                    aria-hidden="true"
+                    data-js-range-span
+                    >6D
+                  </span>
+                </label>
+                <label
+                  class="chart-activity__x-axis-item"
+                  data-js-range-item
+                  tabindex="-1"
+                  aria-checked="false">
+                  <input
+                    class="chart-activity__x-axis-input"
+                    type="radio"
+                    name="range"
+                    value="7D"
+                    hidden />
+                  <span
+                    class="chart-activity__x-axis-label"
+                    aria-hidden="true"
+                    data-js-range-span
+                    >7D
+                  </span>
+                </label>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="register__preview-caption container" aria-labelledby="register__preview-title">
+          <h2 class="register__preview-title" id="register__preview-title">Find Foods With Love </h2>
+          <div class="register__preview-description">
+            <p>Eatly Is The Food Delivery Dashboard And Having More Than 2K+ Dishes Including Asian, Chinese, Italians And Many More. Our Dashboard Helps You To Manage Orders And Money.</p>
+          </div>
+        </div>
+
+       </div>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="footer visible-mobile">
+  <div class="footer__inner container">
+    <div class="footer__body">
+     <div class="footer__body-inner">
+       <div class="footer__body-inner-mobile">
+        <a class="footer__logo logo is-active"
+        href="/"
+        aria-label="Home"
+        title="Home">
+        <img src="./images/logo.svg"
+          alt=""
+          class="logo__image"
+          width="150" height="57">
+      </a>
+      <div class="footer__soc1als-mobile soc1als">
+        <ul class="soc1als__list">
+          <li class="soc1als__item">
+            <a
+              href="/"
+              target="_blank"
+              class="soc1als__link"
+              aria-label="Instagram"
+              title="Instagram"
+              >
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7721 0C12.1916 0.0506994 13.6618 0.0506994 15.0812 0.101392C16.3486 0.152085 17.5146 0.354867 18.6299 1.0139C20.0494 1.87572 20.9112 3.14309 21.2154 4.76533C21.3674 5.72853 21.4181 6.74243 21.4688 7.70564C21.5195 9.83483 21.4688 11.964 21.4688 14.0932C21.4688 15.2085 21.4181 16.3238 21.0633 17.3884C20.3535 19.4669 18.8834 20.7342 16.7542 21.1398C15.791 21.3426 14.7771 21.3426 13.8139 21.3933C11.6846 21.444 9.60615 21.3933 7.47694 21.3933C6.36165 21.3933 5.24635 21.3426 4.18176 20.9877C2.10325 20.278 0.835867 18.8078 0.430303 16.6786C0.227525 15.7154 0.227525 14.7015 0.176829 13.7383C0.126131 11.6091 0.176829 9.47996 0.176829 7.35077C0.176829 6.23549 0.227525 5.1202 0.582391 4.05559C1.29213 1.9771 2.76229 0.709734 4.89148 0.304173C5.8547 0.101399 6.8686 0.101399 7.83181 0.0506994C8.79502 0 9.75823 0 10.7721 0ZM19.5426 10.4939C19.4919 10.4939 19.5426 10.4939 19.5426 10.4939C19.4919 9.6321 19.4919 8.82097 19.4919 7.95916C19.4919 7.14805 19.4412 6.33692 19.3398 5.52581C19.137 3.70078 18.0724 2.4841 16.2981 2.12924C15.3855 1.92646 14.3716 1.92646 13.4591 1.92646C11.6341 1.87577 9.85976 1.87577 8.03473 1.92646C7.12222 1.92646 6.2097 1.97715 5.34788 2.12924C3.82702 2.38271 2.76243 3.24453 2.30617 4.76538C2.15408 5.27233 2.10339 5.77928 2.05269 6.28623C2.002 8.21264 2.002 10.139 2.002 12.0655C2.002 13.2821 2.05269 14.5495 2.15408 15.7662C2.30617 17.5912 3.42146 18.8586 5.2465 19.1627C6.159 19.3148 7.12222 19.3655 8.08543 19.3655C9.85976 19.4162 11.6341 19.3655 13.4591 19.3655C14.2703 19.3655 15.0814 19.3148 15.8925 19.2134C16.6529 19.1627 17.3627 18.9093 17.971 18.4023C18.9849 17.5912 19.3398 16.5266 19.3905 15.3099C19.4919 13.7891 19.4919 12.1668 19.5426 10.4939Z" fill="#081420"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2471 10.6962C16.2471 13.7379 13.8137 16.1712 10.772 16.1712C7.73025 16.1712 5.29688 13.7379 5.29688 10.6455C5.29688 7.65453 7.78094 5.22119 10.8227 5.22119C13.8137 5.22119 16.2471 7.65453 16.2471 10.6962ZM10.7719 14.2448C12.6983 14.2448 14.3205 12.6226 14.3205 10.6962C14.3205 8.76976 12.6983 7.14752 10.7719 7.14752C8.79474 7.14752 7.22318 8.76976 7.22318 10.6962C7.17248 12.6226 8.79474 14.2448 10.7719 14.2448Z" fill="#081420"/>
+                <path d="M17.7184 4.96758C17.7184 5.67731 17.1607 6.28566 16.451 6.28566C15.7413 6.28566 15.1329 5.67731 15.1836 4.96758C15.1836 4.25785 15.7413 3.7002 16.451 3.7002C17.1607 3.7002 17.7184 4.25784 17.7184 4.96758Z" fill="#081420"/>
+                </svg>
+            </a>
+          </li>
+          <li class="soc1als__item">
+            <a
+              href="/"
+              target="_blank"
+              class="soc1als__link"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+              >
+              <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.6325 12.4811V20.3602H17.0315V12.9987C17.0315 11.1583 16.3989 9.89304 14.731 9.89304C13.4658 9.89304 12.7181 10.7557 12.373 11.5609C12.258 11.8484 12.2005 12.251 12.2005 12.6536V20.3602H7.59952C7.59952 20.3602 7.65703 7.88013 7.59952 6.61487H12.2005V8.57027C12.2005 8.57027 12.2005 8.62777 12.143 8.62777H12.2005V8.57027C12.8331 7.65008 13.8684 6.26979 16.3414 6.26979C19.332 6.26979 21.6325 8.28271 21.6325 12.4811ZM2.88298 0.000976562C1.33014 0.000976562 0.294922 1.03619 0.294922 2.35897C0.294922 3.68174 1.27263 4.71697 2.82546 4.71697H2.88298C4.49333 4.71697 5.47103 3.68175 5.47103 2.35897C5.41352 1.03619 4.43581 0.000976562 2.88298 0.000976562ZM0.525568 20.3602H5.06905V6.61489H0.525568V20.3602Z" fill="#081420"/>
+                </svg>
+
+            </a>
+          </li>
+          <li class="soc1als__item">
+            <a
+              href="/"
+              target="_blank"
+              class="soc1als__link"
+              aria-label="Facebook"
+              title="Facebook"
+              >
+              <svg width="11" height="22" viewBox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.95256 10.6695H6.97166V21.338H2.52644V12.415V10.6695H0.43457V6.90414H2.52644V4.4462C2.52644 2.72041 3.36319 0.000976562 6.97166 0.000976562H10.2663V3.66174H7.913C7.54692 3.66174 6.97166 3.87094 6.97166 4.70768V6.90414H10.3186L9.95256 10.6695Z" fill="#081420"/>
+                </svg>
+
+            </a>
+          </li>
+          <li class="soc1als__item">
+            <a
+              href="/"
+              target="_blank"
+              class="soc1als__link"
+              aria-label="Twitter"
+              title="Twitter"
+              >
+              <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.6183 2.82596C20.8151 3.1774 20.0118 3.42842 19.1081 3.52883C20.0118 2.97658 20.7146 2.1231 21.0159 1.11901C20.1624 1.62106 19.2085 1.97249 18.2546 2.1733C17.4513 1.31982 16.2966 0.767578 15.0415 0.767578C12.6317 0.767578 10.6737 2.72555 10.6737 5.13537C10.6737 5.48681 10.7239 5.83823 10.7741 6.13947C7.10912 5.93865 3.896 4.23169 1.73719 1.57085C1.33555 2.22351 1.13473 2.97658 1.13473 3.77985C1.13473 5.28599 1.88781 6.64151 3.09272 7.44478C2.38985 7.44478 1.68699 7.24397 1.08453 6.89253V6.94273C1.08453 9.05133 2.59067 10.8587 4.59887 11.2603C4.24743 11.3607 3.8458 11.4109 3.44415 11.4109C3.14293 11.4109 2.8919 11.3607 2.64088 11.3105C3.19313 13.0677 4.79969 14.3228 6.75768 14.373C5.25153 15.5277 3.39395 16.2306 1.33555 16.2306C0.984119 16.2306 0.632686 16.2306 0.28125 16.1804C2.23924 17.4355 4.49846 18.1383 7.0087 18.1383C15.0917 18.1383 19.4595 11.4611 19.4595 5.68762C19.4595 5.48681 19.4595 5.28599 19.4595 5.13537C20.313 4.48272 21.0661 3.67944 21.6183 2.82596V2.82596Z" fill="#081420" fill-opacity="0.8"/>
+                </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+       </div>
+      <nav class="footer__navigation">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="/blog.html" class="footer__link">Blog</a>
+          </li>
+          <li class="footer__item">
+            <a href="/pricing.html" class="footer__link">Pricing</a>
+          </li>
+          <li class="footer__item">
+            <a href="/" class="footer__link">About Us</a>
+          </li>
+          <li class="footer__item">
+            <a href="/contact.html" class="footer__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+     </div>
+    </div>
+    <div class="footer__extra">
+      <p class="footer__copyright">© <time datetime="2023">2023</time> EATLY All Rights Reserved.</p>
+      <div class="footer__soc1als-desktop soc1als">
+        <ul class="soc1als__list">
+          <li class="soc1als__item">
+            <a
+              href="/"
+              target="_blank"
+              class="soc1als__link"
+              aria-label="Instagram"
+              title="Instagram"
+              >
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7721 0C12.1916 0.0506994 13.6618 0.0506994 15.0812 0.101392C16.3486 0.152085 17.5146 0.354867 18.6299 1.0139C20.0494 1.87572 20.9112 3.14309 21.2154 4.76533C21.3674 5.72853 21.4181 6.74243 21.4688 7.70564C21.5195 9.83483 21.4688 11.964 21.4688 14.0932C21.4688 15.2085 21.4181 16.3238 21.0633 17.3884C20.3535 19.4669 18.8834 20.7342 16.7542 21.1398C15.791 21.3426 14.7771 21.3426 13.8139 21.3933C11.6846 21.444 9.60615 21.3933 7.47694 21.3933C6.36165 21.3933 5.24635 21.3426 4.18176 20.9877C2.10325 20.278 0.835867 18.8078 0.430303 16.6786C0.227525 15.7154 0.227525 14.7015 0.176829 13.7383C0.126131 11.6091 0.176829 9.47996 0.176829 7.35077C0.176829 6.23549 0.227525 5.1202 0.582391 4.05559C1.29213 1.9771 2.76229 0.709734 4.89148 0.304173C5.8547 0.101399 6.8686 0.101399 7.83181 0.0506994C8.79502 0 9.75823 0 10.7721 0ZM19.5426 10.4939C19.4919 10.4939 19.5426 10.4939 19.5426 10.4939C19.4919 9.6321 19.4919 8.82097 19.4919 7.95916C19.4919 7.14805 19.4412 6.33692 19.3398 5.52581C19.137 3.70078 18.0724 2.4841 16.2981 2.12924C15.3855 1.92646 14.3716 1.92646 13.4591 1.92646C11.6341 1.87577 9.85976 1.87577 8.03473 1.92646C7.12222 1.92646 6.2097 1.97715 5.34788 2.12924C3.82702 2.38271 2.76243 3.24453 2.30617 4.76538C2.15408 5.27233 2.10339 5.77928 2.05269 6.28623C2.002 8.21264 2.002 10.139 2.002 12.0655C2.002 13.2821 2.05269 14.5495 2.15408 15.7662C2.30617 17.5912 3.42146 18.8586 5.2465 19.1627C6.159 19.3148 7.12222 19.3655 8.08543 19.3655C9.85976 19.4162 11.6341 19.3655 13.4591 19.3655C14.2703 19.3655 15.0814 19.3148 15.8925 19.2134C16.6529 19.1627 17.3627 18.9093 17.971 18.4023C18.9849 17.5912 19.3398 16.5266 19.3905 15.3099C19.4919 13.7891 19.4919 12.1668 19.5426 10.4939Z" fill="#081420"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2471 10.6962C16.2471 13.7379 13.8137 16.1712 10.772 16.1712C7.73025 16.1712 5.29688 13.7379 5.29688 10.6455C5.29688 7.65453 7.78094 5.22119 10.8227 5.22119C13.8137 5.22119 16.2471 7.65453 16.2471 10.6962ZM10.7719 14.2448C12.6983 14.2448 14.3205 12.6226 14.3205 10.6962C14.3205 8.76976 12.6983 7.14752 10.7719 7.14752C8.79474 7.14752 7.22318 8.76976 7.22318 10.6962C7.17248 12.6226 8.79474 14.2448 10.7719 14.2448Z" fill="#081420"/>
+                <path d="M17.7184 4.96758C17.7184 5.67731 17.1607 6.28566 16.451 6.28566C15.7413 6.28566 15.1329 5.67731 15.1836 4.96758C15.1836 4.25785 15.7413 3.7002 16.451 3.7002C17.1607 3.7002 17.7184 4.25784 17.7184 4.96758Z" fill="#081420"/>
+                </svg>
+            </a>
+          </li>
+          <li class="soc1als__item">
+            <a
+              href="/"
+              target="_blank"
+              class="soc1als__link"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+              >
+              <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.6325 12.4811V20.3602H17.0315V12.9987C17.0315 11.1583 16.3989 9.89304 14.731 9.89304C13.4658 9.89304 12.7181 10.7557 12.373 11.5609C12.258 11.8484 12.2005 12.251 12.2005 12.6536V20.3602H7.59952C7.59952 20.3602 7.65703 7.88013 7.59952 6.61487H12.2005V8.57027C12.2005 8.57027 12.2005 8.62777 12.143 8.62777H12.2005V8.57027C12.8331 7.65008 13.8684 6.26979 16.3414 6.26979C19.332 6.26979 21.6325 8.28271 21.6325 12.4811ZM2.88298 0.000976562C1.33014 0.000976562 0.294922 1.03619 0.294922 2.35897C0.294922 3.68174 1.27263 4.71697 2.82546 4.71697H2.88298C4.49333 4.71697 5.47103 3.68175 5.47103 2.35897C5.41352 1.03619 4.43581 0.000976562 2.88298 0.000976562ZM0.525568 20.3602H5.06905V6.61489H0.525568V20.3602Z" fill="#081420"/>
+                </svg>
+
+            </a>
+          </li>
+          <li class="soc1als__item">
+            <a
+              href="/"
+              target="_blank"
+              class="soc1als__link"
+              aria-label="Facebook"
+              title="Facebook"
+              >
+              <svg width="11" height="22" viewBox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.95256 10.6695H6.97166V21.338H2.52644V12.415V10.6695H0.43457V6.90414H2.52644V4.4462C2.52644 2.72041 3.36319 0.000976562 6.97166 0.000976562H10.2663V3.66174H7.913C7.54692 3.66174 6.97166 3.87094 6.97166 4.70768V6.90414H10.3186L9.95256 10.6695Z" fill="#081420"/>
+                </svg>
+
+            </a>
+          </li>
+          <li class="soc1als__item">
+            <a
+              href="/"
+              target="_blank"
+              class="soc1als__link"
+              aria-label="Twitter"
+              title="Twitter"
+              >
+              <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.6183 2.82596C20.8151 3.1774 20.0118 3.42842 19.1081 3.52883C20.0118 2.97658 20.7146 2.1231 21.0159 1.11901C20.1624 1.62106 19.2085 1.97249 18.2546 2.1733C17.4513 1.31982 16.2966 0.767578 15.0415 0.767578C12.6317 0.767578 10.6737 2.72555 10.6737 5.13537C10.6737 5.48681 10.7239 5.83823 10.7741 6.13947C7.10912 5.93865 3.896 4.23169 1.73719 1.57085C1.33555 2.22351 1.13473 2.97658 1.13473 3.77985C1.13473 5.28599 1.88781 6.64151 3.09272 7.44478C2.38985 7.44478 1.68699 7.24397 1.08453 6.89253V6.94273C1.08453 9.05133 2.59067 10.8587 4.59887 11.2603C4.24743 11.3607 3.8458 11.4109 3.44415 11.4109C3.14293 11.4109 2.8919 11.3607 2.64088 11.3105C3.19313 13.0677 4.79969 14.3228 6.75768 14.373C5.25153 15.5277 3.39395 16.2306 1.33555 16.2306C0.984119 16.2306 0.632686 16.2306 0.28125 16.1804C2.23924 17.4355 4.49846 18.1383 7.0087 18.1383C15.0917 18.1383 19.4595 11.4611 19.4595 5.68762C19.4595 5.48681 19.4595 5.28599 19.4595 5.13537C20.313 4.48272 21.0661 3.67944 21.6183 2.82596V2.82596Z" fill="#081420" fill-opacity="0.8"/>
+                </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

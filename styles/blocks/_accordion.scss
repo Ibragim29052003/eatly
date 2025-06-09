@@ -1,0 +1,112 @@
+@use '../helpers' as *;
+
+.accordion {
+  display: grid;
+  row-gap: fluid(19.5, 13.5);
+  border-bottom: var(--border);
+
+  &__content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition-duration: .3s; 
+
+    &-body {
+      max-width: 90%;
+      font-family: var(--font-family-poppins);
+      font-weight: 400;
+      font-size: fluid(20, 11);
+      color: var(--color-gray-accent);
+      padding-bottom: fluid(43, 41);
+    }
+
+    &-inner {
+      overflow: hidden;
+    }
+  }
+
+  &__details {
+    &[open] {
+      .accordion__title {
+        &::before,
+        &::after {
+          background-color: var(--color-white);
+        }
+
+        &::after {
+          rotate: 0deg;
+        }
+      }
+      & + .accordion__content {
+        grid-template-rows: 1fr;
+      }
+    }
+  }
+
+  &__summary {
+    position: relative;
+    list-style: none;
+    color: var(--color-dark-gray);
+
+    @include hover {
+      color: var(--color-lavender);
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+    &::after {
+      @include abs-y;
+
+      content: '';
+      right: 0;
+      --size: #{rem(30.1)};
+      @include square(var(--size));
+      border-radius: 50%;
+      background-color: var(--color-lavender);
+      z-index: -1;
+      @include tablet {
+        --size: #{rem(21.4)};
+      }
+      @include mobile-s {
+        --size: #{rem(15.8)};
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    padding-right: rem(50);
+    color: inherit;
+    transition-duration: var(--transition-duration);
+    cursor: pointer;
+    @include mobile-s {
+      font-size: rem(12.3);
+    }
+
+    &::before,
+    &::after {
+      @include abs-y;
+
+      content: '';
+      right: 9.75px;
+      width: rem(10.6);
+      height: rem(1.1);
+      background-color: var(--color-white);
+      transition-duration: var(--transition-duration);
+      @include tablet {
+        right: 6.95px;
+        width: rem(7.5);
+        height: rem(0.8);
+      }
+      @include mobile-s {
+        right: 5.1px;
+        width: rem(5.6);
+        height: rem(0.6);
+      }
+
+    }
+    &::after {
+      rotate: 90deg;
+    }
+  }
+}

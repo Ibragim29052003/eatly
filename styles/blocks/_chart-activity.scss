@@ -1,0 +1,90 @@
+@use '../helpers' as *;
+
+.chart-activity {
+  position: absolute;
+  bottom: -6%;
+  left: -18%;
+  display: inline-block;
+  border-radius: rem(17);
+  box-shadow:
+  6px -8px 13px 0 rgba(0, 0, 0, 0.15),
+  7px 9px 18px 0 rgba(26, 32, 44, 0.15);
+  background-color: var(--color-white);
+  @include tablet {
+    bottom: -15%;
+    left: -24%;
+  }
+  @include mobile {
+    bottom: -8%;
+    left: -17%;
+  }
+
+  &__register {
+    bottom: -22%;
+    left: -12%;
+
+    @include tablet {
+      bottom: -29%;
+      left: -16%;
+    }
+  }
+  &__graph {
+    margin-block: fluid(30, 14.5) fluid(15, 7.5);
+    width: fluid(207, 98.1);
+    height: fluid(97, 46);
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    column-gap: fluid(7.3, 3.5);
+  }
+
+  &__tab {
+    font-family: var(--font-family-poppins);
+    padding: fluid(4, 2) fluid(11, 5);
+    border-radius: rem(34);
+
+    font-size: fluid(6.39, 3);
+    &:not(.is-active) {
+      border: none;
+      color: var(--color-ml-gray);
+      background-color: inherit;
+      @include hover {
+        color: var(--color-white);
+        background-color: var(--color-lavender);
+
+      }
+    }
+  }
+  &__x-axis {
+    display: flex;
+    justify-content: center;
+    column-gap: fluid(8, 4);
+    padding-bottom: fluid(11, 5);
+
+    &-item {
+      font-family: var(--font-family-roboto);
+      padding: fluid(4, 2) fluid(11, 5);
+      border-radius: rem(34);
+      border: none;
+      font-size: fluid(6.39, 3);
+      color: var(--color-ml-gray);
+      @include hover {
+        background-color: var(--color-light-gray);
+        color: var(--color-dark-gray);
+      }
+      &.is-active {
+        background-color: var(--color-light-gray);
+        color: var(--color-dark-gray);
+        border: var(--border);
+        @include hover {
+          color: var(--color-ml-gray);
+          background-color: inherit;
+
+        }
+      }
+    }
+  }
+
+}

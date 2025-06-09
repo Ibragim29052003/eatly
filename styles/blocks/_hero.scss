@@ -1,0 +1,101 @@
+@use '../helpers' as *;
+
+.hero {
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    padding-top: fluid(254, 163);
+    column-gap: 2rem;
+
+    @include tablet {
+      column-gap: 1.5rem;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: rem(95.5);
+    }
+  }
+
+  &__promo {
+    display: flex;
+    column-gap: fluid(20, 12);
+    align-items: center;
+    font-family: var(--font-family-poppins);
+    &-line {
+      display: inline-flex;
+      width: 10.32%;
+      height: rem(2);
+      background-color: var(--color-light-gray);
+      @include mobile {
+        background-color: var(--color-dark-gray);
+      }
+    }
+
+    &-info {
+      font-weight: 600;
+      color: var(--color-light-gray);
+      font-size: fluid(15, 9);
+      @include mobile {
+        color: var(--color-dark-gray);
+      }
+    }
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  &__body {
+    display: grid;
+    row-gap: 1rem;
+    @include mobile {
+      align-self: center;
+    }
+  }
+
+  &__title {
+    max-width: rem(581);
+    font-weight: 600;
+    &-highlight {
+      color: var(--color-purple);
+    }
+    @include tablet {
+      font-size: fluid(53, 46);
+      max-width: rem(434);
+    }
+    @include mobile {
+      max-width: rem(332);
+      text-align: center;
+    }
+  }
+
+  &__description {
+    color: var(--color-ml-gray);
+    max-width: fluid(500, 307);
+    font-size: fluid(18, 11);
+    &-highlight {
+      color: var(--color-purple);
+    }
+    @include tablet {
+      max-width: rem(354);
+    }
+    @include mobile {
+      text-align: center;
+    }
+  }
+  &__action {
+    font-family: var(--font-family-poppins);
+    padding-block: fluid(37, 25) fluid(17, 10);
+    display: flex;
+    column-gap: fluid(18, 14);
+    @include mobile {
+      justify-content: center;
+    }
+  }
+  &__food-info {
+    padding-right: 5%;
+    margin-inline: auto;
+  }
+}

@@ -1,0 +1,197 @@
+@use '../helpers' as *;
+
+.support {
+
+  &__inner {
+    padding-block: fluid(339, 157) fluid(218, 100);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  &__preview {
+    position: relative;
+    background-color: var(--color-lavender);
+    &::before {
+      @include abs-x;
+      top: 15%;
+      content: '';
+      width: rem(336);
+      height: rem(127.5);
+      background: url('../../icons/support/curve-arrow.svg') center/contain no-repeat;
+    }
+
+    &-title {
+      position: relative;
+      font-size: rem(48);
+      font-family: var(--font-family-poppins);
+      color: var(--color-white);
+      padding-top: rem(84.4);
+      padding-inline: rem(107);
+      @include tablet {
+        font-size: rem(34.1);
+        padding-top: rem(60);
+        padding-inline: rem(76);
+
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        left: 20%;
+        top: 39%;
+        width: rem(13.7);
+        height: rem(17.3);
+        background: url('../../icons/support/star.svg') center/contain no-repeat;
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        left: 17%;
+        top: 60%;
+        width: rem(11.1);
+        height: rem(18.7);
+        background: url('../../icons/support/rhombus.svg') center/contain no-repeat;
+      }
+    }
+  }
+
+  &__title {
+    font-size: rem(40);
+    @include tablet {
+      font-size: rem(28.4);
+    }
+  }
+
+  &__info {
+    position: relative;
+    display: grid;
+    row-gap: rem(62);
+    width: 39.5%;
+    @include tablet {
+      row-gap: rem(43.9);
+    }
+    @include mobile {
+      width: 80%;
+    }
+    @include mobile-s {
+      width: 100%;
+    }
+  }
+
+  &__form {
+    display: grid;
+    row-gap: fluid(26, 12);
+  }
+
+
+  &__control {
+    height: fluid(79, 57);
+    width: 100%;
+    padding-inline: fluid(25.3, 15.9);
+    border-radius: fluid(16.9, 10.6);
+    border: var(--border);
+    border-color: var(--color-lavender);
+    border-width: rem(3);
+    @include mobile {
+      border-width: rem(1.3);
+    }
+    &::placeholder {
+      text-transform: uppercase;
+    }
+
+    &:focus-visible {
+      border-color: var(--color-black);
+    }
+
+    &-textaria {
+      resize: none;
+      overflow: scroll;
+      height: fluid(345, 210);
+      padding-block: fluid(22.7, 13.8);
+    }
+
+    &--error {
+      border-color: var(--color-red);
+    }
+  }
+
+  &__image-wrapper {
+    position: absolute;
+    bottom: -10%;
+    left: -89%;
+    z-index: 1;
+    @include tablet {
+      left: -100%;
+      bottom: -17%;
+    }
+  }
+
+  &__button {
+    position: relative;
+
+    @include mobile-above {
+    &::before {
+      --size: #{rem(122.7)};
+      @include square(var(--size));
+      position: absolute;
+      content: '';
+      left: -18%;
+      bottom: -113%;
+      background: url('../../icons/support/curve-arrow-button.svg') center/contain no-repeat;
+
+      @include tablet {
+        --size: #{rem(87.2)};
+      }
+    }
+  }
+  }
+
+  &__errors {
+    display: grid;
+    row-gap: fluid(10, 4);
+    padding-top: fluid(9, 5);
+    padding-inline: fluid(25.3, 15.9);
+    font-size: fluid(17, 12);
+    color: var(--color-red);
+    line-height: 1.25;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__contact-us {
+    display: flex;
+    justify-content: center;
+    height: rem(180);
+    background-color: var(--color-lavender);
+    width: 100%;
+
+
+    @include mobile-s {
+      height: rem(150);
+    }
+    &--title {
+      position: relative;
+      display: inline-block;
+      padding-top: rem(23.7);
+      font-size: rem(24);
+      color: var(--color-white);
+      text-align: center;
+      &::before {
+        position: absolute;
+        content: '';
+        left: -57%;
+        top: 13%;
+        background: url('../../icons/support/mobile-arrow.svg') center/contain no-repeat;
+        width: rem(99.9);
+        height: rem(110.6);
+      }
+    }
+  }
+}

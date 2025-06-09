@@ -1,0 +1,14 @@
+@use '../helpers' as *;
+
+.soc1als {
+  color: var(--color-black);
+  &__list {
+    display: flex;
+    column-gap: fluid(53, 24);
+  }
+  &__item {
+    @include hover {
+      color: var(--color-lavender);
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@use "../helpers" as *;
+
+.article-view {
+
+  padding-block: fluid(261, 175) fluid(168, 95.3);
+
+  &__content {
+    &-inner {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+  }
+
+
+  &__image {
+    width: 100%;
+    height: rem(403);
+    object-fit: cover;
+
+    @include tablet {
+      height: rem(286.6);
+    }
+    @include mobile {
+      height: rem(335);
+    }
+    &-wrapper {
+      padding-block: fluid(61.5, 53.7) fluid(80, 54);
+    }
+  }
+  &__title {
+    font-size: fluid(37.4, 22.4);
+    padding-bottom: fluid(32, 25);
+  }
+  &__body {
+    width: 65%;
+    @include mobile {
+      width: 100%;
+
+    }
+  }
+
+  &__button {
+    @include hover {
+      .icon--right-arrow::after {
+      background-image: url('../../icons/prem-health/arrow-right-purple.svg');
+    }
+  }
+  }
+}
