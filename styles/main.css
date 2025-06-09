@@ -5556,5 +5556,10 @@ button[aria-label]::before {
   pointer-events: none;
   right: -100%;
 }
+@media (width <= 47.99875rem) {
+  .register__container-form {
+    top: 20%;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

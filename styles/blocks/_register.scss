@@ -7,11 +7,16 @@
     display: grid;
     align-self: center;
     flex-grow: 1;
-
+    // padding-block: rem(169) rem(200.3);
     min-width: fluid(388, 309);
     max-width: 49.8%;
     overflow: hidden;
-
+    // @include tablet {
+    //   padding-block: rem(120) rem(170.8);
+    // }
+    // @include mobile {
+    //   padding-block: rem(206) rem(111);
+    // }
   }
 
   &__body {
@@ -115,5 +120,8 @@
     opacity: 0;
     pointer-events: none;
     right: -100%;
+    @include mobile {
+      top: 20%;
+    }
   }
 }
